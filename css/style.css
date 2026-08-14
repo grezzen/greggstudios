@@ -1,1 +1,163 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #ffffff;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+/* Main home page */
+
+.home {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 45px);
+    overflow: hidden;
+}
+
+/* Illustration */
+
+.illustration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100%;
+
+    background-image: url("images/home-page-background-mess.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+
+    z-index: 1;
+}
+
+/* Navigation area */
+
+.menu {
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    z-index: 3;
+}
+
+/* Black navigation boxes */
+
+.menu-box,
+.studio-box {
+    background: #000000;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+
+/* Portfolio / Info */
+
+.menu-box {
+    width: 260px;
+    height: 80px;
+    font-size: 1.2rem;
+}
+
+.menu-box:hover {
+    background: #222222;
+}
+
+/* Gregg Studios */
+
+.studio-box {
+    position: absolute;
+
+    left: 8%;
+    top: calc(50% - 120px);
+
+    width: 320px;
+    height: 80px;
+
+    font-size: 1.4rem;
+
+    z-index: 4;
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 45px;
+
+    background: #000000;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+
+    z-index: 10;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .illustration {
+        width: 100%;
+        opacity: 0.35;
+    }
+
+    .menu,
+    .studio-box {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .menu {
+        top: 55%;
+    }
+
+    .studio-box {
+        top: calc(55% - 120px);
+    }
+
+    .menu-box {
+        width: 240px;
+        height: 70px;
+    }
+
+    .studio-box {
+        width: 280px;
+        height: 70px;
+    }
+}
+```
 
