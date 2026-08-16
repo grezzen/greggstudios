@@ -1,1 +1,678 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gregg Studios | Info</title>
+
+    <style>
+
+        /* =========================
+           RESET
+           ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #d9d9d9;
+        }
+
+
+        /* =========================
+           RESUME PAGE
+           ========================= */
+
+        .resume-page {
+            min-height: 100vh;
+
+            background-image: url("resume-background-v2.png");
+            background-repeat: repeat;
+
+            padding: 20px 0 45px;
+        }
+
+
+        /* =========================
+           RESUME PAPER
+           ========================= */
+
+        .resume {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+
+            padding: 28px 8% 60px;
+
+            color: #111111;
+        }
+
+
+        /* =========================
+           HEADER
+           ========================= */
+
+        .resume-header {
+            text-align: center;
+            margin-bottom: 22px;
+        }
+
+        .name {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        .location {
+            font-size: 11px;
+            margin-bottom: 2px;
+        }
+
+        .contact {
+            font-size: 9px;
+        }
+
+
+        /* =========================
+           SECTION HEADINGS
+           ========================= */
+
+        .section {
+            margin-top: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           INTRO / PROFILE
+           ========================= */
+
+        .job-title {
+            text-align: center;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            margin-bottom: 2px;
+        }
+
+        .specialties {
+            text-align: center;
+
+            font-size: 9px;
+            margin-bottom: 8px;
+        }
+
+        .profile {
+            font-size: 9px;
+            line-height: 1.35;
+            text-align: left;
+        }
+
+
+        /* =========================
+           CAREER HIGHLIGHTS
+           ========================= */
+
+        .bullet-list {
+            margin: 0;
+            padding-left: 15px;
+
+            font-size: 8.5px;
+            line-height: 1.35;
+        }
+
+        .bullet-list li {
+            margin-bottom: 1px;
+        }
+
+
+        /* =========================
+           CORE SKILLS
+           ========================= */
+
+        .skill-group {
+            margin-bottom: 7px;
+        }
+
+        .skill-heading {
+            font-size: 8.5px;
+            font-weight: 700;
+
+            margin-bottom: 1px;
+        }
+
+        .skill-text {
+            font-size: 8px;
+            line-height: 1.35;
+        }
+
+
+        /* =========================
+           PROFESSIONAL EXPERIENCE
+           ========================= */
+
+        .job {
+            margin-bottom: 15px;
+        }
+
+        .company {
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .position {
+            font-size: 8.5px;
+            font-weight: 700;
+        }
+
+        .dates {
+            font-size: 8px;
+            margin-bottom: 4px;
+        }
+
+        .job-description {
+            font-size: 8px;
+            line-height: 1.35;
+            margin-bottom: 5px;
+        }
+
+        .job-category {
+            font-size: 8px;
+            font-weight: 700;
+            margin-top: 4px;
+            margin-bottom: 1px;
+        }
+
+
+        /* =========================
+           EDUCATION
+           ========================= */
+
+        .education {
+            text-align: left;
+            font-size: 8.5px;
+            line-height: 1.35;
+        }
+
+        .degree {
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           PORTFOLIO EXPERTISE
+           ========================= */
+
+        .portfolio-expertise {
+            font-size: 8px;
+            line-height: 1.35;
+        }
+
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        .home-footer {
+            position: fixed;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: 31px;
+
+            background-color: #000000;
+            color: #ffffff;
+
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 3px 20px;
+
+            z-index: 100;
+        }
+
+        .copyright {
+            font-size: 12px;
+            line-height: 12px;
+            margin-bottom: 2px;
+        }
+
+        .copyright-details {
+            font-size: 7px;
+            line-height: 8px;
+        }
+
+
+        /* =========================
+           TABLET
+           ========================= */
+
+        @media (max-width: 800px) {
+
+            .resume {
+                width: 94%;
+                padding-left: 7%;
+                padding-right: 7%;
+            }
+
+            .name {
+                font-size: 20px;
+            }
+
+            .profile,
+            .bullet-list {
+                font-size: 9px;
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 600px) {
+
+            .resume-page {
+                padding-top: 10px;
+                padding-bottom: 55px;
+            }
+
+            .resume {
+                width: 96%;
+                padding: 20px 7% 40px;
+            }
+
+            .name {
+                font-size: 18px;
+            }
+
+            .location {
+                font-size: 10px;
+            }
+
+            .contact {
+                font-size: 8px;
+            }
+
+            .section-title {
+                font-size: 12px;
+            }
+
+            .job-title {
+                font-size: 12px;
+            }
+
+            .specialties {
+                font-size: 8px;
+            }
+
+            .profile,
+            .bullet-list,
+            .skill-text,
+            .job-description,
+            .portfolio-expertise {
+                font-size: 8px;
+            }
+
+            .home-footer {
+                height: 45px;
+                padding: 4px 10px;
+            }
+
+            .copyright {
+                font-size: 10px;
+                line-height: 10px;
+            }
+
+            .copyright-details {
+                font-size: 6px;
+                line-height: 7px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <main class="resume-page">
+
+        <article class="resume">
+
+            <!-- HEADER -->
+
+            <header class="resume-header">
+
+                <div class="name">
+                    GREG GRIESENAUER
+                </div>
+
+                <div class="location">
+                    Atlanta, GA
+                </div>
+
+                <div class="contact">
+                    (314)662-1173 • ggrezzen@gmail.com • GregGLLC.com • linkedin.com/in/greg-griesenauer
+                </div>
+
+            </header>
+
+
+            <!-- PROFESSIONAL SUMMARY -->
+
+            <section class="section">
+
+                <div class="job-title">
+                    SENIOR GRAPHIC DESIGNER
+                </div>
+
+                <div class="specialties">
+                    Brand Identity | Consumer Products | Packaging | Print | Digital | Illustration
+                </div>
+
+                <p class="profile">
+                    Senior Graphic Designer with 15+ years of experience creating brand identities,
+                    packaging, advertising, catalogs, digital marketing assets, retail graphics,
+                    product photography, and illustration for consumer products, nonprofits, and
+                    commercial clients. Proven ability to manage projects from concept through
+                    production while collaborating with marketing teams, photographers,
+                    videographers, printers, manufacturers, and vendors. Experienced supporting
+                    multi-brand organizations, launching new products, and producing creative
+                    solutions across print, digital, retail, and e-commerce environments.
+                </p>
+
+            </section>
+
+
+            <!-- CAREER HIGHLIGHTS -->
+
+            <section class="section">
+
+                <h2 class="section-title">
+                    CAREER HIGHLIGHTS
+                </h2>
+
+                <ul class="bullet-list">
+                    <li>15+ years of professional graphic design experience.</li>
+                    <li>Designed branding and packaging for <strong>hundreds of consumer products</strong>.</li>
+                    <li>Created <strong>hundreds of logos, advertisements, brochures, posters, marketing campaigns, and promotional materials</strong>.</li>
+                    <li>Produced <strong>50+ product catalogs, sales publications, and printed marketing pieces</strong>.</li>
+                    <li>Designed creative assets supporting <strong>50+ websites and e-commerce platforms</strong>.</li>
+                    <li>Produced and retouched <strong>thousands of commercial product photographs</strong>.</li>
+                    <li>Led creative execution across <strong>20+ consumer and commercial brands</strong>.</li>
+                    <li>Coordinated production with domestic and international printers, manufacturers, and creative vendors.</li>
+                </ul>
+
+            </section>
+
+
+            <!-- CORE SKILLS -->
+
+            <section class="section">
+
+                <h2 class="section-title">
+                    CORE SKILLS
+                </h2>
+
+                <div class="skill-group">
+                    <div class="skill-heading">Graphic Design</div>
+                    <div class="skill-text">
+                        Brand Identity • Logo Design • Visual Communication • Typography • Layout Design • Editorial Design • Print Design • Digital Design • Publication Design • Marketing Collateral
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-heading">Marketing</div>
+                    <div class="skill-text">
+                        Advertising • Campaign Development • Social Media Graphics • Email Marketing • Presentation Design • Retail Marketing • Sales Materials • Trade Show Graphics
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-heading">Packaging & Production</div>
+                    <div class="skill-text">
+                        Packaging Design • Dielines • Product Labels • Print Production • Prepress • Color Management • Large Format Graphics • Promotional Products • Vendor Coordination
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-heading">Photography & Illustration</div>
+                    <div class="skill-text">
+                        Commercial Product Photography • Lifestyle Photography • Photo Retouching • Illustration • Vector Artwork • Art Direction
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-heading">Software</div>
+                    <div class="skill-text">
+                        Adobe Illustrator • Adobe Photoshop • Adobe InDesign • Adobe Acrobat Pro • Adobe Lightroom • Adobe Bridge • After Effects • Premiere Pro • Figma • Shopify • WordPress • Mailchimp • Canva • Blender
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- PROFESSIONAL EXPERIENCE -->
+
+            <section class="section">
+
+                <h2 class="section-title">
+                    PROFESSIONAL EXPERIENCE
+                </h2>
+
+
+                <!-- BTMTD -->
+
+                <div class="job">
+
+                    <div class="company">BTMTD</div>
+                    <div class="position">Senior Graphic Designer</div>
+                    <div class="dates">2021 – Present | Atlanta, GA</div>
+
+                    <p class="job-description">
+                        Lead graphic designer supporting a portfolio of 20+ consumer and commercial
+                        brands across packaging, retail, digital marketing, print, and e-commerce.
+                        Develop creative solutions from concept through production while partnering
+                        with marketing teams, photographers, videographers, manufacturers, and
+                        domestic and international vendors.
+                    </p>
+
+                    <div class="job-category">Brand Development</div>
+                    <ul class="bullet-list">
+                        <li>Design and maintain visual identity systems across a diverse portfolio of consumer brands.</li>
+                        <li>Develop logos, branding systems, sales presentations, product launch materials, and marketing campaigns supporting new and existing product lines.</li>
+                    </ul>
+
+                    <div class="job-category">Graphic Design</div>
+                    <ul class="bullet-list">
+                        <li>Produce hundreds of advertisements, catalogs, brochures, posters, point-of-purchase displays, retail graphics, trade show materials, digital marketing assets, website graphics, and promotional materials.</li>
+                        <li>Designed and produced a <strong>100-page multi-brand product catalog</strong> from concept through print production, creating a unified sales resource where none previously existed.</li>
+                        <li>Create website graphics, Shopify assets, WordPress graphics, email campaigns, and digital marketing materials supporting product launches and ongoing sales initiatives.</li>
+                    </ul>
+
+                    <div class="job-category">Packaging</div>
+                    <ul class="bullet-list">
+                        <li>Design packaging for <strong>hundreds of consumer products</strong>, including dielines, labels, regulatory layouts, inserts, display packaging, and production-ready artwork.</li>
+                        <li>Coordinate directly with packaging manufacturers and production vendors to ensure designs transition successfully into manufacturing.</li>
+                    </ul>
+
+                    <div class="job-category">Photography & Creative Direction</div>
+                    <ul class="bullet-list">
+                        <li>Produce and retouch <strong>thousands of commercial product photographs</strong> for catalogs, advertising, websites, and packaging.</li>
+                        <li>Direct photographers, videographers, models, and overseas freelance designers to maintain creative quality and brand consistency.</li>
+                    </ul>
+
+                    <div class="job-category">Production</div>
+                    <ul class="bullet-list">
+                        <li>Prepare production-ready artwork for offset, digital, screen printing, embroidery, promotional products, packaging, and large-format graphics.</li>
+                        <li>Manage multiple concurrent projects while balancing aggressive production schedules across numerous active brands.</li>
+                    </ul>
+
+                </div>
+
+
+                <!-- BIG FROG -->
+
+                <div class="job">
+
+                    <div class="company">Big Frog</div>
+                    <div class="position">Graphic Designer</div>
+                    <div class="dates">2020 – 2021</div>
+
+                    <ul class="bullet-list">
+                        <li>Designed custom branding, promotional graphics, apparel, and marketing materials for businesses and organizations.</li>
+                        <li>Prepared production-ready vector artwork for embroidery, screen printing, and promotional products.</li>
+                        <li>Managed multiple client projects while working directly with customers to translate concepts into finished designs.</li>
+                    </ul>
+
+                </div>
+
+
+                <!-- OXFORD AMERICAN -->
+
+                <div class="job">
+
+                    <div class="company">Oxford American</div>
+                    <div class="position">Freelance Graphic Designer</div>
+                    <div class="dates">2016 – 2019</div>
+
+                    <ul class="bullet-list">
+                        <li>Developed branding and promotional campaigns supporting publications, fundraising, and special events.</li>
+                        <li>Designed brochures, invitations, posters, advertising, direct mail, and digital marketing materials.</li>
+                        <li>Created three consecutive Giving Tuesday campaigns that contributed approximately <strong>$25,000 annually</strong> in fundraising.</li>
+                    </ul>
+
+                </div>
+
+
+                <!-- GREATEST SHOP EVER -->
+
+                <div class="job">
+
+                    <div class="company">Greatest Shop Ever / Coughing Cardinal</div>
+                    <div class="position">Graphic Designer</div>
+                    <div class="dates">2016 – 2019</div>
+
+                    <ul class="bullet-list">
+                        <li>Led a complete retail rebrand while developing product branding, advertising, photography, website graphics, packaging, and promotional materials.</li>
+                        <li>Created branding and marketing assets supporting product launches and retail promotions.</li>
+                        <li>Produced commercial photography and coordinated creative resources for marketing campaigns.</li>
+                    </ul>
+
+                </div>
+
+
+                <!-- HEARDING CATS -->
+
+                <div class="job">
+
+                    <div class="company">HEARding Cats</div>
+                    <div class="position">Freelance Brand Designer</div>
+                    <div class="dates">2010 – 2020</div>
+
+                    <ul class="bullet-list">
+                        <li>Developed and maintained the organization's visual identity across print and event marketing.</li>
+                        <li>Designed posters, brochures, programs, books, advertising, and promotional campaigns.</li>
+                        <li>Collaborated on grant proposal materials and community outreach initiatives.</li>
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <!-- EDUCATION -->
+
+            <section class="section">
+
+                <h2 class="section-title">
+                    EDUCATION
+                </h2>
+
+                <div class="education">
+
+                    <div class="degree">
+                        Bachelor of Fine Arts
+                    </div>
+
+                    <div>
+                        Visual Communication, Emphasis in Illustration
+                    </div>
+
+                    <div>
+                        University of Kansas
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PORTFOLIO EXPERTISE -->
+
+            <section class="section">
+
+                <h2 class="section-title">
+                    PORTFOLIO EXPERTISE
+                </h2>
+
+                <div class="portfolio-expertise">
+                    Brand Identity • Packaging Design • Consumer Products • Catalog Design • Print Design • Illustration • Commercial Photography • Advertising • Marketing Campaigns • Retail Graphics
+                </div>
+
+            </section>
+
+        </article>
+
+    </main>
+
+
+    <!-- COPYRIGHT FOOTER -->
+
+    <footer class="home-footer">
+
+        <div class="copyright">
+            © 2026 Greg Griesenauer. All rights reserved.
+        </div>
+
+        <div class="copyright-details">
+            All original artwork and content on this website are protected by applicable copyright law.
+            Unauthorized copying, reproduction, distribution, modification, publication, or commercial use
+            of any content is prohibited without prior written permission from the copyright holder.
+        </div>
+
+    </footer>
+
+</body>
+</html>
+```
 
