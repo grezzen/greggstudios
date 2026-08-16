@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,44 +6,291 @@
 
     <title>Gregg Studios</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* =========================
+           RESET
+           ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+
+        /* =========================
+           HOME PAGE
+           ========================= */
+
+        .home-page {
+            width: 100%;
+            height: 100vh;
+            min-height: 500px;
+
+            display: flex;
+            flex-direction: column;
+
+            background-image: url("home-page-background-mess.png");
+            background-repeat: no-repeat;
+
+            /* Keeps the artwork on the right side */
+            background-position: right center;
+
+            /* Fills the screen while maintaining proportions */
+            background-size: cover;
+
+            position: relative;
+        }
+
+
+        /* =========================
+           NAVIGATION AREA
+           ========================= */
+
+        .home-navigation {
+            position: absolute;
+
+            left: 10.7%;
+            top: 38%;
+
+            width: 40%;
+
+            max-width: 500px;
+            min-width: 350px;
+        }
+
+
+        /* =========================
+           GREGG STUDIOS TITLE
+           ========================= */
+
+        .studio-title {
+            width: 100%;
+            height: 57px;
+
+            background-color: #000000;
+            color: #ffffff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 32px;
+            font-weight: 300;
+            letter-spacing: 1px;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           NAVIGATION BUTTONS
+           ========================= */
+
+        .navigation-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .navigation-button {
+            flex: 1;
+
+            height: 57px;
+
+            background-color: #000000;
+            color: #ffffff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+
+            font-size: 22px;
+            font-weight: 300;
+            letter-spacing: 1px;
+
+            transition: background-color 0.2s ease;
+        }
+
+        .navigation-button:hover {
+            background-color: #222222;
+        }
+
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        .home-footer {
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+
+            height: 31px;
+
+            background-color: #000000;
+
+            color: #ffffff;
+
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 3px 20px;
+
+            z-index: 10;
+        }
+
+        .copyright {
+            font-size: 12px;
+            font-weight: 400;
+
+            line-height: 12px;
+
+            margin-bottom: 2px;
+        }
+
+        .copyright-details {
+            font-size: 7px;
+            font-weight: 400;
+
+            line-height: 8px;
+        }
+
+
+        /* =========================
+           TABLET
+           ========================= */
+
+        @media (max-width: 900px) {
+
+            .home-navigation {
+                left: 7%;
+                width: 45%;
+                min-width: 320px;
+            }
+
+            .studio-title {
+                font-size: 27px;
+            }
+
+            .navigation-button {
+                font-size: 19px;
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 600px) {
+
+            .home-page {
+                min-height: 600px;
+
+                background-position: 70% center;
+                background-size: cover;
+            }
+
+            .home-navigation {
+                left: 8%;
+                top: 35%;
+
+                width: 84%;
+
+                min-width: 0;
+                max-width: none;
+            }
+
+            .studio-title {
+                height: 55px;
+                font-size: 25px;
+            }
+
+            .navigation-button {
+                height: 55px;
+                font-size: 18px;
+            }
+
+            .home-footer {
+                height: 45px;
+                padding: 4px 10px;
+            }
+
+            .copyright {
+                font-size: 10px;
+                line-height: 10px;
+            }
+
+            .copyright-details {
+                font-size: 6px;
+                line-height: 7px;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-    <main class="home">
-
-        <!-- Background illustration -->
-        <img
-            src="images/home-page-background-mess.png"
-            alt=""
-            class="home-illustration"
-        >
+    <main class="home-page">
 
         <!-- Navigation -->
-        <div class="navigation">
+        <nav class="home-navigation">
 
-            <div class="title-box">
+            <div class="studio-title">
                 GREGG STUDIOS
             </div>
 
-            <a href="portfolio.html" class="nav-box">
-                PORTFOLIO
-            </a>
+            <div class="navigation-buttons">
 
-            <a href="info.html" class="nav-box">
-                INFO
-            </a>
+                <a href="portfolio.html" class="navigation-button">
+                    PORTFOLIO
+                </a>
 
-        </div>
+                <a href="info.html" class="navigation-button">
+                    INFO
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- Copyright Footer -->
+        <footer class="home-footer">
+
+            <div class="copyright">
+                © 2026 Greg Griesenauer. All rights reserved.
+            </div>
+
+            <div class="copyright-details">
+                All original artwork and content on this website are protected by applicable copyright law.
+                Unauthorized copying, reproduction, distribution, modification, publication, or commercial use
+                of any content is prohibited without prior written permission from the copyright holder.
+            </div>
+
+        </footer>
 
     </main>
 
-    <!-- Footer -->
-    <footer>
-        © 2026 Gregg Studios. All rights reserved.
-    </footer>
-
 </body>
 </html>
-```
