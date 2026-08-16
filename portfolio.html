@@ -1,1 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Gregg Studios | Portfolio</title>
+
+    <style>
+
+        /* =========================
+           RESET
+           ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: #000000;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+
+        /* =========================
+           PORTFOLIO PAGE
+           ========================= */
+
+        .portfolio-page {
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            background: #000000;
+        }
+
+
+        /* =========================
+           PAGE HEADER
+           ========================= */
+
+        .portfolio-header {
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 35px;
+
+            background: #000000;
+
+            flex-shrink: 0;
+        }
+
+        .portfolio-title {
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .home-link {
+            margin-left: auto;
+
+            color: #ffffff;
+            text-decoration: none;
+
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .home-link:hover {
+            opacity: 0.6;
+        }
+
+
+        /* =========================
+           ACCORDION
+           ========================= */
+
+        .portfolio-accordion {
+            width: 100%;
+            height: calc(100vh - 101px);
+
+            display: flex;
+
+            overflow: hidden;
+        }
+
+
+        /* =========================
+           PANELS
+           ========================= */
+
+        .portfolio-panel {
+            position: relative;
+
+            flex: 1;
+
+            min-width: 0;
+
+            height: 100%;
+
+            overflow: hidden;
+
+            cursor: pointer;
+
+            transition:
+                flex 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+
+        /* =========================
+           PANEL IMAGE
+           ========================= */
+
+        .panel-image {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.6s ease,
+                opacity 0.6s ease;
+        }
+
+
+        /* =========================
+           COLOR OVERLAY
+           ========================= */
+
+        .panel-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            background: #000000;
+
+            opacity: 0;
+
+            transition:
+                opacity 0.4s ease;
+
+            z-index: 2;
+        }
+
+
+        /* =========================
+           CATEGORY NAME
+           ========================= */
+
+        .panel-name {
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform:
+                translate(-50%, -50%)
+                rotate(-90deg);
+
+            white-space: nowrap;
+
+            color: #ffffff;
+
+            font-size: 18px;
+            font-weight: 300;
+
+            letter-spacing: 2px;
+
+            opacity: 0;
+
+            transition:
+                opacity 0.4s ease,
+                transform 0.4s ease;
+
+            z-index: 3;
+        }
+
+
+        /* =========================
+           HOVER STATE
+           ========================= */
+
+        .portfolio-panel:hover .panel-overlay {
+            opacity: 0.88;
+        }
+
+        .portfolio-panel:hover .panel-name {
+            opacity: 1;
+
+            transform:
+                translate(-50%, -50%)
+                rotate(-90deg);
+        }
+
+        .portfolio-panel:hover .panel-image {
+            transform: scale(1.04);
+        }
+
+
+        /* =========================
+           ACTIVE PANEL
+           ========================= */
+
+        .portfolio-panel.active {
+            flex: 8;
+        }
+
+        .portfolio-panel.active .panel-image {
+            opacity: 0.28;
+
+            transform: scale(1.02);
+        }
+
+        .portfolio-panel.active .panel-overlay {
+            opacity: 0.35;
+        }
+
+        .portfolio-panel.active .panel-name {
+            display: none;
+        }
+
+
+        /* =========================
+           EXPANDED CONTENT
+           ========================= */
+
+        .panel-content {
+            position: absolute;
+
+            left: 0;
+            right: 0;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            padding: 50px 70px;
+
+            max-width: 900px;
+
+            opacity: 0;
+
+            transition:
+                opacity 0.4s ease 0.25s;
+
+            z-index: 4;
+
+            pointer-events: none;
+        }
+
+        .portfolio-panel.active .panel-content {
+            opacity: 1;
+
+            pointer-events: auto;
+        }
+
+
+        /* =========================
+           EXPANDED TITLE
+           ========================= */
+
+        .panel-content h2 {
+            font-size: 42px;
+            font-weight: 300;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           EXPANDED DESCRIPTION
+           ========================= */
+
+        .panel-content p {
+            max-width: 700px;
+
+            font-size: 17px;
+            font-weight: 300;
+
+            line-height: 1.6;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           LEARN MORE BUTTON
+           ========================= */
+
+        .learn-more {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-width: 150px;
+            height: 48px;
+
+            padding: 0 25px;
+
+            border: 1px solid #ffffff;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 13px;
+            font-weight: 400;
+
+            letter-spacing: 1.5px;
+
+            transition:
+                background-color 0.25s ease,
+                color 0.25s ease;
+        }
+
+        .learn-more:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+
+        /* =========================
+           CLOSE INDICATOR
+           ========================= */
+
+        .close-panel {
+            position: absolute;
+
+            top: 25px;
+            right: 30px;
+
+            z-index: 5;
+
+            color: #ffffff;
+
+            font-size: 25px;
+            font-weight: 200;
+
+            opacity: 0;
+
+            transition:
+                opacity 0.3s ease;
+
+            pointer-events: none;
+        }
+
+        .portfolio-panel.active .close-panel {
+            opacity: 0.8;
+
+            pointer-events: auto;
+        }
+
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        .portfolio-footer {
+            height: 31px;
+
+            background: #000000;
+
+            color: #ffffff;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 3px 20px;
+
+            flex-shrink: 0;
+        }
+
+        .copyright {
+            font-size: 12px;
+            line-height: 12px;
+
+            margin-bottom: 2px;
+        }
+
+        .copyright-details {
+            font-size: 7px;
+            line-height: 8px;
+        }
+
+
+        /* =========================
+           MOBILE
+           
+           WE WILL DEAL WITH THIS
+           LATER.
+           ========================= */
+
+        @media (max-width: 600px) {
+
+            .portfolio-accordion {
+                flex-direction: column;
+                overflow-y: auto;
+            }
+
+            .portfolio-panel {
+                min-height: 100px;
+                flex: none;
+            }
+
+            .portfolio-panel.active {
+                flex: none;
+                height: 500px;
+            }
+
+            .panel-name {
+                transform: translate(-50%, -50%);
+            }
+
+            .portfolio-panel:hover .panel-name {
+                transform: translate(-50%, -50%);
+            }
+
+            .panel-content {
+                padding: 30px;
+            }
+
+            .panel-content h2 {
+                font-size: 30px;
+            }
+
+            .panel-content p {
+                font-size: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <main class="portfolio-page">
+
+
+        <!-- =========================
+             HEADER
+             ========================= -->
+
+        <header class="portfolio-header">
+
+            <div class="portfolio-title">
+                GREGG STUDIOS
+            </div>
+
+            <a href="index.html" class="home-link">
+                HOME
+            </a>
+
+        </header>
+
+
+        <!-- =========================
+             PORTFOLIO ACCORDION
+             ========================= -->
+
+        <section class="portfolio-accordion">
+
+
+            <!-- SBK -->
+
+            <article class="portfolio-panel">
+
+                <img
+                    src="SBK.png"
+                    alt="SBK"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    SBK
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>SBK</h2>
+
+                    <p>
+                        A complete collection of branding and marketing materials
+                        created for SBK, including a 108-page catalog, sell sheets,
+                        business cards, and supporting promotional materials.
+                    </p>
+
+                    <a href="projects/sbk.html" class="learn-more">
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
+            <!-- CLOUD 9 -->
+
+            <article class="portfolio-panel">
+
+                <img
+                    src="C9.png"
+                    alt="Cloud 9"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    CLOUD 9
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>CLOUD 9</h2>
+
+                    <p>
+                        Retail and brand design including store products,
+                        website design, DoorDash assets, franchise presentation
+                        slides, brand standards, menus, and supporting
+                        promotional materials.
+                    </p>
+
+                    <a href="projects/cloud9.html" class="learn-more">
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
+            <!-- GREATEST SHOP EVER -->
+
+            <article class="portfolio-panel">
+
+                <img
+                    src="Shop.png"
+                    alt="Greatest Shop Ever"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    GREATEST SHOP EVER
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>GREATEST SHOP EVER / COUGHING CARDINAL</h2>
+
+                    <p>
+                        Branding, apparel, skateboard designs, glass blowing
+                        show materials, store promotions, product artwork,
+                        photography, and supporting retail graphics.
+                    </p>
+
+                    <a href="projects/greatest-shop-ever.html" class="learn-more">
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
+            <!-- TRUE HEMP CREATIONS -->
+
+            <article class="portfolio-panel">
+
+                <img
+                    src="THC.png"
+                    alt="True Hemp Creations"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    TRUE HEMP CREATIONS
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>TRUE HEMP CREATIONS</h2>
+
+                    <p>
+                        Catalog design, web assets, presentation materials,
+                        pitch deck development, and supporting brand and
+                        marketing collateral.
+                    </p>
+
+                    <a href="projects/true-hemp-creations.html" class="learn-more">
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
+            <!-- PHOTOGRAPHY -->
+
+            <article class="portfolio-panel">
+
+                <img
+                    src="photo.png"
+                    alt="Photography"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    PHOTOGRAPHY
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>PHOTOGRAPHY</h2>
+
+                    <p>
+                        Commercial product photography, portrait photography,
+                        event photography, glass product photography, and
+                        supporting image production and retouching.
+                    </p>
+
+                    <a href="projects/photography.html" class="learn-more">
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
+            <!-- OXFORD AMERICAN -->
+
+            <article class="portfolio-panel">
+
+                <img
+                    src="OA.png"
+                    alt="Oxford American"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    OXFORD AMERICAN
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>OXFORD AMERICAN</h2>
+
+                    <p>
+                        Graphic design and promotional work including concert
+                        series materials, special events, fundraising campaigns,
+                        and the 50 Years of True Grit exhibition.
+                    </p>
+
+                    <a href="projects/oxford-american.html" class="learn-more">
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
+            <!-- BLITZ STICKS -->
+
+            <article class="portfolio-panel">
+
+                <img
+                    src="blitz.png"
+                    alt="Blitz Sticks"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    BLITZ STICKS
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>BLITZ STICKS</h2>
+
+                    <p>
+                        A 50-product catalog supported by packaging design,
+                        promotional materials, web assets, and product
+                        marketing graphics.
+                    </p>
+
+                    <a href="projects/blitz-sticks.html" class="learn-more">
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
+            <!-- EVENT POSTERS -->
+
+            <article class="portfolio-panel">
+
+                <img
+                    src="poster.png"
+                    alt="Event Posters"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    EVENT POSTERS
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>EVENT POSTERS</h2>
+
+                    <p>
+                        Poster design spanning music shows, fights, DJ sessions,
+                        glass blowing events, pancake events, and other
+                        promotional campaigns.
+                    </p>
+
+                    <a href="projects/event-posters.html" class="learn-more">
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
+            <!-- ILLUSTRATION -->
+
+            <article class="portfolio-panel">
+
+                <img
+                    src="Ill.png"
+                    alt="Illustration"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    ILLUSTRATION
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>ILLUSTRATION</h2>
+
+                    <p>
+                        Illustration and artwork created across glass blowing,
+                        cannabis and beverage brands, clothing, logos, murals,
+                        packaging, merchandise, promotional materials, and
+                        custom artwork.
+                    </p>
+
+                    <a href="projects/illustration.html" class="learn-more">
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
+            <!-- TWACKED TEA -->
+
+            <article class="portfolio-panel">
+
+                <img
+                    src="TW.png"
+                    alt="Twacked Tea"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    TWACKED TEA
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>TWACKED TEA</h2>
+
+                    <p>
+                        Complete brand and product support including web assets,
+                        banners, product graphics, infographics, social media
+                        promotion, can labels, four-pack packaging, master cases,
+                        and a four-flavor product catalog.
+                    </p>
+
+                    <a href="projects/twacked-tea.html" class="learn-more">
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- =========================
+             FOOTER
+             ========================= -->
+
+        <footer class="portfolio-footer">
+
+            <div class="copyright">
+                © 2026 Greg Griesenauer. All rights reserved.
+            </div>
+
+            <div class="copyright-details">
+                All original artwork and content on this website are protected by applicable copyright law.
+                Unauthorized copying, reproduction, distribution, modification, publication, or commercial use
+                of any content is prohibited without prior written permission from the copyright holder.
+            </div>
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- =========================
+         ACCORDION JAVASCRIPT
+         ========================= -->
+
+    <script>
+
+        const panels = document.querySelectorAll(".portfolio-panel");
+
+
+        panels.forEach(panel => {
+
+            panel.addEventListener("click", function(event) {
+
+                /*
+                 * Don't let clicking the Learn More button
+                 * trigger the accordion.
+                 */
+
+                if (event.target.closest(".learn-more")) {
+                    return;
+                }
+
+
+                /*
+                 * If this panel is already open,
+                 * close it.
+                 */
+
+                if (this.classList.contains("active")) {
+
+                    this.classList.remove("active");
+
+                    return;
+                }
+
+
+                /*
+                 * Close every other panel.
+                 */
+
+                panels.forEach(otherPanel => {
+                    otherPanel.classList.remove("active");
+                });
+
+
+                /*
+                 * Open the selected panel.
+                 */
+
+                this.classList.add("active");
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+</html>
