@@ -117,13 +117,15 @@
 
             cursor: pointer;
 
+            background-color: #000000;
+
             transition:
                 flex 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
 
         /* =========================
-           PANEL IMAGE
+           COLLAPSED IMAGE
            ========================= */
 
         .panel-image {
@@ -136,9 +138,40 @@
 
             object-fit: cover;
 
+            opacity: 1;
+
             transition:
                 transform 0.6s ease,
-                opacity 0.6s ease;
+                opacity 0.45s ease;
+
+            z-index: 1;
+        }
+
+
+        /* =========================
+           EXPANDED BACKGROUND IMAGE
+           ========================= */
+
+        .panel-background {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+
+            opacity: 0;
+
+            transform: scale(1.03);
+
+            transition:
+                opacity 0.55s ease,
+                transform 0.7s ease;
+
+            z-index: 1;
         }
 
 
@@ -181,7 +214,6 @@
 
             font-size: 18px;
             font-weight: 300;
-
             letter-spacing: 2px;
 
             opacity: 0;
@@ -220,13 +252,17 @@
         }
 
         .portfolio-panel.active .panel-image {
-            opacity: 0.35;
-
+            opacity: 0;
             transform: scale(1.02);
         }
 
+        .portfolio-panel.active .panel-background {
+            opacity: 1;
+            transform: scale(1);
+        }
+
         .portfolio-panel.active .panel-overlay {
-            opacity: 0.72;
+            opacity: 0.35;
         }
 
         .portfolio-panel.active .panel-name {
@@ -264,7 +300,6 @@
 
         .portfolio-panel.active .panel-content {
             opacity: 1;
-
             pointer-events: auto;
         }
 
@@ -362,7 +397,6 @@
 
         .portfolio-panel.active .close-panel {
             opacity: 0.8;
-
             pointer-events: auto;
         }
 
@@ -520,6 +554,12 @@
                     class="panel-image"
                 >
 
+                <img
+                    src="C9-background.jpg"
+                    alt=""
+                    class="panel-background"
+                >
+
                 <div class="panel-overlay"></div>
 
                 <div class="panel-name">
@@ -543,9 +583,7 @@
 
                 </div>
 
-                <div class="close-panel">
-                    ×
-                </div>
+                <div class="close-panel">×</div>
 
             </article>
 
@@ -561,6 +599,12 @@
                     src="SBK.png"
                     alt="SBK International"
                     class="panel-image"
+                >
+
+                <img
+                    src="SBK-background.jpg"
+                    alt=""
+                    class="panel-background"
                 >
 
                 <div class="panel-overlay"></div>
@@ -586,9 +630,7 @@
 
                 </div>
 
-                <div class="close-panel">
-                    ×
-                </div>
+                <div class="close-panel">×</div>
 
             </article>
 
@@ -604,6 +646,12 @@
                     src="blitz.png"
                     alt="Blitz Sticks"
                     class="panel-image"
+                >
+
+                <img
+                    src="blitz-background.jpg"
+                    alt=""
+                    class="panel-background"
                 >
 
                 <div class="panel-overlay"></div>
@@ -628,9 +676,7 @@
 
                 </div>
 
-                <div class="close-panel">
-                    ×
-                </div>
+                <div class="close-panel">×</div>
 
             </article>
 
@@ -646,6 +692,12 @@
                     src="Shop.png"
                     alt="Greatest Shop Ever"
                     class="panel-image"
+                >
+
+                <img
+                    src="Shop-background.jpg"
+                    alt=""
+                    class="panel-background"
                 >
 
                 <div class="panel-overlay"></div>
@@ -673,9 +725,7 @@
 
                 </div>
 
-                <div class="close-panel">
-                    ×
-                </div>
+                <div class="close-panel">×</div>
 
             </article>
 
@@ -691,6 +741,12 @@
                     src="OA.png"
                     alt="Oxford American"
                     class="panel-image"
+                >
+
+                <img
+                    src="OA-background.jpg"
+                    alt=""
+                    class="panel-background"
                 >
 
                 <div class="panel-overlay"></div>
@@ -719,9 +775,7 @@
 
                 </div>
 
-                <div class="close-panel">
-                    ×
-                </div>
+                <div class="close-panel">×</div>
 
             </article>
 
@@ -737,6 +791,12 @@
                     src="THC.png"
                     alt="True Hemp Creations"
                     class="panel-image"
+                >
+
+                <img
+                    src="THC-background.jpg"
+                    alt=""
+                    class="panel-background"
                 >
 
                 <div class="panel-overlay"></div>
@@ -764,9 +824,7 @@
 
                 </div>
 
-                <div class="close-panel">
-                    ×
-                </div>
+                <div class="close-panel">×</div>
 
             </article>
 
@@ -782,6 +840,12 @@
                     src="TW.png"
                     alt="Twacked Tea"
                     class="panel-image"
+                >
+
+                <img
+                    src="TW-background.jpg"
+                    alt=""
+                    class="panel-background"
                 >
 
                 <div class="panel-overlay"></div>
@@ -810,9 +874,7 @@
 
                 </div>
 
-                <div class="close-panel">
-                    ×
-                </div>
+                <div class="close-panel">×</div>
 
             </article>
 
@@ -828,6 +890,12 @@
                     src="poster.png"
                     alt="Event Posters"
                     class="panel-image"
+                >
+
+                <img
+                    src="poster-background.jpg"
+                    alt=""
+                    class="panel-background"
                 >
 
                 <div class="panel-overlay"></div>
@@ -855,9 +923,7 @@
 
                 </div>
 
-                <div class="close-panel">
-                    ×
-                </div>
+                <div class="close-panel">×</div>
 
             </article>
 
@@ -873,6 +939,12 @@
                     src="Ill.png"
                     alt="Illustrations"
                     class="panel-image"
+                >
+
+                <img
+                    src="Ill-background.jpg"
+                    alt=""
+                    class="panel-background"
                 >
 
                 <div class="panel-overlay"></div>
@@ -901,9 +973,7 @@
 
                 </div>
 
-                <div class="close-panel">
-                    ×
-                </div>
+                <div class="close-panel">×</div>
 
             </article>
 
@@ -919,6 +989,12 @@
                     src="photo.png"
                     alt="Photography"
                     class="panel-image"
+                >
+
+                <img
+                    src="photo-background.jpg"
+                    alt=""
+                    class="panel-background"
                 >
 
                 <div class="panel-overlay"></div>
@@ -946,9 +1022,7 @@
 
                 </div>
 
-                <div class="close-panel">
-                    ×
-                </div>
+                <div class="close-panel">×</div>
 
             </article>
 
@@ -993,41 +1067,21 @@
 
             panel.addEventListener("click", function(event) {
 
-                /*
-                 * Don't let clicking the Learn More button
-                 * trigger the accordion.
-                 */
-
                 if (event.target.closest(".learn-more")) {
                     return;
                 }
 
 
-                /*
-                 * If this panel is already open,
-                 * close it.
-                 */
-
                 if (this.classList.contains("active")) {
-
                     this.classList.remove("active");
-
                     return;
                 }
 
-
-                /*
-                 * Close every other panel.
-                 */
 
                 panels.forEach(otherPanel => {
                     otherPanel.classList.remove("active");
                 });
 
-
-                /*
-                 * Open selected panel.
-                 */
 
                 this.classList.add("active");
 
