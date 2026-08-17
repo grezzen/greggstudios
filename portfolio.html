@@ -26,7 +26,7 @@
 
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background: #000000;
+            background: #ffffff;
             color: #ffffff;
             overflow: hidden;
         }
@@ -43,12 +43,13 @@
             display: flex;
             flex-direction: column;
 
-            background: #000000;
+            background: #ffffff;
         }
 
 
         /* =========================
-           PAGE HEADER
+           HEADER
+           ENTIRE BAR = HOME BUTTON
            ========================= */
 
         .portfolio-header {
@@ -56,12 +57,20 @@
 
             display: flex;
             align-items: center;
-
-            padding: 0 35px;
+            justify-content: center;
 
             background: #000000;
 
+            color: #ffffff;
+            text-decoration: none;
+
             flex-shrink: 0;
+
+            transition: background-color 0.25s ease;
+        }
+
+        .portfolio-header:hover {
+            background: #181818;
         }
 
         .portfolio-title {
@@ -70,32 +79,24 @@
             letter-spacing: 2px;
         }
 
-        .home-link {
-            margin-left: auto;
-
-            color: #ffffff;
-            text-decoration: none;
-
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
-
-        .home-link:hover {
-            opacity: 0.6;
-        }
-
 
         /* =========================
            ACCORDION
            ========================= */
 
         .portfolio-accordion {
-            width: 100%;
-            height: calc(100vh - 101px);
+            width: 78%;
+            max-width: 1200px;
+
+            height: calc(100vh - 165px);
+
+            margin: 32px auto;
 
             display: flex;
 
             overflow: hidden;
+
+            background: #ffffff;
         }
 
 
@@ -150,12 +151,11 @@
 
             inset: 0;
 
-            background: #000000;
+            background: var(--panel-color);
 
             opacity: 0;
 
-            transition:
-                opacity 0.4s ease;
+            transition: opacity 0.4s ease;
 
             z-index: 2;
         }
@@ -199,15 +199,11 @@
            ========================= */
 
         .portfolio-panel:hover .panel-overlay {
-            opacity: 0.88;
+            opacity: 0.82;
         }
 
         .portfolio-panel:hover .panel-name {
             opacity: 1;
-
-            transform:
-                translate(-50%, -50%)
-                rotate(-90deg);
         }
 
         .portfolio-panel:hover .panel-image {
@@ -224,13 +220,13 @@
         }
 
         .portfolio-panel.active .panel-image {
-            opacity: 0.28;
+            opacity: 0.35;
 
             transform: scale(1.02);
         }
 
         .portfolio-panel.active .panel-overlay {
-            opacity: 0.35;
+            opacity: 0.72;
         }
 
         .portfolio-panel.active .panel-name {
@@ -359,8 +355,7 @@
 
             opacity: 0;
 
-            transition:
-                opacity 0.3s ease;
+            transition: opacity 0.3s ease;
 
             pointer-events: none;
         }
@@ -369,6 +364,28 @@
             opacity: 0.8;
 
             pointer-events: auto;
+        }
+
+
+        /* =========================
+           LIGHT PANEL
+           TRUE HEMP CREATIONS
+           ========================= */
+
+        .light-panel .panel-name,
+        .light-panel .panel-content,
+        .light-panel .close-panel {
+            color: #000000;
+        }
+
+        .light-panel .learn-more {
+            color: #000000;
+            border-color: #000000;
+        }
+
+        .light-panel .learn-more:hover {
+            background: #000000;
+            color: #ffffff;
         }
 
 
@@ -387,7 +404,6 @@
             flex-direction: column;
 
             justify-content: center;
-
             align-items: center;
 
             text-align: center;
@@ -412,20 +428,31 @@
 
         /* =========================
            MOBILE
-           
-           WE WILL DEAL WITH THIS
-           LATER.
+           WE'LL FIX THIS LATER
            ========================= */
 
         @media (max-width: 600px) {
 
+            body {
+                overflow: auto;
+            }
+
+            .portfolio-page {
+                min-height: 100vh;
+                height: auto;
+            }
+
             .portfolio-accordion {
+                width: 90%;
+                height: auto;
+
                 flex-direction: column;
-                overflow-y: auto;
+
+                margin: 20px auto;
             }
 
             .portfolio-panel {
-                min-height: 100px;
+                min-height: 120px;
                 flex: none;
             }
 
@@ -435,10 +462,6 @@
             }
 
             .panel-name {
-                transform: translate(-50%, -50%);
-            }
-
-            .portfolio-panel:hover .panel-name {
                 transform: translate(-50%, -50%);
             }
 
@@ -461,25 +484,20 @@
 
 <body>
 
-
     <main class="portfolio-page">
 
 
         <!-- =========================
-             HEADER
+             HEADER / HOME BUTTON
              ========================= -->
 
-        <header class="portfolio-header">
+        <a href="index.html" class="portfolio-header">
 
             <div class="portfolio-title">
                 GREGG STUDIOS
             </div>
 
-            <a href="index.html" class="home-link">
-                HOME
-            </a>
-
-        </header>
+        </a>
 
 
         <!-- =========================
@@ -489,48 +507,12 @@
         <section class="portfolio-accordion">
 
 
-            <!-- SBK -->
-
-            <article class="portfolio-panel">
-
-                <img
-                    src="SBK.png"
-                    alt="SBK"
-                    class="panel-image"
-                >
-
-                <div class="panel-overlay"></div>
-
-                <div class="panel-name">
-                    SBK
-                </div>
-
-                <div class="panel-content">
-
-                    <h2>SBK</h2>
-
-                    <p>
-                        A complete collection of branding and marketing materials
-                        created for SBK, including a 108-page catalog, sell sheets,
-                        business cards, and supporting promotional materials.
-                    </p>
-
-                    <a href="projects/sbk.html" class="learn-more">
-                        LEARN MORE
-                    </a>
-
-                </div>
-
-                <div class="close-panel">
-                    ×
-                </div>
-
-            </article>
-
-
             <!-- CLOUD 9 -->
 
-            <article class="portfolio-panel">
+            <article
+                class="portfolio-panel"
+                style="--panel-color:#008dd2;"
+            >
 
                 <img
                     src="C9.png"
@@ -568,9 +550,97 @@
             </article>
 
 
+            <!-- SBK INTERNATIONAL -->
+
+            <article
+                class="portfolio-panel"
+                style="--panel-color:#e64129;"
+            >
+
+                <img
+                    src="SBK.png"
+                    alt="SBK International"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    SBK INTERNATIONAL
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>SBK INTERNATIONAL</h2>
+
+                    <p>
+                        A complete collection of branding and marketing
+                        materials including a 108-page catalog, sell sheets,
+                        business cards, promotional graphics, and supporting
+                        sales materials.
+                    </p>
+
+                    <a href="projects/sbk.html" class="learn-more">
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
+            <!-- BLITZ STICKS -->
+
+            <article
+                class="portfolio-panel"
+                style="--panel-color:#64bd45;"
+            >
+
+                <img
+                    src="blitz.png"
+                    alt="Blitz Sticks"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    BLITZ STICKS
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>BLITZ STICKS</h2>
+
+                    <p>
+                        A 50-product catalog supported by packaging design,
+                        promotional materials, web assets, product photography,
+                        retail graphics, and marketing materials.
+                    </p>
+
+                    <a href="projects/blitz-sticks.html" class="learn-more">
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
             <!-- GREATEST SHOP EVER -->
 
-            <article class="portfolio-panel">
+            <article
+                class="portfolio-panel"
+                style="--panel-color:#161616;"
+            >
 
                 <img
                     src="Shop.png"
@@ -586,93 +656,18 @@
 
                 <div class="panel-content">
 
-                    <h2>GREATEST SHOP EVER / COUGHING CARDINAL</h2>
+                    <h2>GREATEST SHOP EVER</h2>
 
                     <p>
-                        Branding, apparel, skateboard designs, glass blowing
+                        Branding, apparel, skateboard graphics, glass blowing
                         show materials, store promotions, product artwork,
                         photography, and supporting retail graphics.
                     </p>
 
-                    <a href="projects/greatest-shop-ever.html" class="learn-more">
-                        LEARN MORE
-                    </a>
-
-                </div>
-
-                <div class="close-panel">
-                    ×
-                </div>
-
-            </article>
-
-
-            <!-- TRUE HEMP CREATIONS -->
-
-            <article class="portfolio-panel">
-
-                <img
-                    src="THC.png"
-                    alt="True Hemp Creations"
-                    class="panel-image"
-                >
-
-                <div class="panel-overlay"></div>
-
-                <div class="panel-name">
-                    TRUE HEMP CREATIONS
-                </div>
-
-                <div class="panel-content">
-
-                    <h2>TRUE HEMP CREATIONS</h2>
-
-                    <p>
-                        Catalog design, web assets, presentation materials,
-                        pitch deck development, and supporting brand and
-                        marketing collateral.
-                    </p>
-
-                    <a href="projects/true-hemp-creations.html" class="learn-more">
-                        LEARN MORE
-                    </a>
-
-                </div>
-
-                <div class="close-panel">
-                    ×
-                </div>
-
-            </article>
-
-
-            <!-- PHOTOGRAPHY -->
-
-            <article class="portfolio-panel">
-
-                <img
-                    src="photo.png"
-                    alt="Photography"
-                    class="panel-image"
-                >
-
-                <div class="panel-overlay"></div>
-
-                <div class="panel-name">
-                    PHOTOGRAPHY
-                </div>
-
-                <div class="panel-content">
-
-                    <h2>PHOTOGRAPHY</h2>
-
-                    <p>
-                        Commercial product photography, portrait photography,
-                        event photography, glass product photography, and
-                        supporting image production and retouching.
-                    </p>
-
-                    <a href="projects/photography.html" class="learn-more">
+                    <a
+                        href="projects/greatest-shop-ever.html"
+                        class="learn-more"
+                    >
                         LEARN MORE
                     </a>
 
@@ -687,7 +682,10 @@
 
             <!-- OXFORD AMERICAN -->
 
-            <article class="portfolio-panel">
+            <article
+                class="portfolio-panel"
+                style="--panel-color:#ef1b24;"
+            >
 
                 <img
                     src="OA.png"
@@ -708,10 +706,14 @@
                     <p>
                         Graphic design and promotional work including concert
                         series materials, special events, fundraising campaigns,
-                        and the 50 Years of True Grit exhibition.
+                        direct mail, web assets, flyers, posters, and exhibition
+                        materials.
                     </p>
 
-                    <a href="projects/oxford-american.html" class="learn-more">
+                    <a
+                        href="projects/oxford-american.html"
+                        class="learn-more"
+                    >
                         LEARN MORE
                     </a>
 
@@ -724,112 +726,39 @@
             </article>
 
 
-            <!-- BLITZ STICKS -->
+            <!-- TRUE HEMP CREATIONS -->
 
-            <article class="portfolio-panel">
+            <article
+                class="portfolio-panel light-panel"
+                style="--panel-color:#eeeeee;"
+            >
 
                 <img
-                    src="blitz.png"
-                    alt="Blitz Sticks"
+                    src="THC.png"
+                    alt="True Hemp Creations"
                     class="panel-image"
                 >
 
                 <div class="panel-overlay"></div>
 
                 <div class="panel-name">
-                    BLITZ STICKS
+                    TRUE HEMP CREATIONS
                 </div>
 
                 <div class="panel-content">
 
-                    <h2>BLITZ STICKS</h2>
+                    <h2>TRUE HEMP CREATIONS</h2>
 
                     <p>
-                        A 50-product catalog supported by packaging design,
-                        promotional materials, web assets, and product
-                        marketing graphics.
+                        Catalog design, web assets, pitch deck development,
+                        digital marketing graphics, sales materials, and
+                        supporting brand and promotional collateral.
                     </p>
 
-                    <a href="projects/blitz-sticks.html" class="learn-more">
-                        LEARN MORE
-                    </a>
-
-                </div>
-
-                <div class="close-panel">
-                    ×
-                </div>
-
-            </article>
-
-
-            <!-- EVENT POSTERS -->
-
-            <article class="portfolio-panel">
-
-                <img
-                    src="poster.png"
-                    alt="Event Posters"
-                    class="panel-image"
-                >
-
-                <div class="panel-overlay"></div>
-
-                <div class="panel-name">
-                    EVENT POSTERS
-                </div>
-
-                <div class="panel-content">
-
-                    <h2>EVENT POSTERS</h2>
-
-                    <p>
-                        Poster design spanning music shows, fights, DJ sessions,
-                        glass blowing events, pancake events, and other
-                        promotional campaigns.
-                    </p>
-
-                    <a href="projects/event-posters.html" class="learn-more">
-                        LEARN MORE
-                    </a>
-
-                </div>
-
-                <div class="close-panel">
-                    ×
-                </div>
-
-            </article>
-
-
-            <!-- ILLUSTRATION -->
-
-            <article class="portfolio-panel">
-
-                <img
-                    src="Ill.png"
-                    alt="Illustration"
-                    class="panel-image"
-                >
-
-                <div class="panel-overlay"></div>
-
-                <div class="panel-name">
-                    ILLUSTRATION
-                </div>
-
-                <div class="panel-content">
-
-                    <h2>ILLUSTRATION</h2>
-
-                    <p>
-                        Illustration and artwork created across glass blowing,
-                        cannabis and beverage brands, clothing, logos, murals,
-                        packaging, merchandise, promotional materials, and
-                        custom artwork.
-                    </p>
-
-                    <a href="projects/illustration.html" class="learn-more">
+                    <a
+                        href="projects/true-hemp-creations.html"
+                        class="learn-more"
+                    >
                         LEARN MORE
                     </a>
 
@@ -844,7 +773,10 @@
 
             <!-- TWACKED TEA -->
 
-            <article class="portfolio-panel">
+            <article
+                class="portfolio-panel"
+                style="--panel-color:#8bc53f;"
+            >
 
                 <img
                     src="TW.png"
@@ -863,13 +795,152 @@
                     <h2>TWACKED TEA</h2>
 
                     <p>
-                        Complete brand and product support including web assets,
-                        banners, product graphics, infographics, social media
-                        promotion, can labels, four-pack packaging, master cases,
-                        and a four-flavor product catalog.
+                        Web assets, banners, product graphics, infographics,
+                        social media promotions, can labels, four-pack
+                        packaging, master cases, and a four-flavor product
+                        catalog.
                     </p>
 
-                    <a href="projects/twacked-tea.html" class="learn-more">
+                    <a
+                        href="projects/twacked-tea.html"
+                        class="learn-more"
+                    >
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
+            <!-- EVENT POSTERS -->
+
+            <article
+                class="portfolio-panel"
+                style="--panel-color:#49a9df;"
+            >
+
+                <img
+                    src="poster.png"
+                    alt="Event Posters"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    EVENT POSTERS
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>EVENT POSTERS</h2>
+
+                    <p>
+                        Poster design spanning concerts, fights, DJ sessions,
+                        glass blowing events, bars, pancake events, special
+                        promotions, and other live events.
+                    </p>
+
+                    <a
+                        href="projects/event-posters.html"
+                        class="learn-more"
+                    >
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
+            <!-- ILLUSTRATIONS -->
+
+            <article
+                class="portfolio-panel"
+                style="--panel-color:#f1ae37;"
+            >
+
+                <img
+                    src="Ill.png"
+                    alt="Illustrations"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    ILLUSTRATIONS
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>ILLUSTRATIONS</h2>
+
+                    <p>
+                        Illustration and custom artwork across logos, apparel,
+                        murals, product packaging, beer labels, mylar bags,
+                        merchandise, retail branding, music identities, and
+                        promotional campaigns.
+                    </p>
+
+                    <a
+                        href="projects/illustration.html"
+                        class="learn-more"
+                    >
+                        LEARN MORE
+                    </a>
+
+                </div>
+
+                <div class="close-panel">
+                    ×
+                </div>
+
+            </article>
+
+
+            <!-- PHOTOGRAPHY -->
+
+            <article
+                class="portfolio-panel"
+                style="--panel-color:#7d2783;"
+            >
+
+                <img
+                    src="photo.png"
+                    alt="Photography"
+                    class="panel-image"
+                >
+
+                <div class="panel-overlay"></div>
+
+                <div class="panel-name">
+                    PHOTOGRAPHY
+                </div>
+
+                <div class="panel-content">
+
+                    <h2>PHOTOGRAPHY</h2>
+
+                    <p>
+                        Commercial product photography, portrait photography,
+                        event photography, glass product photography,
+                        creative direction, image production, and retouching.
+                    </p>
+
+                    <a
+                        href="projects/photography.html"
+                        class="learn-more"
+                    >
                         LEARN MORE
                     </a>
 
@@ -896,9 +967,11 @@
             </div>
 
             <div class="copyright-details">
-                All original artwork and content on this website are protected by applicable copyright law.
-                Unauthorized copying, reproduction, distribution, modification, publication, or commercial use
-                of any content is prohibited without prior written permission from the copyright holder.
+                All original artwork and content on this website are protected
+                by applicable copyright law. Unauthorized copying, reproduction,
+                distribution, modification, publication, or commercial use of
+                any content is prohibited without prior written permission from
+                the copyright holder.
             </div>
 
         </footer>
@@ -953,7 +1026,7 @@
 
 
                 /*
-                 * Open the selected panel.
+                 * Open selected panel.
                  */
 
                 this.classList.add("active");
