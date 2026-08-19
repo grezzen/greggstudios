@@ -78,8 +78,6 @@
             background: #000000;
             color: #ffffff;
 
-            text-decoration: none;
-
             text-align: center;
 
             padding: 4px 20px 6px;
@@ -94,6 +92,11 @@
         .header-project {
             font-size: 15px;
             line-height: 1.1;
+        }
+
+        .header-home {
+            color: #ffffff;
+            text-decoration: none;
         }
 
         .header-back {
@@ -146,10 +149,30 @@
         /* ==================================================
            SECTION 1
            WEBSITE & DIGITAL ASSETS
+
+           BLACK FIELD CONTINUES BEHIND
+           TOP IMAGE GROUP
            ================================================== */
 
+        .digital-section {
+            position: relative;
+        }
+
+        .digital-section .section-header {
+            min-height: 145px;
+
+            position: relative;
+            z-index: 0;
+        }
+
         .digital-content {
+            position: relative;
+
             padding: 18px 18px 0;
+
+            margin-top: -66px;
+
+            z-index: 1;
         }
 
         .digital-top {
@@ -162,6 +185,9 @@
             align-items: stretch;
 
             margin-bottom: 26px;
+
+            position: relative;
+            z-index: 1;
         }
 
         .digital-main {
@@ -192,7 +218,9 @@
         }
 
 
-        /* LARGE BANNERS */
+        /* ==================================================
+           LARGE BANNERS
+           ================================================== */
 
         .web-banner {
             width: 100%;
@@ -395,6 +423,14 @@
 
         @media (max-width: 900px) {
 
+            .digital-section .section-header {
+                min-height: 78px;
+            }
+
+            .digital-content {
+                margin-top: 0;
+            }
+
             .digital-top {
                 grid-template-columns: 1fr;
             }
@@ -484,7 +520,10 @@
 
         <div class="header-button">
 
-            <a href="../index.html" style="color:white; text-decoration:none;">
+            <a
+                href="../index.html"
+                class="header-home"
+            >
 
                 <div class="header-main">
                     GREGG STUDIOS
@@ -515,7 +554,7 @@
              WEBSITE & DIGITAL ASSETS
              ================================================== -->
 
-        <section class="project-section">
+        <section class="project-section digital-section">
 
 
             <div class="section-header">
