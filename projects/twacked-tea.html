@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -18,9 +20,9 @@
 
     <style>
 
-        /* =========================
+        /* ==================================================
            RESET
-           ========================= */
+           ================================================== */
 
         * {
             margin: 0;
@@ -43,6 +45,8 @@
 
             background: #ffffff;
             color: #000000;
+
+            overflow-x: hidden;
         }
 
         img {
@@ -51,10 +55,10 @@
         }
 
 
-        /* =========================
-           HEADER
-           WHOLE BAR = HOME
-           ========================= */
+        /* ==================================================
+           TOP HEADER
+           WHOLE BAR = HOME BUTTON
+           ================================================== */
 
         .site-header {
             width: 100%;
@@ -69,8 +73,7 @@
             color: #ffffff;
             text-decoration: none;
 
-            transition:
-                background-color 0.25s ease;
+            transition: background-color 0.25s ease;
         }
 
         .site-header:hover {
@@ -85,34 +88,15 @@
         }
 
 
-        /* =========================
-           PROJECT PAGE
-           ========================= */
-
-        .project-page {
-            width: 100%;
-
-            background: #ffffff;
-
-            overflow-x: hidden;
-        }
-
-        .project-container {
-            width: 92%;
-            max-width: 1450px;
-
-            margin: 0 auto;
-
-            padding: 36px 0 75px;
-        }
-
-
-        /* =========================
+        /* ==================================================
            BACK TO PORTFOLIO
-           ========================= */
+           ================================================== */
 
         .back-row {
-            margin-bottom: 28px;
+            width: 90%;
+            max-width: 1450px;
+
+            margin: 26px auto 20px;
         }
 
         .back-link {
@@ -130,38 +114,36 @@
         }
 
 
-        /* =========================
-           INTRO BLACK BLOCK
-           ========================= */
+        /* ==================================================
+           BLACK PROJECT INTRO
+           ================================================== */
 
-        .project-intro-wrap {
-            width: 100vw;
+        .intro-wrap {
+            width: 100%;
 
-            margin-left: calc((100vw - 100%) / -2);
-
-            margin-bottom: 42px;
+            margin-bottom: 45px;
         }
 
         .project-intro {
-            width: 78%;
+            width: 82%;
 
             background: #000000;
             color: #ffffff;
 
             padding:
-                38px
-                55px
                 40px
-                max(7vw, 70px);
+                60px
+                42px
+                max(7vw, 80px);
         }
 
         .project-title {
-            font-size: 50px;
+            font-size: 52px;
             font-weight: 300;
 
             letter-spacing: 2px;
 
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .project-subtitle {
@@ -169,8 +151,6 @@
             font-weight: 600;
 
             letter-spacing: 1.5px;
-
-            text-transform: uppercase;
 
             margin-bottom: 18px;
         }
@@ -183,80 +163,149 @@
         }
 
 
-        /* =========================
-           GENERAL ART BLOCK
-           ========================= */
+        /* ==================================================
+           FULL WIDTH WEB BANNERS
+           ================================================== */
 
-        .art-section {
-            width: 100%;
+        .full-banner {
+            width: 100vw;
 
-            margin-bottom: 26px;
+            margin-left: calc(50% - 50vw);
+
+            margin-bottom: 45px;
+
+            overflow: hidden;
+
+            background: #000000;
         }
 
-        .art-section img {
-            width: 100%;
-            height: auto;
-        }
-
-
-        /* =========================
-           HERO / LARGE ART
-           ========================= */
-
-        .hero-wide {
-            width: 88%;
-            margin: 0 auto 28px;
-        }
-
-        .hero-wide img {
+        .full-banner img {
             width: 100%;
             height: auto;
+
+            object-fit: cover;
         }
 
 
-        /* =========================
-           FEATURE GRID
-           ========================= */
+        /* ==================================================
+           MAIN BLACK SHOWCASE FIELD
+           ================================================== */
 
-        .feature-grid {
-            width: 96%;
-
-            margin: 0 auto 30px;
-
-            display: grid;
-
-            grid-template-columns:
-                2fr 1fr;
-
-            gap: 22px;
-
-            align-items: start;
-        }
-
-        .feature-main {
+        .showcase-wrap {
             width: 100%;
+
+            position: relative;
+
+            margin: 0 0 48px;
         }
 
-        .feature-side {
+        .showcase-field {
+            position: relative;
+
+            width: 94%;
+            max-width: 1540px;
+
+            margin: 0 auto;
+
+            background: #000000;
+
+            padding: 65px 5% 75px;
+
+            color: #ffffff;
+        }
+
+
+        /*
+         * These pieces make the black field feel less
+         * like a centered website rectangle and more
+         * like a graphic shape extending off the page.
+         */
+
+        .showcase-field::before {
+            content: "";
+
+            position: absolute;
+
+            left: -15vw;
+            top: 8%;
+
+            width: 22vw;
+            height: 62%;
+
+            background: #000000;
+
+            z-index: -1;
+        }
+
+        .showcase-field::after {
+            content: "";
+
+            position: absolute;
+
+            right: -10vw;
+            bottom: 7%;
+
+            width: 18vw;
+            height: 38%;
+
+            background: #000000;
+
+            z-index: -1;
+        }
+
+
+        /* ==================================================
+           SECTION LABELS
+           ================================================== */
+
+        .group-heading {
+            font-size: 15px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 24px;
+        }
+
+        .image-group {
+            margin-bottom: 70px;
+        }
+
+        .image-group:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* ==================================================
+           STANDARD IMAGE CARDS
+           MAKES MIXED IMAGES FEEL SIMILAR IN SIZE
+           ================================================== */
+
+        .image-card {
             width: 100%;
+
+            background: #ffffff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
         }
 
-        .feature-main img,
-        .feature-side img {
+        .image-card img {
             width: 100%;
-            height: auto;
+            height: 100%;
+
+            object-fit: contain;
         }
 
 
-        /* =========================
-           THREE IMAGE ROW
-           ========================= */
+        /* ==================================================
+           PROMOTIONAL ART
+           ================================================== */
 
-        .three-grid {
-            width: 96%;
-
-            margin: 0 auto 32px;
-
+        .promo-grid {
             display: grid;
 
             grid-template-columns:
@@ -265,37 +314,17 @@
             gap: 22px;
         }
 
-        .three-grid img {
-            width: 100%;
-            height: auto;
+        .promo-grid .image-card {
+            aspect-ratio: 4 / 5;
         }
 
 
-        /* =========================
-           BANNER BLOCK
-           ========================= */
+        /* ==================================================
+           PACKAGE DESIGN
+           CAN + LABEL
+           ================================================== */
 
-        .banner-block {
-            width: 92%;
-
-            margin: 0 auto 32px;
-        }
-
-        .banner-block img {
-            width: 100%;
-            height: auto;
-        }
-
-
-        /* =========================
-           PACKAGING / LABEL SECTION
-           ========================= */
-
-        .packaging-grid {
-            width: 96%;
-
-            margin: 36px auto 40px;
-
+        .package-grid {
             display: grid;
 
             grid-template-columns:
@@ -305,53 +334,64 @@
         }
 
         .package-pair {
-            display: grid;
-
-            grid-template-columns:
-                0.65fr 1.35fr;
-
-            gap: 16px;
-
-            align-items: center;
-
-            padding: 16px;
+            min-height: 430px;
 
             background: #ffffff;
 
-            border: 1px solid #000000;
+            display: grid;
+
+            grid-template-columns:
+                34% 66%;
+
+            align-items: center;
+
+            overflow: hidden;
         }
 
-        .package-can {
+        .can-side {
+            height: 100%;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
+            padding: 24px 10px;
         }
 
-        .package-can img {
-            max-height: 430px;
+        .can-side img {
+            max-width: 100%;
+            max-height: 360px;
 
             width: auto;
-            max-width: 100%;
+            height: auto;
 
             object-fit: contain;
         }
 
-        .package-label img {
+        .label-side {
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 15px;
+        }
+
+        .label-side img {
             width: 100%;
-            height: auto;
+            max-height: 390px;
+
+            object-fit: contain;
         }
 
 
-        /* =========================
+        /* ==================================================
            CATALOG
-           ALL SAME SIZE
-           ========================= */
+           ALL FIVE MATCH
+           ================================================== */
 
         .catalog-grid {
-            width: 96%;
-
-            margin: 42px auto 45px;
-
             display: grid;
 
             grid-template-columns:
@@ -360,16 +400,19 @@
             gap: 22px;
         }
 
-        .catalog-item {
-            width: 100%;
+        .catalog-card {
             aspect-ratio: 1 / 1.28;
 
-            overflow: hidden;
-
             background: #ffffff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
         }
 
-        .catalog-item img {
+        .catalog-card img {
             width: 100%;
             height: 100%;
 
@@ -377,53 +420,52 @@
         }
 
 
-        /* =========================
-           FINAL ART STRIP
-           ========================= */
+        /* ==================================================
+           LARGE PRODUCT ART
+           ================================================== */
 
-        .final-art {
-            width: 88%;
+        .product-grid {
+            display: grid;
 
-            margin: 0 auto 45px;
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 22px;
         }
 
-        .final-art img {
-            width: 100%;
-            height: auto;
+        .product-grid .image-card {
+            aspect-ratio: 4 / 5;
         }
 
 
-        /* =========================
-           SKILLS / PROGRAMS
-           BLACK BLOCK
-           ========================= */
+        /* ==================================================
+           SKILLS + PROGRAMS
+           ================================================== */
 
         .details-wrap {
-            width: 100vw;
+            width: 100%;
 
-            margin-left: calc((100vw - 100%) / -2);
-
-            margin-top: 52px;
+            margin-top: 55px;
         }
 
         .project-details {
-            width: 82%;
+            width: 86%;
 
             background: #000000;
             color: #ffffff;
 
             padding:
-                34px
-                55px
                 38px
-                max(7vw, 70px);
+                60px
+                42px
+                max(7vw, 80px);
 
             display: grid;
 
             grid-template-columns:
                 repeat(2, minmax(0, 1fr));
 
-            gap: 70px;
+            gap: 75px;
         }
 
         .details-heading {
@@ -432,23 +474,24 @@
 
             letter-spacing: 1.5px;
 
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .details-text {
             font-size: 14px;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
 
-        /* =========================
+        /* ==================================================
            FOOTER
-           ========================= */
+           ================================================== */
 
         .site-footer {
             width: 100%;
-
             min-height: 42px;
+
+            margin-top: 60px;
 
             background: #000000;
             color: #ffffff;
@@ -477,37 +520,41 @@
         }
 
 
-        /* =========================
+        /* ==================================================
            TABLET
-           ========================= */
+           ================================================== */
 
         @media (max-width: 950px) {
 
-            .project-intro,
-            .project-details {
-                width: 88%;
+            .project-intro {
+                width: 90%;
             }
 
-            .feature-grid {
-                grid-template-columns: 1fr;
+            .showcase-field {
+                width: 96%;
             }
 
-            .packaging-grid {
-                grid-template-columns: 1fr;
-            }
-
+            .promo-grid,
+            .product-grid,
             .catalog-grid {
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
             }
 
+            .package-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-details {
+                width: 92%;
+            }
         }
 
 
-        /* =========================
+        /* ==================================================
            MOBILE
            BASIC FOR NOW
-           ========================= */
+           ================================================== */
 
         @media (max-width: 600px) {
 
@@ -519,18 +566,14 @@
                 font-size: 22px;
             }
 
-            .project-container {
-                width: 94%;
+            .project-intro {
+                width: 95%;
 
-                padding-top: 25px;
-            }
-
-            .project-intro,
-            .project-details {
-                width: 94%;
-
-                padding-left: 7vw;
-                padding-right: 30px;
+                padding:
+                    30px
+                    25px
+                    32px
+                    7vw;
             }
 
             .project-title {
@@ -541,35 +584,53 @@
                 font-size: 15px;
             }
 
-            .three-grid,
+            .showcase-field {
+                width: 96%;
+
+                padding:
+                    40px
+                    18px
+                    50px;
+            }
+
+            .promo-grid,
+            .product-grid,
             .catalog-grid,
+            .package-grid,
             .project-details {
                 grid-template-columns: 1fr;
             }
 
             .package-pair {
                 grid-template-columns: 1fr;
-            }
 
-            .package-can img {
-                max-height: 320px;
+                min-height: 0;
             }
 
             .project-details {
+                width: 95%;
+
+                padding:
+                    30px
+                    25px
+                    32px
+                    7vw;
+
                 gap: 30px;
             }
         }
 
     </style>
+
 </head>
 
 
 <body>
 
 
-    <!-- =========================
+    <!-- ==================================================
          HOME HEADER
-         ========================= -->
+         ================================================== -->
 
     <a
         href="../index.html"
@@ -583,406 +644,480 @@
     </a>
 
 
-    <!-- =========================
-         PROJECT
-         ========================= -->
+    <!-- ==================================================
+         BACK TO PORTFOLIO
+         ================================================== -->
 
-    <main class="project-page">
+    <div class="back-row">
 
-        <div class="project-container">
+        <a
+            href="../portfolio.html"
+            class="back-link"
+        >
+            ← BACK TO PORTFOLIO
+        </a>
+
+    </div>
 
 
-            <!-- BACK TO PORTFOLIO -->
+    <!-- ==================================================
+         PROJECT INTRO
+         ================================================== -->
 
-            <div class="back-row">
+    <div class="intro-wrap">
 
-                <a
-                    href="../portfolio.html"
-                    class="back-link"
-                >
-                    ← BACK TO PORTFOLIO
-                </a>
+        <section class="project-intro">
 
+            <h1 class="project-title">
+                TWACKED TEA
+            </h1>
+
+            <div class="project-subtitle">
+                BRANDING • PACKAGING • DIGITAL • CATALOG DESIGN
             </div>
 
+            <p class="project-description">
+                Twacked Tea is a four-flavor beverage brand supported
+                across packaging, digital marketing, product presentation,
+                and sales materials. The project included can labels,
+                four-pack and master case packaging, web banners,
+                promotional graphics, infographics, social media assets,
+                product imagery, and a catalog showcasing the complete
+                product line.
+            </p>
 
-            <!-- =========================
-                 INTRO BLACK BLOCK
-                 ========================= -->
+        </section>
 
-            <div class="project-intro-wrap">
+    </div>
 
-                <section class="project-intro">
 
-                    <h1 class="project-title">
-                        TWACKED TEA
-                    </h1>
+    <!-- ==================================================
+         FULL WIDTH WEB BANNER
+         ================================================== -->
 
-                    <div class="project-subtitle">
-                        BRANDING • PACKAGING • DIGITAL • CATALOG DESIGN
+    <section class="full-banner">
+
+        <img
+            src="../assets/projects/twacked-tea/Twacked-Tea-Hero-Banner-new-raspberry.jpg"
+            alt=""
+        >
+
+    </section>
+
+
+    <!-- ==================================================
+         BLACK IMAGE FIELD
+         ================================================== -->
+
+    <div class="showcase-wrap">
+
+        <div class="showcase-field">
+
+
+            <!-- ============================================
+                 PROMOTIONAL / MARKETING ART
+                 ============================================ -->
+
+            <section class="image-group">
+
+                <div class="group-heading">
+                    MARKETING & PROMOTIONAL ASSETS
+                </div>
+
+                <div class="promo-grid">
+
+
+                    <div class="image-card">
+
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-catalog-01.jpg"
+                            alt=""
+                        >
+
                     </div>
 
-                    <p class="project-description">
-                        Twacked Tea is a four-flavor beverage brand supported
-                        across packaging, digital marketing, product presentation,
-                        and sales materials. The project included can labels,
-                        four-pack and master case packaging, web banners,
-                        promotional graphics, infographics, social media assets,
-                        product imagery, and a catalog showcasing the complete
-                        product line.
-                    </p>
 
-                </section>
+                    <div class="image-card">
 
-            </div>
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-catalog-02.jpg"
+                            alt=""
+                        >
+
+                    </div>
 
 
-            <!-- =========================
-                 MAIN FEATURE
-                 ========================= -->
+                    <div class="image-card">
 
-            <section class="feature-grid">
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-catalog-03.jpg"
+                            alt=""
+                        >
 
-                <div class="feature-main">
+                    </div>
 
-                    <img
-                        src="../assets/projects/twacked-tea/Twacked-Tea-Hero-Banner-4pack.jpg"
-                        alt=""
-                    >
+
+                    <div class="image-card">
+
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-catalog-04.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+
+                    <div class="image-card">
+
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-catalog-05.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+
+                    <div class="image-card">
+
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-tea-raspberry-sweet-tea 2.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
 
                 </div>
 
-                <div class="feature-side">
+            </section>
 
-                    <img
-                        src="../assets/projects/twacked-tea/twacked-catalog-02.jpg"
-                        alt=""
-                    >
+
+            <!-- ============================================
+                 FINISHED PRODUCT ART
+                 ============================================ -->
+
+            <section class="image-group">
+
+                <div class="group-heading">
+                    PRODUCT IMAGERY
+                </div>
+
+                <div class="product-grid">
+
+
+                    <div class="image-card">
+
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-tea-cross-fade 2.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+
+                    <div class="image-card">
+
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-tea-georgia-tea 2.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+
+                    <div class="image-card">
+
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-tea-peach-tea 2.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+
+                    <div class="image-card">
+
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-tea-raspberry-sweet-tea 2.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
 
                 </div>
 
             </section>
 
 
-            <!-- =========================
-                 FLAVOR ART
-                 ========================= -->
+            <!-- ============================================
+                 CAN + LABEL PAIRS
+                 ============================================ -->
 
-            <section class="three-grid">
+            <section class="image-group">
 
-                <img
-                    src="../assets/projects/twacked-tea/twacked-catalog-03.jpg"
-                    alt=""
-                >
+                <div class="group-heading">
+                    PACKAGING
+                </div>
 
-                <img
-                    src="../assets/projects/twacked-tea/twacked-catalog-04.jpg"
-                    alt=""
-                >
-
-                <img
-                    src="../assets/projects/twacked-tea/twacked-catalog-05.jpg"
-                    alt=""
-                >
-
-            </section>
+                <div class="package-grid">
 
 
-            <!-- =========================
-                 RASPBERRY BANNER
-                 ========================= -->
+                    <!-- RASPBERRY -->
 
-            <section class="banner-block">
+                    <div class="package-pair">
 
-                <img
-                    src="../assets/projects/twacked-tea/Twacked-Tea-Hero-Banner-new-raspberry.jpg"
-                    alt=""
-                >
+                        <div class="can-side">
 
-            </section>
+                            <img
+                                src="../assets/projects/twacked-tea/twacked tea raspberry sweet tea.png"
+                                alt=""
+                            >
 
+                        </div>
 
-            <!-- =========================
-                 LOGO / BRAND BANNER
-                 ========================= -->
+                        <div class="label-side">
 
-            <section class="hero-wide">
+                            <img
+                                src="../assets/projects/twacked-tea/twacked-tea-raspberry-sweet-tea-label.jpg"
+                                alt=""
+                            >
 
-                <img
-                    src="../assets/projects/twacked-tea/Twacked-Tea-Hero-Banner-new-raspberry-logo.jpg"
-                    alt=""
-                >
-
-            </section>
-
-
-            <!-- =========================
-                 PACKAGE LABEL + FINISHED CAN
-                 ========================= -->
-
-            <section class="packaging-grid">
-
-
-                <!-- RASPBERRY -->
-
-                <div class="package-pair">
-
-                    <div class="package-can">
-
-                        <img
-                            src="../assets/projects/twacked-tea/twacked tea raspberry sweet tea.png"
-                            alt=""
-                        >
+                        </div>
 
                     </div>
 
-                    <div class="package-label">
 
-                        <img
-                            src="../assets/projects/twacked-tea/twacked-tea-raspberry-sweet-tea-label.jpg"
-                            alt=""
-                        >
+                    <!-- CROSS FADE -->
+
+                    <div class="package-pair">
+
+                        <div class="can-side">
+
+                            <img
+                                src="../assets/projects/twacked-tea/twacked-tea-cross-fade.png"
+                                alt=""
+                            >
+
+                        </div>
+
+                        <div class="label-side">
+
+                            <img
+                                src="../assets/projects/twacked-tea/twacked-tea-cross-fade-label.jpg"
+                                alt=""
+                            >
+
+                        </div>
 
                     </div>
+
+
+                    <!-- GEORGIA TEA -->
+
+                    <div class="package-pair">
+
+                        <div class="can-side">
+
+                            <img
+                                src="../assets/projects/twacked-tea/twacked-tea-georgia-tea.png"
+                                alt=""
+                            >
+
+                        </div>
+
+                        <div class="label-side">
+
+                            <img
+                                src="../assets/projects/twacked-tea/twacked-tea-georgia-tea-label.jpg"
+                                alt=""
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PEACH TEA -->
+
+                    <div class="package-pair">
+
+                        <div class="can-side">
+
+                            <img
+                                src="../assets/projects/twacked-tea/twacked-tea-peach tea.png"
+                                alt=""
+                            >
+
+                        </div>
+
+                        <div class="label-side">
+
+                            <img
+                                src="../assets/projects/twacked-tea/twacked-tea-peach-tea-label.jpg"
+                                alt=""
+                            >
+
+                        </div>
+
+                    </div>
+
 
                 </div>
 
-
-                <!-- CROSS FADE -->
-
-                <div class="package-pair">
-
-                    <div class="package-can">
-
-                        <img
-                            src="../assets/projects/twacked-tea/twacked-tea-cross-fade.png"
-                            alt=""
-                        >
-
-                    </div>
-
-                    <div class="package-label">
-
-                        <img
-                            src="../assets/projects/twacked-tea/twacked-tea-cross-fade-label.jpg"
-                            alt=""
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <!-- GEORGIA TEA -->
-
-                <div class="package-pair">
-
-                    <div class="package-can">
-
-                        <img
-                            src="../assets/projects/twacked-tea/twacked-tea-georgia-tea.png"
-                            alt=""
-                        >
-
-                    </div>
-
-                    <div class="package-label">
-
-                        <img
-                            src="../assets/projects/twacked-tea/twacked-tea-georgia-tea-label.jpg"
-                            alt=""
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <!-- PEACH TEA -->
-
-                <div class="package-pair">
-
-                    <div class="package-can">
-
-                        <img
-                            src="../assets/projects/twacked-tea/twacked-tea-peach tea.png"
-                            alt=""
-                        >
-
-                    </div>
-
-                    <div class="package-label">
-
-                        <img
-                            src="../assets/projects/twacked-tea/twacked-tea-peach-tea-label.jpg"
-                            alt=""
-                        >
-
-                    </div>
-
-                </div>
-
-
             </section>
 
 
-            <!-- =========================
-                 PRODUCT ART
-                 ========================= -->
-
-            <section class="three-grid">
-
-                <img
-                    src="../assets/projects/twacked-tea/twacked-tea-cross-fade 2.jpg"
-                    alt=""
-                >
-
-                <img
-                    src="../assets/projects/twacked-tea/twacked-tea-georgia-tea 2.jpg"
-                    alt=""
-                >
-
-                <img
-                    src="../assets/projects/twacked-tea/twacked-tea-peach-tea 2.jpg"
-                    alt=""
-                >
-
-            </section>
-
-
-            <section class="hero-wide">
-
-                <img
-                    src="../assets/projects/twacked-tea/twacked-tea-raspberry-sweet-tea 2.jpg"
-                    alt=""
-                >
-
-            </section>
-
-
-            <!-- =========================
+            <!-- ============================================
                  CATALOG
-                 SAME SIZE
-                 ========================= -->
+                 ============================================ -->
 
-            <section class="catalog-grid">
+            <section class="image-group">
 
-                <div class="catalog-item">
-
-                    <img
-                        src="../assets/projects/twacked-tea/twacked-catalog-01.jpg"
-                        alt=""
-                    >
-
+                <div class="group-heading">
+                    PRODUCT CATALOG
                 </div>
 
-                <div class="catalog-item">
-
-                    <img
-                        src="../assets/projects/twacked-tea/twacked-catalog-02.jpg"
-                        alt=""
-                    >
-
-                </div>
-
-                <div class="catalog-item">
-
-                    <img
-                        src="../assets/projects/twacked-tea/twacked-catalog-03.jpg"
-                        alt=""
-                    >
-
-                </div>
-
-                <div class="catalog-item">
-
-                    <img
-                        src="../assets/projects/twacked-tea/twacked-catalog-04.jpg"
-                        alt=""
-                    >
-
-                </div>
-
-                <div class="catalog-item">
-
-                    <img
-                        src="../assets/projects/twacked-tea/twacked-catalog-05.jpg"
-                        alt=""
-                    >
-
-                </div>
-
-            </section>
+                <div class="catalog-grid">
 
 
-            <!-- =========================
-                 FINAL BANNER
-                 ========================= -->
+                    <div class="catalog-card">
 
-            <section class="final-art">
-
-                <img
-                    src="../assets/projects/twacked-tea/Twacked-Tea-Hero-Banner-4pack.jpg"
-                    alt=""
-                >
-
-            </section>
-
-
-            <!-- =========================
-                 BLACK SKILLS / PROGRAMS
-                 ========================= -->
-
-            <div class="details-wrap">
-
-                <section class="project-details">
-
-
-                    <div>
-
-                        <div class="details-heading">
-                            SKILLS
-                        </div>
-
-                        <div class="details-text">
-                            Brand Development • Packaging Design •
-                            Product Labels • Catalog Design •
-                            Digital Marketing • Web Graphics •
-                            Social Media Assets • Infographics •
-                            Product Presentation • Print Production •
-                            Prepress • Production-Ready Artwork
-                        </div>
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-catalog-01.jpg"
+                            alt=""
+                        >
 
                     </div>
 
 
-                    <div>
+                    <div class="catalog-card">
 
-                        <div class="details-heading">
-                            PROGRAMS
-                        </div>
-
-                        <div class="details-text">
-                            Adobe Illustrator • Adobe Photoshop •
-                            Adobe InDesign • Adobe Acrobat Pro
-                        </div>
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-catalog-02.jpg"
+                            alt=""
+                        >
 
                     </div>
 
 
-                </section>
+                    <div class="catalog-card">
 
-            </div>
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-catalog-03.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+
+                    <div class="catalog-card">
+
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-catalog-04.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+
+                    <div class="catalog-card">
+
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-catalog-05.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+
+                </div>
+
+            </section>
 
 
         </div>
 
-    </main>
+    </div>
 
 
-    <!-- =========================
+    <!-- ==================================================
+         FULL WIDTH BANNER
+         ================================================== -->
+
+    <section class="full-banner">
+
+        <img
+            src="../assets/projects/twacked-tea/Twacked-Tea-Hero-Banner-4pack.jpg"
+            alt=""
+        >
+
+    </section>
+
+
+    <!-- ==================================================
+         SECOND FULL WIDTH BANNER
+         ================================================== -->
+
+    <section class="full-banner">
+
+        <img
+            src="../assets/projects/twacked-tea/Twacked-Tea-Hero-Banner-new-raspberry-logo.jpg"
+            alt=""
+        >
+
+    </section>
+
+
+    <!-- ==================================================
+         SKILLS / PROGRAMS
+         ================================================== -->
+
+    <div class="details-wrap">
+
+        <section class="project-details">
+
+
+            <div>
+
+                <div class="details-heading">
+                    SKILLS
+                </div>
+
+                <div class="details-text">
+                    Brand Development • Packaging Design •
+                    Product Labels • Catalog Design •
+                    Digital Marketing • Web Graphics •
+                    Social Media Assets • Infographics •
+                    Product Presentation • Print Production •
+                    Prepress • Production-Ready Artwork
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="details-heading">
+                    PROGRAMS
+                </div>
+
+                <div class="details-text">
+                    Adobe Illustrator • Adobe Photoshop •
+                    Adobe InDesign • Adobe Acrobat Pro
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </div>
+
+
+    <!-- ==================================================
          LEGAL FOOTER
-         ========================= -->
+         ================================================== -->
 
     <footer class="site-footer">
 
@@ -991,15 +1126,16 @@
         </div>
 
         <div class="copyright-details">
-            All original artwork and content on this website are protected
-            by applicable copyright law. Unauthorized copying, reproduction,
-            distribution, modification, publication, or commercial use of
-            any content is prohibited without prior written permission from
-            the copyright holder.
+            All original artwork and content on this website are protected by
+            applicable copyright law. Unauthorized copying, reproduction,
+            distribution, modification, publication, or commercial use of any
+            content is prohibited without prior written permission from the
+            copyright holder.
         </div>
 
     </footer>
 
 
 </body>
+
 </html>
