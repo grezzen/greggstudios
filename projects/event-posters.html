@@ -177,7 +177,7 @@
 
 
         /* ==================================================
-           MATCHED-HEIGHT PAIRS
+           MATCHED-HEIGHT IMAGE PAIRS
            ================================================== */
 
         .poster-top-two,
@@ -187,36 +187,37 @@
 
             display: flex;
             justify-content: center;
-            align-items: stretch;
+            align-items: center;
 
-            gap: 18px;
-            margin-bottom: 18px;
+            gap: 24px;
+            margin-bottom: 24px;
         }
 
 
         /* FIRST PAIR
            MARNI + SHERBET
-        */
+           ================================================== */
 
         .poster-top-two {
-            height: 760px;
+            height: 820px;
         }
 
         .poster-top-two img {
             height: 100%;
             width: auto;
 
-            max-width: calc(50% - 9px);
+            max-width: calc(50% - 12px);
 
             object-fit: contain;
         }
 
 
-        /* OTHER POSTER PAIRS */
+        /* OTHER MATCHED PAIRS
+           ================================================== */
 
         .poster-two,
         .promo-two {
-            height: 570px;
+            height: 700px;
         }
 
         .poster-two img,
@@ -224,29 +225,36 @@
             height: 100%;
             width: auto;
 
-            max-width: calc(50% - 9px);
+            max-width: calc(50% - 12px);
 
             object-fit: contain;
         }
 
 
         /* ==================================================
-           LARGE SINGLE POSTER
+           SINGLE POSTERS
            ================================================== */
 
-        .poster-wide {
+        .poster-wide,
+        .promo-hero {
             width: 100%;
-
-            margin-bottom: 18px;
 
             display: flex;
             justify-content: center;
+            align-items: center;
+
+            margin-bottom: 24px;
         }
 
-        .poster-wide img {
+        .poster-wide img,
+        .promo-hero img {
             width: auto;
-            max-width: 100%;
             height: auto;
+
+            max-width: 72%;
+            max-height: 850px;
+
+            object-fit: contain;
         }
 
 
@@ -267,24 +275,6 @@
             z-index: 2;
 
             padding: 0 18px 40px;
-        }
-
-
-        /* LARGE HERO */
-
-        .promo-hero {
-            width: 100%;
-
-            margin-bottom: 18px;
-
-            display: flex;
-            justify-content: center;
-        }
-
-        .promo-hero img {
-            width: auto;
-            max-width: 100%;
-            height: auto;
         }
 
 
@@ -388,6 +378,12 @@
                 max-width: 100%;
             }
 
+            .poster-wide img,
+            .promo-hero img {
+                max-width: 100%;
+                max-height: none;
+            }
+
             .project-details {
                 grid-template-columns: 1fr;
 
@@ -405,6 +401,12 @@
 
             .page-inner {
                 width: 100%;
+            }
+
+            .poster-content,
+            .promo-content {
+                padding-left: 12px;
+                padding-right: 12px;
             }
 
             .project-details {
@@ -493,49 +495,56 @@
             <div class="poster-content">
 
 
-                <!-- MARNI + SHERBET
-                     MATCHED HEIGHT -->
+                <!-- ==================================================
+                     MARNI + SHERBET
+                     MATCHED HEIGHT
+                     ================================================== -->
 
                 <div class="poster-top-two">
 
                     <img
                         src="../assets/projects/event-posters/marni-show-03.jpg"
-                        alt=""
+                        alt="Marni event poster"
                     >
 
                     <img
                         src="../assets/projects/event-posters/sherbet-show-02.jpg"
-                        alt=""
+                        alt="Sherbet event poster"
                     >
 
                 </div>
 
 
-                <!-- SHERBET PANCAKE -->
+                <!-- ==================================================
+                     SHERBET PANCAKE
+                     SINGLE
+                     ================================================== -->
 
                 <div class="poster-wide">
 
                     <img
                         src="../assets/projects/event-posters/sherbet-show-03.jpg"
-                        alt=""
+                        alt="Sherbet pancake event poster"
                     >
 
                 </div>
 
 
-                <!-- HUFFY + TAKODA
-                     MATCHED HEIGHT -->
+                <!-- ==================================================
+                     HUFFY + TAKODA
+                     MATCHED HEIGHT
+                     ================================================== -->
 
                 <div class="poster-two">
 
                     <img
                         src="../assets/projects/event-posters/huffy-show-02.jpg"
-                        alt=""
+                        alt="Huffy event poster"
                     >
 
                     <img
                         src="../assets/projects/event-posters/takoda-show-02.jpg"
-                        alt=""
+                        alt="Takoda event poster"
                     >
 
                 </div>
@@ -578,61 +587,71 @@
             <div class="promo-content">
 
 
-                <!-- DEVIN THE DUDE -->
+                <!-- ==================================================
+                     DEVIN THE DUDE
+                     SINGLE
+                     ================================================== -->
 
                 <div class="promo-hero">
 
                     <img
                         src="../assets/projects/event-posters/takoda-show-04.jpg"
-                        alt=""
+                        alt="Devin the Dude event poster"
                     >
 
                 </div>
 
 
-                <!-- RILEYS + ST PATS
-                     MATCHED HEIGHT -->
+                <!-- ==================================================
+                     RILEYS + ST PATS
+                     MATCHED HEIGHT
+                     ================================================== -->
 
                 <div class="promo-two">
 
                     <img
                         src="../assets/projects/event-posters/10.jpg"
-                        alt=""
+                        alt="The Rileys event poster"
                     >
 
                     <img
                         src="../assets/projects/event-posters/ST-PATS.jpg"
-                        alt=""
+                        alt="Saint Patrick's Day event poster"
                     >
 
                 </div>
 
 
-                <!-- TRACKBILL -->
+                <!-- ==================================================
+                     TRACKBILL
+                     SINGLE
+                     ================================================== -->
 
                 <div class="poster-wide">
 
                     <img
                         src="../assets/projects/event-posters/trackbill-05.jpg"
-                        alt=""
+                        alt="TrakBill promotional design"
                     >
 
                 </div>
 
 
-                <!-- TRACY BOY + ARCADE
-                     MATCHED HEIGHT -->
+                <!-- ==================================================
+                     TRACY BOY + ARCADE
+                     MATCHED HEIGHT
+                     ================================================== -->
 
                 <div class="promo-two">
 
                     <img
                         src="../assets/projects/event-posters/09.jpg"
-                        alt=""
+                        alt="Tracy Boy Taylor event poster"
                     >
 
                     <img
                         src="../assets/projects/event-posters/04.jpg"
-                        alt=""
+                        alt="Arcade event poster"
                     >
 
                 </div>
