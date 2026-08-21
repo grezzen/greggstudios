@@ -12,10 +12,6 @@
 
     <style>
 
-        /* ==================================================
-           RESET
-           ================================================== */
-
         * {
             margin: 0;
             padding: 0;
@@ -41,9 +37,7 @@
         }
 
 
-        /* ==================================================
-           PAGE
-           ================================================== */
+        /* PAGE */
 
         .project-page {
             width: 100%;
@@ -57,15 +51,11 @@
         }
 
 
-        /* ==================================================
-           TOP HEADER
-           SAME AS TWACKED TEA
-           ================================================== */
+        /* HEADER */
 
         .top-header {
             width: 100%;
             min-height: 62px;
-
             background: #000000;
 
             display: flex;
@@ -81,7 +71,6 @@
             color: #ffffff;
 
             text-align: center;
-
             padding: 5px 20px 7px;
         }
 
@@ -114,29 +103,22 @@
         }
 
 
-        /* ==================================================
-           COMMON TYPOGRAPHY
-           SAME AS TWACKED TEA
-           ================================================== */
+        /* TYPOGRAPHY */
 
         .section-title {
             font-size: 19px;
             font-weight: 700;
-
             margin-bottom: 8px;
         }
 
         .section-copy {
             max-width: 1000px;
-
             font-size: 14px;
             line-height: 1.35;
         }
 
 
-        /* ==================================================
-           FULL WIDTH BLACK FIELD
-           ================================================== */
+        /* FULL WIDTH BLACK FIELD */
 
         .black-field {
             width: 100vw;
@@ -155,14 +137,11 @@
             max-width: 1500px;
 
             margin: 0 auto;
-
             padding: 16px 18px;
         }
 
 
-        /* ==================================================
-           PEOPLE & EVENT PHOTOGRAPHY
-           ================================================== */
+        /* PEOPLE SECTION */
 
         .people-black {
             min-height: 190px;
@@ -176,11 +155,6 @@
             padding: 0 18px 40px;
         }
 
-
-        /* ==================================================
-           HERO
-           ================================================== */
-
         .people-hero {
             width: 100%;
             margin-bottom: 24px;
@@ -192,14 +166,12 @@
         }
 
 
-        /* ==================================================
-           SNOW SET
-           3 SQUARE TOP / 2 SQUARE CENTERED BOTTOM
-           ================================================== */
+        /* SNOW SET */
 
         .snow-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
+
             gap: 18px;
             margin-bottom: 28px;
         }
@@ -236,10 +208,7 @@
         }
 
 
-        /* ==================================================
-           SKATE SET
-           3 TOP / 2 CENTERED BOTTOM
-           ================================================== */
+        /* SKATE SET */
 
         .skate-section {
             margin-bottom: 28px;
@@ -248,6 +217,7 @@
         .skate-top {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+
             gap: 18px;
             margin-bottom: 18px;
         }
@@ -269,8 +239,8 @@
 
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
 
+            gap: 18px;
             align-items: start;
         }
 
@@ -281,10 +251,7 @@
         }
 
 
-        /* ==================================================
-           JEEP SET
-           4 SQUARE TOP / 3 LARGER SQUARE BOTTOM
-           ================================================== */
+        /* JEEP SET */
 
         .jeep-section {
             margin-bottom: 28px;
@@ -292,17 +259,14 @@
 
         .jeep-top {
             display: grid;
-
             grid-template-columns: repeat(4, 1fr);
 
             gap: 16px;
-
             margin-bottom: 18px;
         }
 
         .jeep-bottom {
             display: grid;
-
             grid-template-columns: repeat(3, 1fr);
 
             gap: 18px;
@@ -310,59 +274,45 @@
 
         .jeep-card {
             aspect-ratio: 1 / 1;
-
             overflow: hidden;
         }
 
         .jeep-card img {
             width: 100%;
             height: 100%;
-
             object-fit: cover;
         }
 
 
-        /* ==================================================
-           FIGHTERS
-           THREE ACROSS
-           ================================================== */
+        /* FIGHTERS */
 
         .fighter-grid {
             display: grid;
-
             grid-template-columns: repeat(3, 1fr);
 
             gap: 18px;
-
             margin-bottom: 28px;
         }
 
         .fighter-card {
             aspect-ratio: 4 / 5;
-
             overflow: hidden;
         }
 
         .fighter-card img {
             width: 100%;
             height: 100%;
-
             object-fit: cover;
         }
 
 
-        /* ==================================================
-           OWL PHOTOS
-           FULL IMAGES — NO CROPPING
-           ================================================== */
+        /* OWL */
 
         .owl-grid {
             display: grid;
-
             grid-template-columns: repeat(2, 1fr);
 
             gap: 18px;
-
             margin-bottom: 28px;
 
             align-items: start;
@@ -371,37 +321,28 @@
         .owl-grid img {
             width: 100%;
             height: auto;
-
             object-fit: contain;
         }
 
 
-        /* ==================================================
-           GSE FINAL PHOTOS
-           FULL IMAGES — NO CROPPING
-           ================================================== */
+        /* FINAL PEOPLE */
 
         .gse-grid {
             display: grid;
-
             grid-template-columns: repeat(2, 1fr);
 
             gap: 18px;
-
             align-items: start;
         }
 
         .gse-grid img {
             width: 100%;
             height: auto;
-
             object-fit: contain;
         }
 
 
-        /* ==================================================
-           GLASS PRODUCT PHOTOGRAPHY
-           ================================================== */
+        /* GLASS SECTION */
 
         .glass-black {
             min-height: 190px;
@@ -418,24 +359,28 @@
         }
 
 
-        /* ==================================================
-           GLASS BANNER GRID
-           TWO COLUMN STACKED LAYOUT
-           ================================================== */
+        /* GLASS BANNER COLUMNS */
 
         .glass-banner-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
 
+            gap: 18px;
             margin-bottom: 30px;
 
-            align-items: start;
+            align-items: stretch;
         }
 
         .glass-column {
             display: flex;
             flex-direction: column;
+        }
+
+        .glass-column-left {
+            justify-content: space-between;
+        }
+
+        .glass-column-right {
             gap: 18px;
         }
 
@@ -450,92 +395,69 @@
         }
 
 
-        /* ==================================================
-           FINAL GLASS GROUP
-           ================================================== */
+        /* FINAL GLASS GROUP */
 
         .final-glass {
+            width: 100%;
             margin-top: 16px;
         }
 
         .final-glass-top {
+            width: 100%;
+
             display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
 
-            grid-template-columns:
-                repeat(2, minmax(0, 1fr));
-
-            gap: 22px;
-
+            gap: 18px;
             margin-bottom: 18px;
         }
 
         .final-square {
             aspect-ratio: 1 / 1;
-
             overflow: hidden;
         }
 
         .final-square img {
             width: 100%;
             height: 100%;
-
             object-fit: cover;
         }
 
 
-        /* ==================================================
-           BOTTOM FOUR — SAME HEIGHT
-           ================================================== */
+        /* BOTTOM FOUR
+           SAME TOTAL WIDTH AS TOP TWO */
 
         .final-glass-bottom {
-            display: flex;
+            width: 100%;
+
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
 
             gap: 18px;
-
             align-items: stretch;
+        }
+
+        .final-bottom-card {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+
+            display: flex;
+            align-items: center;
             justify-content: center;
-        }
-
-        .final-glass-bottom img {
-            height: 300px;
-            width: auto;
-
-            display: block;
-
-            object-fit: contain;
-        }
-
-        .dynamic-card {
-            flex: 0 0 auto;
-        }
-
-        .dynamic-card img {
-            height: 300px;
-            width: auto;
-
-            object-fit: contain;
-        }
-
-        .bottom-square {
-            flex: 0 0 auto;
-
-            width: 300px;
-            height: 300px;
 
             overflow: hidden;
+            background: #ffffff;
         }
 
-        .bottom-square img {
-            width: 300px;
-            height: 300px;
+        .final-bottom-card img {
+            width: 100%;
+            height: 100%;
 
-            object-fit: cover;
+            object-fit: contain;
         }
 
 
-        /* ==================================================
-           SKILLS / PROGRAMS
-           ================================================== */
+        /* SKILLS */
 
         .project-details {
             width: 100vw;
@@ -544,7 +466,6 @@
             left: 50%;
 
             margin-left: -50vw;
-
             margin-top: 34px;
 
             background: #000000;
@@ -553,9 +474,7 @@
             padding: 26px 7vw 28px;
 
             display: grid;
-
-            grid-template-columns:
-                repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
 
             gap: 70px;
         }
@@ -575,9 +494,7 @@
         }
 
 
-        /* ==================================================
-           FOOTER
-           ================================================== */
+        /* FOOTER */
 
         .site-footer {
             width: 100%;
@@ -595,8 +512,6 @@
             text-align: center;
 
             padding: 7px 20px;
-
-            margin-top: 0;
         }
 
         .copyright {
@@ -612,9 +527,7 @@
         }
 
 
-        /* ==================================================
-           TABLET
-           ================================================== */
+        /* TABLET */
 
         @media (max-width: 900px) {
 
@@ -630,20 +543,14 @@
                 width: 100%;
             }
 
-            .jeep-top {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .jeep-bottom {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
+            .jeep-top,
+            .jeep-bottom,
             .fighter-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
             .final-glass-bottom {
-                flex-wrap: wrap;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .project-details {
@@ -654,10 +561,7 @@
         }
 
 
-        /* ==================================================
-           MOBILE
-           BASIC FOR NOW
-           ================================================== */
+        /* MOBILE */
 
         @media (max-width: 600px) {
 
@@ -674,19 +578,14 @@
             .owl-grid,
             .gse-grid,
             .glass-banner-grid,
-            .final-glass-top {
+            .final-glass-top,
+            .final-glass-bottom {
                 width: 100%;
-
                 grid-template-columns: 1fr;
             }
 
             .glass-column {
-                width: 100%;
-            }
-
-            .final-glass-bottom {
-                flex-direction: column;
-                align-items: center;
+                gap: 18px;
             }
 
             .project-details {
@@ -706,18 +605,13 @@
 <div class="project-page">
 
 
-    <!-- ==================================================
-         TOP HEADER
-         ================================================== -->
+    <!-- HEADER -->
 
     <div class="top-header">
 
         <div class="header-button">
 
-            <a
-                href="../index.html"
-                class="header-home"
-            >
+            <a href="../index.html" class="header-home">
 
                 <div class="header-main">
                     GREGG STUDIOS
@@ -729,10 +623,7 @@
                 PHOTOGRAPHY
             </div>
 
-            <a
-                href="../portfolio.html"
-                class="header-back"
-            >
+            <a href="../portfolio.html" class="header-back">
                 [ BACK TO PORTFOLIO ]
             </a>
 
@@ -744,12 +635,9 @@
     <main class="page-inner">
 
 
-        <!-- ==================================================
-             PEOPLE & EVENT PHOTOGRAPHY
-             ================================================== -->
+        <!-- PEOPLE & EVENT PHOTOGRAPHY -->
 
         <section>
-
 
             <div class="black-field people-black">
 
@@ -775,7 +663,7 @@
             <div class="people-content">
 
 
-                <!-- CLOTHING BANNER -->
+                <!-- HERO -->
 
                 <div class="people-hero">
 
@@ -787,7 +675,7 @@
                 </div>
 
 
-                <!-- SNOW SET -->
+                <!-- SNOW -->
 
                 <div class="snow-grid">
 
@@ -814,7 +702,9 @@
                 </div>
 
 
-                <!-- SKATE SET -->
+                <!-- SKATE
+                     TOP: 01 / 02 / 04
+                     BOTTOM: 03 / 05 -->
 
                 <div class="skate-section">
 
@@ -829,15 +719,16 @@
                         </div>
 
                         <div class="skate-top-card">
-                            <img src="../assets/projects/photography/GSE skate 03.jpg" alt="">
+                            <img src="../assets/projects/photography/GSE skate 04.jpg" alt="">
                         </div>
 
                     </div>
 
+
                     <div class="skate-bottom">
 
                         <img
-                            src="../assets/projects/photography/GSE skate 04.jpg"
+                            src="../assets/projects/photography/GSE skate 03.jpg"
                             alt=""
                         >
 
@@ -851,31 +742,17 @@
                 </div>
 
 
-                <!-- JEEP SET -->
+                <!-- JEEP
+                     TOP: 04 / 05 / 06 / 07
+                     BOTTOM: 01 / 02 / 03 -->
 
                 <div class="jeep-section">
 
                     <div class="jeep-top">
 
                         <div class="jeep-card">
-                            <img src="../assets/projects/photography/greatest jeep 01.jpg" alt="">
-                        </div>
-
-                        <div class="jeep-card">
-                            <img src="../assets/projects/photography/greatest jeep 02.jpg" alt="">
-                        </div>
-
-                        <div class="jeep-card">
-                            <img src="../assets/projects/photography/greatest jeep 03.jpg" alt="">
-                        </div>
-
-                        <div class="jeep-card">
                             <img src="../assets/projects/photography/greatest jeep 04.jpg" alt="">
                         </div>
-
-                    </div>
-
-                    <div class="jeep-bottom">
 
                         <div class="jeep-card">
                             <img src="../assets/projects/photography/greatest jeep 05.jpg" alt="">
@@ -891,10 +768,27 @@
 
                     </div>
 
+
+                    <div class="jeep-bottom">
+
+                        <div class="jeep-card">
+                            <img src="../assets/projects/photography/greatest jeep 01.jpg" alt="">
+                        </div>
+
+                        <div class="jeep-card">
+                            <img src="../assets/projects/photography/greatest jeep 02.jpg" alt="">
+                        </div>
+
+                        <div class="jeep-card">
+                            <img src="../assets/projects/photography/greatest jeep 03.jpg" alt="">
+                        </div>
+
+                    </div>
+
                 </div>
 
 
-                <!-- FIGHTER SET -->
+                <!-- FIGHTERS -->
 
                 <div class="fighter-grid">
 
@@ -913,7 +807,7 @@
                 </div>
 
 
-                <!-- OWL SET -->
+                <!-- OWL -->
 
                 <div class="owl-grid">
 
@@ -930,7 +824,7 @@
                 </div>
 
 
-                <!-- GSE FINAL SET -->
+                <!-- GSE FINAL -->
 
                 <div class="gse-grid">
 
@@ -949,16 +843,12 @@
 
             </div>
 
-
         </section>
 
 
-        <!-- ==================================================
-             GLASS PRODUCT PHOTOGRAPHY
-             ================================================== -->
+        <!-- GLASS PRODUCT PHOTOGRAPHY -->
 
         <section>
-
 
             <div class="black-field glass-black">
 
@@ -984,14 +874,14 @@
             <div class="glass-content">
 
 
-                <!-- RECTANGULAR / BANNER GROUP -->
+                <!-- BANNER SECTION -->
 
                 <div class="glass-banner-grid">
 
 
                     <!-- LEFT COLUMN -->
 
-                    <div class="glass-column">
+                    <div class="glass-column glass-column-left">
 
                         <div class="glass-banner-card">
                             <img
@@ -1026,7 +916,7 @@
 
                     <!-- RIGHT COLUMN -->
 
-                    <div class="glass-column">
+                    <div class="glass-column glass-column-right">
 
                         <div class="glass-banner-card">
                             <img
@@ -1049,13 +939,6 @@
                             >
                         </div>
 
-                        <div class="glass-banner-card">
-                            <img
-                                src="../assets/projects/photography/bloghuffybeaker02.jpg"
-                                alt=""
-                            >
-                        </div>
-
                     </div>
 
 
@@ -1067,7 +950,7 @@
                 <div class="final-glass">
 
 
-                    <!-- TOP TWO SQUARE -->
+                    <!-- TOP TWO -->
 
                     <div class="final-glass-top">
 
@@ -1092,12 +975,11 @@
                     </div>
 
 
-                    <!-- BOTTOM FOUR SAME HEIGHT -->
+                    <!-- BOTTOM FOUR -->
 
                     <div class="final-glass-bottom">
 
-
-                        <div class="dynamic-card">
+                        <div class="final-bottom-card">
 
                             <img
                                 src="../assets/projects/photography/dynamic-ball-rig-RBY-bead-side-1.jpg"
@@ -1106,8 +988,7 @@
 
                         </div>
 
-
-                        <div class="dynamic-card">
+                        <div class="final-bottom-card">
 
                             <img
                                 src="../assets/projects/photography/Dynamic-Fab-Beaker-with-RBY-Bead-side-1.jpg"
@@ -1116,8 +997,7 @@
 
                         </div>
 
-
-                        <div class="bottom-square">
+                        <div class="final-bottom-card">
 
                             <img
                                 src="../assets/projects/photography/huffy-insta2.jpg"
@@ -1126,8 +1006,7 @@
 
                         </div>
 
-
-                        <div class="bottom-square">
+                        <div class="final-bottom-card">
 
                             <img
                                 src="../assets/projects/photography/huffy-insta.jpg"
@@ -1135,7 +1014,6 @@
                             >
 
                         </div>
-
 
                     </div>
 
@@ -1145,19 +1023,15 @@
 
             </div>
 
-
         </section>
 
 
     </main>
 
 
-    <!-- ==================================================
-         SKILLS / PROGRAMS
-         ================================================== -->
+    <!-- SKILLS / PROGRAMS -->
 
     <section class="project-details">
-
 
         <div>
 
@@ -1191,13 +1065,10 @@
 
         </div>
 
-
     </section>
 
 
-    <!-- ==================================================
-         FOOTER
-         ================================================== -->
+    <!-- FOOTER -->
 
     <footer class="site-footer">
 
