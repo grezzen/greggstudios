@@ -199,11 +199,8 @@
 
         .snow-grid {
             display: grid;
-
             grid-template-columns: repeat(6, 1fr);
-
             gap: 18px;
-
             margin-bottom: 28px;
         }
 
@@ -241,7 +238,7 @@
 
         /* ==================================================
            SKATE SET
-           3 SQUARE TOP / 2 ORIGINAL PROPORTION BOTTOM
+           3 TOP / 2 CENTERED BOTTOM
            ================================================== */
 
         .skate-section {
@@ -250,11 +247,8 @@
 
         .skate-top {
             display: grid;
-
             grid-template-columns: repeat(3, 1fr);
-
             gap: 18px;
-
             margin-bottom: 18px;
         }
 
@@ -270,14 +264,11 @@
         }
 
         .skate-bottom {
-            width: 72%;
-
+            width: 66%;
             margin: 0 auto;
 
             display: grid;
-
             grid-template-columns: repeat(2, 1fr);
-
             gap: 18px;
 
             align-items: start;
@@ -286,6 +277,7 @@
         .skate-bottom img {
             width: 100%;
             height: auto;
+            object-fit: contain;
         }
 
 
@@ -428,20 +420,23 @@
 
         /* ==================================================
            GLASS BANNER GRID
-           NATURAL PROPORTIONS
+           TWO COLUMN STACKED LAYOUT
            ================================================== */
 
         .glass-banner-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(2, minmax(0, 1fr));
-
-            gap: 22px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
 
             margin-bottom: 30px;
 
             align-items: start;
+        }
+
+        .glass-column {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
         }
 
         .glass-banner-card {
@@ -451,16 +446,12 @@
         .glass-banner-card img {
             width: 100%;
             height: auto;
-
-            object-fit: contain;
+            display: block;
         }
 
 
         /* ==================================================
            FINAL GLASS GROUP
-
-           TOP = 2 LARGE SQUARES
-           BOTTOM = 4 ACROSS
            ================================================== */
 
         .final-glass {
@@ -492,35 +483,51 @@
         }
 
 
-        /* BOTTOM FOUR */
+        /* ==================================================
+           BOTTOM FOUR — SAME HEIGHT
+           ================================================== */
 
         .final-glass-bottom {
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, minmax(0, 1fr));
+            display: flex;
 
             gap: 18px;
 
-            align-items: start;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        .final-glass-bottom img {
+            height: 300px;
+            width: auto;
+
+            display: block;
+
+            object-fit: contain;
+        }
+
+        .dynamic-card {
+            flex: 0 0 auto;
         }
 
         .dynamic-card img {
-            width: 100%;
-            height: auto;
+            height: 300px;
+            width: auto;
 
             object-fit: contain;
         }
 
         .bottom-square {
-            aspect-ratio: 1 / 1;
+            flex: 0 0 auto;
+
+            width: 300px;
+            height: 300px;
 
             overflow: hidden;
         }
 
         .bottom-square img {
-            width: 100%;
-            height: 100%;
+            width: 300px;
+            height: 300px;
 
             object-fit: cover;
         }
@@ -636,7 +643,7 @@
             }
 
             .final-glass-bottom {
-                grid-template-columns: repeat(2, 1fr);
+                flex-wrap: wrap;
             }
 
             .project-details {
@@ -667,11 +674,19 @@
             .owl-grid,
             .gse-grid,
             .glass-banner-grid,
-            .final-glass-top,
-            .final-glass-bottom {
+            .final-glass-top {
                 width: 100%;
 
                 grid-template-columns: 1fr;
+            }
+
+            .glass-column {
+                width: 100%;
+            }
+
+            .final-glass-bottom {
+                flex-direction: column;
+                align-items: center;
             }
 
             .project-details {
@@ -760,9 +775,7 @@
             <div class="people-content">
 
 
-                <!-- ==================================================
-                     CLOTHING BANNER
-                     ================================================== -->
+                <!-- CLOTHING BANNER -->
 
                 <div class="people-hero">
 
@@ -774,112 +787,52 @@
                 </div>
 
 
-                <!-- ==================================================
-                     SNOW SET
-                     ================================================== -->
+                <!-- SNOW SET -->
 
                 <div class="snow-grid">
 
-
                     <div class="snow-card">
-
-                        <img
-                            src="../assets/projects/photography/strix vitro snow 01.jpg"
-                            alt=""
-                        >
-
+                        <img src="../assets/projects/photography/strix vitro snow 01.jpg" alt="">
                     </div>
 
-
                     <div class="snow-card">
-
-                        <img
-                            src="../assets/projects/photography/strix vitro snow 02.jpg"
-                            alt=""
-                        >
-
+                        <img src="../assets/projects/photography/strix vitro snow 02.jpg" alt="">
                     </div>
 
-
                     <div class="snow-card">
-
-                        <img
-                            src="../assets/projects/photography/strix vitro snow 03.jpg"
-                            alt=""
-                        >
-
+                        <img src="../assets/projects/photography/strix vitro snow 03.jpg" alt="">
                     </div>
 
-
                     <div class="snow-card">
-
-                        <img
-                            src="../assets/projects/photography/strix vitro snow 04.jpg"
-                            alt=""
-                        >
-
+                        <img src="../assets/projects/photography/strix vitro snow 04.jpg" alt="">
                     </div>
 
-
                     <div class="snow-card">
-
-                        <img
-                            src="../assets/projects/photography/strix vitro snow 05.jpg"
-                            alt=""
-                        >
-
+                        <img src="../assets/projects/photography/strix vitro snow 05.jpg" alt="">
                     </div>
-
 
                 </div>
 
 
-                <!-- ==================================================
-                     SKATE SET
-                     ================================================== -->
+                <!-- SKATE SET -->
 
                 <div class="skate-section">
 
-
-                    <!-- TOP 3 SQUARE -->
-
                     <div class="skate-top">
 
-
                         <div class="skate-top-card">
-
-                            <img
-                                src="../assets/projects/photography/GSE skate 01.jpg"
-                                alt=""
-                            >
-
+                            <img src="../assets/projects/photography/GSE skate 01.jpg" alt="">
                         </div>
 
-
                         <div class="skate-top-card">
-
-                            <img
-                                src="../assets/projects/photography/GSE skate 02.jpg"
-                                alt=""
-                            >
-
+                            <img src="../assets/projects/photography/GSE skate 02.jpg" alt="">
                         </div>
 
-
                         <div class="skate-top-card">
-
-                            <img
-                                src="../assets/projects/photography/GSE skate 03.jpg"
-                                alt=""
-                            >
-
+                            <img src="../assets/projects/photography/GSE skate 03.jpg" alt="">
                         </div>
-
 
                     </div>
-
-
-                    <!-- BOTTOM 2 ORIGINAL PROPORTIONS -->
 
                     <div class="skate-bottom">
 
@@ -895,150 +848,72 @@
 
                     </div>
 
-
                 </div>
 
 
-                <!-- ==================================================
-                     JEEP SET
-                     ================================================== -->
+                <!-- JEEP SET -->
 
                 <div class="jeep-section">
 
-
-                    <!-- TOP FOUR -->
-
                     <div class="jeep-top">
 
-
                         <div class="jeep-card">
-
-                            <img
-                                src="../assets/projects/photography/greatest jeep 01.jpg"
-                                alt=""
-                            >
-
+                            <img src="../assets/projects/photography/greatest jeep 01.jpg" alt="">
                         </div>
 
-
                         <div class="jeep-card">
-
-                            <img
-                                src="../assets/projects/photography/greatest jeep 02.jpg"
-                                alt=""
-                            >
-
+                            <img src="../assets/projects/photography/greatest jeep 02.jpg" alt="">
                         </div>
 
-
                         <div class="jeep-card">
-
-                            <img
-                                src="../assets/projects/photography/greatest jeep 03.jpg"
-                                alt=""
-                            >
-
+                            <img src="../assets/projects/photography/greatest jeep 03.jpg" alt="">
                         </div>
 
-
                         <div class="jeep-card">
-
-                            <img
-                                src="../assets/projects/photography/greatest jeep 04.jpg"
-                                alt=""
-                            >
-
+                            <img src="../assets/projects/photography/greatest jeep 04.jpg" alt="">
                         </div>
-
 
                     </div>
-
-
-                    <!-- BOTTOM THREE -->
 
                     <div class="jeep-bottom">
 
-
                         <div class="jeep-card">
-
-                            <img
-                                src="../assets/projects/photography/greatest jeep 05.jpg"
-                                alt=""
-                            >
-
+                            <img src="../assets/projects/photography/greatest jeep 05.jpg" alt="">
                         </div>
 
-
                         <div class="jeep-card">
-
-                            <img
-                                src="../assets/projects/photography/greatest jeep 06.jpg"
-                                alt=""
-                            >
-
+                            <img src="../assets/projects/photography/greatest jeep 06.jpg" alt="">
                         </div>
 
-
                         <div class="jeep-card">
-
-                            <img
-                                src="../assets/projects/photography/greatest jeep 07.jpg"
-                                alt=""
-                            >
-
+                            <img src="../assets/projects/photography/greatest jeep 07.jpg" alt="">
                         </div>
-
 
                     </div>
-
 
                 </div>
 
 
-                <!-- ==================================================
-                     FIGHTER SET
-                     ================================================== -->
+                <!-- FIGHTER SET -->
 
                 <div class="fighter-grid">
 
-
                     <div class="fighter-card">
-
-                        <img
-                            src="../assets/projects/photography/strix vitro fighter 01.jpg"
-                            alt=""
-                        >
-
+                        <img src="../assets/projects/photography/strix vitro fighter 01.jpg" alt="">
                     </div>
 
-
                     <div class="fighter-card">
-
-                        <img
-                            src="../assets/projects/photography/strix vitro fighter 02.jpg"
-                            alt=""
-                        >
-
+                        <img src="../assets/projects/photography/strix vitro fighter 02.jpg" alt="">
                     </div>
 
-
                     <div class="fighter-card">
-
-                        <img
-                            src="../assets/projects/photography/strix vitro fighter 03.jpg"
-                            alt=""
-                        >
-
+                        <img src="../assets/projects/photography/strix vitro fighter 03.jpg" alt="">
                     </div>
-
 
                 </div>
 
 
-                <!-- ==================================================
-                     OWL SET
-                     FULL IMAGE
-                     ================================================== -->
+                <!-- OWL SET -->
 
                 <div class="owl-grid">
 
@@ -1055,10 +930,7 @@
                 </div>
 
 
-                <!-- ==================================================
-                     GSE FINAL SET
-                     FULL IMAGE
-                     ================================================== -->
+                <!-- GSE FINAL SET -->
 
                 <div class="gse-grid">
 
@@ -1112,89 +984,77 @@
             <div class="glass-content">
 
 
-                <!-- ==================================================
-                     RECTANGULAR / BANNER GROUP
-                     ================================================== -->
+                <!-- RECTANGULAR / BANNER GROUP -->
 
                 <div class="glass-banner-grid">
 
 
-                    <div class="glass-banner-card">
+                    <!-- LEFT COLUMN -->
 
-                        <img
-                            src="../assets/projects/photography/hura.jpg"
-                            alt=""
-                        >
+                    <div class="glass-column">
 
-                    </div>
+                        <div class="glass-banner-card">
+                            <img
+                                src="../assets/projects/photography/hura.jpg"
+                                alt=""
+                            >
+                        </div>
 
+                        <div class="glass-banner-card">
+                            <img
+                                src="../assets/projects/photography/yig-banner.jpg"
+                                alt=""
+                            >
+                        </div>
 
-                    <div class="glass-banner-card">
+                        <div class="glass-banner-card">
+                            <img
+                                src="../assets/projects/photography/jm-flow-02.jpg"
+                                alt=""
+                            >
+                        </div>
 
-                        <img
-                            src="../assets/projects/photography/crayinsta2.jpg"
-                            alt=""
-                        >
-
-                    </div>
-
-
-                    <div class="glass-banner-card">
-
-                        <img
-                            src="../assets/projects/photography/yig-banner.jpg"
-                            alt=""
-                        >
-
-                    </div>
-
-
-                    <div class="glass-banner-card">
-
-                        <img
-                            src="../assets/projects/photography/newTORO-GRAIL-1200X400.jpg"
-                            alt=""
-                        >
+                        <div class="glass-banner-card">
+                            <img
+                                src="../assets/projects/photography/huffy-jammer-banner.jpg"
+                                alt=""
+                            >
+                        </div>
 
                     </div>
 
 
-                    <div class="glass-banner-card">
+                    <!-- RIGHT COLUMN -->
 
-                        <img
-                            src="../assets/projects/photography/jm-flow-02.jpg"
-                            alt=""
-                        >
+                    <div class="glass-column">
 
-                    </div>
+                        <div class="glass-banner-card">
+                            <img
+                                src="../assets/projects/photography/crayinsta2.jpg"
+                                alt=""
+                            >
+                        </div>
 
+                        <div class="glass-banner-card">
+                            <img
+                                src="../assets/projects/photography/newTORO-GRAIL-1200X400.jpg"
+                                alt=""
+                            >
+                        </div>
 
-                    <div class="glass-banner-card">
+                        <div class="glass-banner-card">
+                            <img
+                                src="../assets/projects/photography/boro-banner-rings-1920x1080.jpg"
+                                alt=""
+                            >
+                        </div>
 
-                        <img
-                            src="../assets/projects/photography/boro-banner-rings-1920x1080.jpg"
-                            alt=""
-                        >
-
-                    </div>
-
-
-                    <div class="glass-banner-card">
-
-                        <img
-                            src="../assets/projects/photography/huffy-jammer-banner.jpg"
-                            alt=""
-                        >
-
-                    </div>
-
-
-                    <div class="glass-banner-card">
-
-                        <img
-                            src="../assets/projects/photography/bloghuffybeaker02.jpg"
-                            alt=""
-                        >
+                        <div class="glass-banner-card">
+                            <img
+                                src="../assets/projects/photography/bloghuffybeaker02.jpg"
+                                alt=""
+                            >
+                        </div>
 
                     </div>
 
@@ -1202,9 +1062,7 @@
                 </div>
 
 
-                <!-- ==================================================
-                     FINAL GLASS GROUP
-                     ================================================== -->
+                <!-- FINAL GLASS GROUP -->
 
                 <div class="final-glass">
 
@@ -1212,7 +1070,6 @@
                     <!-- TOP TWO SQUARE -->
 
                     <div class="final-glass-top">
-
 
                         <div class="final-square">
 
@@ -1223,7 +1080,6 @@
 
                         </div>
 
-
                         <div class="final-square">
 
                             <img
@@ -1233,16 +1089,13 @@
 
                         </div>
 
-
                     </div>
 
 
-                    <!-- BOTTOM FOUR -->
+                    <!-- BOTTOM FOUR SAME HEIGHT -->
 
                     <div class="final-glass-bottom">
 
-
-                        <!-- DYNAMIC - ORIGINAL PROPORTION -->
 
                         <div class="dynamic-card">
 
@@ -1254,8 +1107,6 @@
                         </div>
 
 
-                        <!-- DYNAMIC - ORIGINAL PROPORTION -->
-
                         <div class="dynamic-card">
 
                             <img
@@ -1266,8 +1117,6 @@
                         </div>
 
 
-                        <!-- SQUARE -->
-
                         <div class="bottom-square">
 
                             <img
@@ -1277,8 +1126,6 @@
 
                         </div>
 
-
-                        <!-- SQUARE -->
 
                         <div class="bottom-square">
 
