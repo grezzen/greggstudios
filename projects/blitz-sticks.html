@@ -89,17 +89,18 @@
            ========================= */
 
         .project-section {
-            position: relative;
             width: 100%;
+            position: relative;
         }
 
         .section-info {
             position: relative;
-            z-index: 2;
+            z-index: 1;
+
             background: #000000;
             color: #ffffff;
-            padding: 28px 32px 44px;
-            margin-bottom: -24px;
+
+            padding: 28px 32px 50px;
         }
 
         .section-info h3 {
@@ -120,9 +121,12 @@
            ========================= */
 
         .image-stack {
-            position: relative;
-            z-index: 1;
             width: 100%;
+            position: relative;
+            z-index: 2;
+
+            margin-top: -25px;
+
             background: #ffffff;
         }
 
@@ -130,7 +134,6 @@
             width: 100%;
             height: auto;
             display: block;
-            margin: 0;
         }
 
 
@@ -147,11 +150,15 @@
 
         .catalog-button {
             display: inline-block;
+
             background: #000000;
             color: #ffffff;
+
             text-decoration: none;
+
             font-size: 13px;
             font-weight: 700;
+
             padding: 10px 25px;
         }
 
@@ -161,41 +168,56 @@
 
 
         /* =========================
-           SKILLS + PROGRAMS
+           BOTTOM INFO AREA
            ========================= */
 
-        .skills-section {
+        .bottom-info {
             width: 100%;
             background: #000000;
             color: #ffffff;
-            text-align: center;
-            padding: 38px 30px 42px;
+
+            padding: 40px 26px 18px;
         }
 
-        .skills-section h3 {
+        .bottom-columns {
+            width: 100%;
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+
+            margin-bottom: 34px;
+        }
+
+        .bottom-column h3 {
             font-size: 19px;
             font-weight: 700;
-            margin-bottom: 13px;
+
+            margin-bottom: 10px;
         }
 
-        .skills-section p {
+        .bottom-column p {
             font-size: 14px;
-            line-height: 1.55;
-            max-width: 1100px;
-            margin: 0 auto;
+            line-height: 1.4;
         }
 
 
         /* =========================
-           FOOTER
+           COPYRIGHT
            ========================= */
 
-        .site-footer {
-            width: 100%;
-            background: #000000;
-            color: #ffffff;
+        .copyright {
             text-align: center;
-            padding: 0 20px 24px;
+
+            font-size: 16px;
+            line-height: 1.4;
+
+            margin-bottom: 4px;
+        }
+
+        .legal {
+            text-align: center;
+
             font-size: 11px;
             line-height: 1.4;
         }
@@ -224,8 +246,7 @@
             }
 
             .section-info {
-                padding: 24px 20px 38px;
-                margin-bottom: -20px;
+                padding: 24px 20px 42px;
             }
 
             .section-info h3 {
@@ -236,12 +257,35 @@
                 font-size: 14px;
             }
 
+            .image-stack {
+                margin-top: -20px;
+            }
+
             .catalog-button-area {
                 padding: 16px 15px 24px;
             }
 
-            .skills-section {
-                padding: 32px 20px 36px;
+            .bottom-info {
+                padding: 32px 20px 18px;
+            }
+
+            .bottom-columns {
+                grid-template-columns: 1fr;
+                gap: 28px;
+
+                margin-bottom: 30px;
+            }
+
+            .bottom-column h3 {
+                font-size: 18px;
+            }
+
+            .copyright {
+                font-size: 14px;
+            }
+
+            .legal {
+                font-size: 10px;
             }
 
         }
@@ -265,7 +309,9 @@
 
         <h2>BLITZ STICKS</h2>
 
-        <a href="../portfolio.html">[ BACK TO PORTFOLIO ]</a>
+        <a href="../portfolio.html">
+            [ BACK TO PORTFOLIO ]
+        </a>
 
     </header>
 
@@ -485,39 +531,66 @@
 
 
     <!-- =========================
-         SKILLS + PROGRAMS
+         SKILLS / PROGRAMS / FOOTER
          ========================= -->
 
-    <section class="skills-section">
-
-        <h3>Skills &amp; Programs</h3>
-
-        <p>
-            Catalog Design &nbsp;•&nbsp;
-            Packaging Design &nbsp;•&nbsp;
-            Print Production &nbsp;•&nbsp;
-            Digital Marketing &nbsp;•&nbsp;
-            Retail Graphics &nbsp;•&nbsp;
-            Art Direction &nbsp;•&nbsp;
-            Vendor Coordination &nbsp;•&nbsp;
-            Adobe Illustrator &nbsp;•&nbsp;
-            Adobe Photoshop &nbsp;•&nbsp;
-            Adobe InDesign
-        </p>
-
-    </section>
+    <footer class="bottom-info">
 
 
+        <div class="bottom-columns">
 
-    <!-- =========================
-         FOOTER
-         ========================= -->
 
-    <footer class="site-footer">
+            <!-- SKILLS -->
 
-        © 2026 Gregg Studios. All rights reserved.
-        Artwork, branding, photography, and design shown are presented
-        for portfolio purposes only.
+            <div class="bottom-column">
+
+                <h3>SKILLS</h3>
+
+                <p>
+                    Packaging Design • Catalog Design • Print Design •
+                    Retail Graphics • Marketing Collateral • Digital Design •
+                    Web Graphics • Product Packaging • Production-Ready Artwork •
+                    Vendor Coordination • Art Direction • Layout Design •
+                    Typography
+                </p>
+
+            </div>
+
+
+            <!-- PROGRAMS -->
+
+            <div class="bottom-column">
+
+                <h3>PROGRAMS</h3>
+
+                <p>
+                    Adobe InDesign • Adobe Illustrator • Adobe Photoshop •
+                    Adobe Acrobat Pro
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="copyright">
+            © 2026 Greg Griesenauer. All rights reserved.
+        </div>
+
+
+        <!-- LEGAL -->
+
+        <div class="legal">
+            All original artwork and content on this website are protected by
+            applicable copyright law. Unauthorized copying, reproduction,
+            distribution, modification, publication, or commercial use of any
+            content is prohibited without prior written permission from the
+            copyright holder.
+        </div>
+
 
     </footer>
 
