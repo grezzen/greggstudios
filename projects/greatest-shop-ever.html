@@ -178,9 +178,6 @@
 
         /* ==================================================
            APPAREL & HATS
-
-           CORRECTION #1:
-           BLACK FIELD EXTENDS DOWN BEHIND TOP OF GSE01
            ================================================== */
 
         .apparel-black {
@@ -191,9 +188,6 @@
 
         /* ==================================================
            FULL WIDTH COMPOSITE IMAGES
-
-           GSE01 - GSE06
-           KEEP EACH FILE INTACT
            ================================================== */
 
         .full-image-stack {
@@ -217,10 +211,7 @@
 
         /* ==================================================
            SKATEBOARD ROW
-
-           CORRECTION #2
-           LEFT APPROX 40%
-           RIGHT APPROX 60%
+           40 / 60
            ================================================== */
 
         .skateboard-row {
@@ -250,10 +241,7 @@
 
         /* ==================================================
            GLASS FEATURE ROW
-
-           CORRECTION #3
-           THREE POSTERS FIRST
-           SAME DISPLAYED HEIGHT
+           THREE IMAGES / SAME HEIGHT
            ================================================== */
 
         .glass-feature-row {
@@ -281,8 +269,7 @@
         /* ==================================================
            RETAIL FEATURE ROW
 
-           CORRECTION #4
-           TWO IMAGES FIRST
+           BOTH IMAGES ENLARGED 20%
            SAME DISPLAYED HEIGHT
            ================================================== */
 
@@ -299,10 +286,10 @@
         }
 
         .retail-feature-row img {
-            height: 650px;
+            height: 780px;
             width: auto;
 
-            max-width: calc(50% - 12px);
+            max-width: none;
 
             object-fit: contain;
         }
@@ -401,7 +388,8 @@
             }
 
             .retail-feature-row img {
-                height: 55vw;
+                height: 66vw;
+                max-width: calc(50% - 12px);
             }
 
         }
@@ -435,7 +423,7 @@
             }
 
 
-            /* KEEP SKATE PAIR TOGETHER */
+            /* SKATE PAIR */
 
             .skateboard-row {
                 gap: 10px;
@@ -471,7 +459,7 @@
             }
 
             .retail-feature-row img {
-                height: 57vw;
+                height: 68vw;
                 max-width: calc(50% - 4px);
             }
 
@@ -557,7 +545,7 @@
                 <div class="full-image-stack">
 
                     <img
-                        src="../assets/projects/greatest-shop-ever/GSE01.jpg"
+                        src="../assets/projects/greatest-shop-ever/GSE01.png"
                         alt="Greatest Shop Ever apparel and hat designs"
                     >
 
@@ -599,7 +587,6 @@
 
             <div class="section-content">
 
-
                 <div class="skateboard-row">
 
                     <img
@@ -615,7 +602,6 @@
                     >
 
                 </div>
-
 
             </div>
 
@@ -654,7 +640,7 @@
             <div class="section-content">
 
 
-                <!-- FIRST: THREE TAKODA / GLASS EVENT POSTERS -->
+                <!-- THREE EVENT POSTERS -->
 
                 <div class="glass-feature-row">
 
@@ -676,7 +662,7 @@
                 </div>
 
 
-                <!-- THEN THE GLASS BLOWING COMPOSITES -->
+                <!-- GLASS BLOWING COMPOSITES -->
 
                 <div class="full-image-stack">
 
@@ -741,7 +727,7 @@
             <div class="section-content">
 
 
-                <!-- FIRST: RETAIL / GLASS SHOP PAIR -->
+                <!-- RETAIL PAIR — 20% LARGER -->
 
                 <div class="retail-feature-row">
 
@@ -758,7 +744,7 @@
                 </div>
 
 
-                <!-- THEN GSE06 WITH VIP / STEVE H MATERIAL -->
+                <!-- VIP / PROMOTIONAL MATERIAL -->
 
                 <div class="full-image-stack">
 
