@@ -2,16 +2,19 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Gregg Studios | Oxford American</title>
 
+    <link rel="icon" type="image/png" href="../favicon.png">
+
     <style>
 
-        /* =========================================================
+        /* ==================================================
            RESET
-           ========================================================= */
+           ================================================== */
 
         * {
             margin: 0;
@@ -29,6 +32,7 @@
             font-family: Arial, Helvetica, sans-serif;
             background: #ffffff;
             color: #000000;
+            overflow-x: hidden;
         }
 
         img {
@@ -37,119 +41,177 @@
         }
 
 
-        /* =========================================================
-           HEADER
-           ========================================================= */
+        /* ==================================================
+           PAGE
+           ================================================== */
 
-        .site-header {
-            width: 100%;
-            background: #000000;
-            color: #ffffff;
-        }
-
-        .header-inner {
-            width: 92%;
-            max-width: 1500px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-
-        .header-inner a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .header-inner a:hover {
-            text-decoration: underline;
-        }
-
-
-        /* =========================================================
-           PROJECT INTRO
-           ========================================================= */
-
-        .project-intro {
-            background: #000000;
-            color: #ffffff;
-        }
-
-        .intro-inner {
-            width: 92%;
-            max-width: 1500px;
-            margin: 0 auto;
-            padding: 32px 0 38px;
-        }
-
-        .project-intro h1 {
-            font-size: 32px;
-            line-height: 1.1;
-            margin-bottom: 14px;
-        }
-
-        .project-intro p {
-            max-width: 1100px;
-            font-size: 18px;
-            line-height: 1.5;
-        }
-
-
-        /* =========================================================
-           SECTION TEXT
-           ========================================================= */
-
-        .section-header {
-            width: 100%;
-            background: #000000;
-            color: #ffffff;
-        }
-
-        .section-header-inner {
-            width: 92%;
-            max-width: 1500px;
-            margin: 0 auto;
-            padding: 28px 0 30px;
-        }
-
-        .section-header h2 {
-            font-size: 25px;
-            line-height: 1.15;
-            margin-bottom: 12px;
-        }
-
-        .section-header p {
-            max-width: 1100px;
-            font-size: 17px;
-            line-height: 1.5;
-        }
-
-
-        /* =========================================================
-           IMAGE AREA
-
-           IMPORTANT:
-           Every composite image is its own row.
-           Nothing is cropped.
-           Every file uses the exact same display width.
-           ========================================================= */
-
-        .project-images {
+        .project-page {
             width: 100%;
             background: #ffffff;
-            padding: 30px 0;
         }
 
-        .project-stack {
-            width: 92%;
+        .page-inner {
+            width: 96%;
             max-width: 1500px;
             margin: 0 auto;
+        }
+
+
+        /* ==================================================
+           HEADER
+           SAME AS OTHER PROJECT PAGES
+           ================================================== */
+
+        .top-header {
+            width: 100%;
+            min-height: 62px;
+
+            background: #000000;
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .header-button {
+            width: 360px;
+            min-height: 62px;
+
+            background: #000000;
+            color: #ffffff;
+
+            text-align: center;
+
+            padding: 5px 20px 7px;
+        }
+
+        .header-home {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .header-main {
+            font-size: 27px;
+            font-weight: 400;
+            line-height: 1.28;
+        }
+
+        .header-project {
+            font-size: 20px;
+            line-height: 1.4;
+        }
+
+        .header-back {
+            display: block;
+
+            color: #ffffff;
+            text-decoration: none;
+
+            font-size: 14px;
+            line-height: 1.45;
+
+            margin-top: 2px;
+        }
+
+
+        /* ==================================================
+           TYPOGRAPHY
+           SAME AS OTHER PROJECT PAGES
+           ================================================== */
+
+        .section-title {
+            font-size: 19px;
+            font-weight: 700;
+
+            margin-bottom: 8px;
+        }
+
+        .section-copy {
+            max-width: 1080px;
+
+            font-size: 14px;
+            line-height: 1.35;
+        }
+
+
+        /* ==================================================
+           FULL WIDTH BLACK FIELD
+           ================================================== */
+
+        .black-field {
+            width: 100vw;
+
+            position: relative;
+            left: 50%;
+
+            margin-left: -50vw;
+
+            background: #000000;
+            color: #ffffff;
+        }
+
+        .black-field-inner {
+            width: 96%;
+            max-width: 1500px;
+
+            margin: 0 auto;
+
+            padding: 16px 18px;
+        }
+
+
+        /* ==================================================
+           CONCERT SERIES
+           ================================================== */
+
+        .concert-black {
+            min-height: 190px;
+            margin-bottom: -62px;
+        }
+
+        .concert-content {
+            position: relative;
+            z-index: 2;
+
+            padding: 0 18px 40px;
+        }
+
+
+        /* ==================================================
+           TRUE GRIT
+           ================================================== */
+
+        .grit-black {
+            min-height: 190px;
+
+            margin-top: 18px;
+            margin-bottom: -62px;
+        }
+
+        .grit-content {
+            position: relative;
+            z-index: 2;
+
+            padding: 0 18px 40px;
+        }
+
+
+        /* ==================================================
+           IMAGE STACK
+
+           ONE COMPLETE FILE PER ROW
+           SAME WIDTH
+           NO CROPPING
+           ================================================== */
+
+        .project-stack {
+            width: 100%;
 
             display: flex;
             flex-direction: column;
             align-items: center;
 
-            gap: 30px;
+            gap: 24px;
         }
 
         .project-stack img {
@@ -157,389 +219,370 @@
             height: auto;
 
             object-fit: contain;
-            object-position: center;
-
-            display: block;
         }
 
 
-        /* =========================================================
-           SKILLS
-           ========================================================= */
+        /* ==================================================
+           SKILLS / PROGRAMS
+           SAME AS OTHER PROJECT PAGES
+           ================================================== */
 
-        .skills {
-            width: 100%;
+        .project-details {
+            width: 100vw;
+
+            position: relative;
+            left: 50%;
+
+            margin-left: -50vw;
+            margin-top: 34px;
+
             background: #000000;
             color: #ffffff;
+
+            padding: 26px 7vw 28px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 70px;
         }
 
-        .skills-inner {
-            width: 92%;
-            max-width: 1500px;
-            margin: 0 auto;
-            padding: 34px 0 38px;
+        .details-heading {
+            font-size: 19px;
+            font-weight: 700;
+
+            margin-bottom: 8px;
         }
 
-        .skills h2 {
-            font-size: 25px;
-            line-height: 1.15;
-            margin-bottom: 14px;
-        }
+        .details-text {
+            font-size: 14px;
+            font-weight: 400;
 
-        .skills p {
-            font-size: 17px;
-            line-height: 1.6;
+            line-height: 1.35;
         }
 
 
-        /* =========================================================
+        /* ==================================================
            FOOTER
-           ========================================================= */
+           SAME AS OTHER PROJECT PAGES
+           ================================================== */
 
         .site-footer {
             width: 100%;
+            min-height: 48px;
+
             background: #000000;
             color: #ffffff;
-            border-top: 1px solid #444444;
-        }
 
-        .footer-inner {
-            width: 92%;
-            max-width: 1500px;
-            margin: 0 auto;
-            padding: 28px 0 34px;
-        }
+            display: flex;
+            flex-direction: column;
 
-        .footer-inner p {
-            font-size: 14px;
-            line-height: 1.6;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 7px 20px;
         }
 
         .copyright {
-            margin-bottom: 10px;
+            font-size: 15px;
+            line-height: 16px;
+
+            margin-bottom: 3px;
+        }
+
+        .copyright-details {
+            font-size: 11px;
+            line-height: 12px;
         }
 
 
-        /* =========================================================
+        /* ==================================================
            TABLET
-           ========================================================= */
+           ================================================== */
 
         @media (max-width: 900px) {
 
-            .header-inner,
-            .intro-inner,
-            .section-header-inner,
-            .project-stack,
-            .skills-inner,
-            .footer-inner {
-                width: 94%;
-            }
-
-            .project-intro h1 {
-                font-size: 28px;
-            }
-
-            .section-header h2,
-            .skills h2 {
-                font-size: 23px;
-            }
-
-            .project-intro p,
-            .section-header p,
-            .skills p {
-                font-size: 16px;
-            }
-
-            .project-stack {
-                gap: 20px;
+            .project-details {
+                grid-template-columns: 1fr;
+                gap: 28px;
             }
 
         }
 
 
-        /* =========================================================
+        /* ==================================================
            MOBILE
-           ========================================================= */
+           ================================================== */
 
         @media (max-width: 600px) {
 
-            .header-inner {
-                padding: 16px 0;
+            .page-inner {
+                width: 100%;
             }
 
-            .header-inner a {
-                font-size: 16px;
+            .concert-content,
+            .grit-content {
+                padding-left: 12px;
+                padding-right: 12px;
             }
 
-            .intro-inner {
-                padding: 24px 0 28px;
-            }
-
-            .project-intro h1 {
-                font-size: 25px;
-                margin-bottom: 10px;
-            }
-
-            .project-intro p {
-                font-size: 15px;
-                line-height: 1.45;
-            }
-
-            .section-header-inner {
-                padding: 23px 0 25px;
-            }
-
-            .section-header h2 {
-                font-size: 21px;
-                margin-bottom: 10px;
-            }
-
-            .section-header p {
-                font-size: 15px;
-                line-height: 1.45;
-            }
-
-            .project-images {
-                padding: 16px 0;
+            .concert-black,
+            .grit-black {
+                margin-bottom: -35px;
             }
 
             .project-stack {
-                width: 94%;
                 gap: 16px;
             }
 
-            .project-stack img {
-                width: 100%;
-                height: auto;
-            }
-
-            .skills-inner {
-                padding: 26px 0 30px;
-            }
-
-            .skills h2 {
-                font-size: 21px;
-            }
-
-            .skills p {
-                font-size: 15px;
-            }
-
-            .footer-inner {
-                padding: 24px 0 28px;
-            }
-
-            .footer-inner p {
-                font-size: 12px;
-                line-height: 1.55;
+            .project-details {
+                padding-left: 7vw;
+                padding-right: 7vw;
             }
 
         }
 
     </style>
+
 </head>
 
 
 <body>
 
+<div class="project-page">
 
-    <!-- =========================================================
+
+    <!-- ==================================================
          HEADER
-         ========================================================= -->
+         ================================================== -->
 
-    <header class="site-header">
+    <div class="top-header">
 
-        <div class="header-inner">
+        <div class="header-button">
 
-            <a href="../portfolio.html">
-                GREGG STUDIOS
+            <a
+                href="../index.html"
+                class="header-home"
+            >
+
+                <div class="header-main">
+                    GREGG STUDIOS
+                </div>
+
+            </a>
+
+            <div class="header-project">
+                OXFORD AMERICAN
+            </div>
+
+            <a
+                href="../portfolio.html"
+                class="header-back"
+            >
+                [ BACK TO PORTFOLIO ]
             </a>
 
         </div>
 
-    </header>
+    </div>
 
 
+    <main class="page-inner">
 
-    <!-- =========================================================
-         PROJECT INTRO
-         ========================================================= -->
 
-    <section class="project-intro">
+        <!-- ==================================================
+             CONCERT SERIES
+             ================================================== -->
 
-        <div class="intro-inner">
+        <section>
 
-            <h1>Oxford American</h1>
 
-            <p>
-                Design work created for the Oxford American across multiple
-                events and promotional campaigns. Projects included concert
-                series materials, event programs, mailers, posters, flyers,
-                and digital assets developed to support programming and
-                audience outreach.
-            </p>
+            <div class="black-field concert-black">
+
+                <div class="black-field-inner">
+
+                    <div class="section-title">
+                        Concert Series
+                    </div>
+
+                    <div class="section-copy">
+                        Developed a complete promotional campaign for the Oxford American
+                        concert series, creating coordinated print and digital materials
+                        including mailers, web assets, flyers, and posters. The visual
+                        system was designed to support multiple events and performers while
+                        presenting the series as a cohesive seasonal program.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="concert-content">
+
+                <div class="project-stack">
+
+
+                    <img
+                        src="../assets/projects/oxford-american/OA-concert-series-04.jpg"
+                        alt="Oxford American Concert Series promotional materials"
+                    >
+
+
+                    <img
+                        src="../assets/projects/oxford-american/OA-concert-series-04-5.jpg"
+                        alt="Oxford American Concert Series schedule and supporting materials"
+                    >
+
+
+                    <img
+                        src="../assets/projects/oxford-american/OA01.jpg"
+                        alt="Oxford American Concert Series poster designs"
+                    >
+
+
+                    <img
+                        src="../assets/projects/oxford-american/OA02.jpg"
+                        alt="Oxford American Concert Series promotional designs"
+                    >
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==================================================
+             50 YEARS OF TRUE GRIT
+             ================================================== -->
+
+        <section>
+
+
+            <div class="black-field grit-black">
+
+                <div class="black-field-inner">
+
+                    <div class="section-title">
+                        50 Years of True Grit
+                    </div>
+
+                    <div class="section-copy">
+                        Designed promotional and event materials for the Oxford American's
+                        three-day celebration of 50 Years of True Grit. Created a coordinated
+                        campaign spanning mailers, website assets, posters, flyers, and the
+                        event program. Developed the visual system to support multiple events
+                        while presenting the film's history and programming in a cohesive,
+                        professional format.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="grit-content">
+
+                <div class="project-stack">
+
+
+                    <img
+                        src="../assets/projects/oxford-american/OA-True-Grit-Event-05.jpg"
+                        alt="Oxford American 50 Years of True Grit event materials"
+                    >
+
+
+                    <img
+                        src="../assets/projects/oxford-american/OA03.jpg"
+                        alt="Oxford American 50 Years of True Grit gold pass materials"
+                    >
+
+
+                    <img
+                        src="../assets/projects/oxford-american/OA04.jpg"
+                        alt="Oxford American 50 Years of True Grit promotional collateral"
+                    >
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==================================================
+         SKILLS / PROGRAMS
+         ================================================== -->
+
+    <section class="project-details">
+
+
+        <div>
+
+            <div class="details-heading">
+                SKILLS
+            </div>
+
+            <div class="details-text">
+                Campaign Design • Event Promotion • Editorial Design •
+                Poster Design • Print Design • Digital Design • Web Graphics •
+                Typography • Layout Design • Marketing Collateral •
+                Direct Mail • Event Programs • Visual Systems •
+                Production-Ready Artwork
+            </div>
 
         </div>
+
+
+        <div>
+
+            <div class="details-heading">
+                PROGRAMS
+            </div>
+
+            <div class="details-text">
+                Adobe InDesign • Adobe Illustrator • Adobe Photoshop •
+                Adobe Acrobat Pro
+            </div>
+
+        </div>
+
 
     </section>
 
 
-
-    <!-- =========================================================
-         CONCERT SERIES
-         ========================================================= -->
-
-    <section class="section-header">
-
-        <div class="section-header-inner">
-
-            <h2>Concert Series</h2>
-
-            <p>
-                Promotional materials developed for the Oxford American
-                Concert Series, including mailers, web assets, flyers, and
-                posters. The campaign required a consistent visual system
-                that could accommodate multiple performers and events while
-                maintaining a recognizable identity across print and digital
-                applications.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <section class="project-images">
-
-        <div class="project-stack">
-
-            <img
-                src="../assets/projects/oxford-american/OA-concert-series-04.jpg"
-                alt="Oxford American Concert Series promotional materials"
-            >
-
-            <img
-                src="../assets/projects/oxford-american/OA-concert-series-04-5.jpg"
-                alt="Oxford American Concert Series mailer and event information"
-            >
-
-            <img
-                src="../assets/projects/oxford-american/OA01.jpg"
-                alt="Oxford American Concert Series poster designs"
-            >
-
-            <img
-                src="../assets/projects/oxford-american/OA02.jpg"
-                alt="Oxford American Concert Series promotional design collection"
-            >
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         TRUE GRIT
-         ========================================================= -->
-
-    <section class="section-header">
-
-        <div class="section-header-inner">
-
-            <h2>50 Years of True Grit</h2>
-
-            <p>
-                Design and promotional materials for the Oxford American's
-                three-day celebration of 50 Years of True Grit. Created a
-                coordinated campaign spanning mailers, web assets, posters,
-                flyers, and the event program. Developed the visual system
-                to support multiple events while presenting the full history
-                and programming in a cohesive, professional format.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <section class="project-images">
-
-        <div class="project-stack">
-
-            <img
-                src="../assets/projects/oxford-american/OA-True-Grit-Event-05.jpg"
-                alt="Oxford American 50 Years of True Grit event materials"
-            >
-
-            <img
-                src="../assets/projects/oxford-american/OA03.jpg"
-                alt="Oxford American 50 Years of True Grit promotional pieces"
-            >
-
-            <img
-                src="../assets/projects/oxford-american/OA04.jpg"
-                alt="Oxford American 50 Years of True Grit posters and event graphics"
-            >
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
-         SKILLS & PROGRAMS
-         ========================================================= -->
-
-    <section class="skills">
-
-        <div class="skills-inner">
-
-            <h2>Skills &amp; Programs</h2>
-
-            <p>
-                Graphic Design &nbsp; / &nbsp;
-                Layout &nbsp; / &nbsp;
-                Typography &nbsp; / &nbsp;
-                Print Design &nbsp; / &nbsp;
-                Event Marketing &nbsp; / &nbsp;
-                Production Design &nbsp; / &nbsp;
-                Adobe Illustrator &nbsp; / &nbsp;
-                Adobe Photoshop &nbsp; / &nbsp;
-                Adobe InDesign
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================================
+    <!-- ==================================================
          FOOTER
-         ========================================================= -->
+         ================================================== -->
 
     <footer class="site-footer">
 
-        <div class="footer-inner">
+        <div class="copyright">
+            © 2026 Greg Griesenauer. All rights reserved.
+        </div>
 
-            <p class="copyright">
-                © 2026 Greg Griesenauer. All rights reserved.
-            </p>
-
-            <p>
-                All original artwork and content on this website are protected
-                by applicable copyright law. Unauthorized copying, reproduction,
-                distribution, modification, publication, or commercial use of
-                any content is prohibited without prior written permission from
-                the copyright holder.
-            </p>
-
+        <div class="copyright-details">
+            All original artwork and content on this website are protected by applicable copyright law.
+            Unauthorized copying, reproduction, distribution, modification, publication, or commercial use
+            of any content is prohibited without prior written permission from the copyright holder.
         </div>
 
     </footer>
 
+
+</div>
 
 </body>
 
