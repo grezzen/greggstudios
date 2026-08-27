@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gregg Studios | SBK Catalog</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+        }
+
+
+        /* =========================
+           HEADER
+           ========================= */
+
+        .site-header {
+            width: 100%;
+            background: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 26px 20px 22px;
+        }
+
+        .site-header h1 {
+            font-size: 27px;
+            font-weight: 400;
+            line-height: 1;
+            margin-bottom: 7px;
+        }
+
+        .site-header h2 {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .site-header a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .site-header a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           PDF
+           ========================= */
+
+        .pdf-wrap {
+            width: 94%;
+            max-width: 1400px;
+            margin: 30px auto;
+        }
+
+        .pdf-viewer {
+            display: block;
+            width: 100%;
+            height: 82vh;
+            min-height: 700px;
+            border: 0;
+            background: #eeeeee;
+        }
+
+
+        /* =========================
+           DOWNLOAD BUTTON
+           ========================= */
+
+        .download-area {
+            text-align: center;
+            padding: 0 20px 35px;
+        }
+
+        .download-button {
+            display: inline-block;
+            background: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 11px 24px;
+        }
+
+        .download-button:hover {
+            background: #333333;
+        }
+
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        .site-footer {
+            width: 100%;
+            background: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 22px 20px;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 700px) {
+
+            .site-header h1 {
+                font-size: 23px;
+            }
+
+            .site-header h2 {
+                font-size: 18px;
+            }
+
+            .pdf-wrap {
+                width: 100%;
+                margin: 0;
+            }
+
+            .pdf-viewer {
+                height: 80vh;
+                min-height: 600px;
+            }
+
+            .download-area {
+                padding: 22px 15px 30px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <header class="site-header">
+
+        <h1>
+            <a href="../index.html">GREGG STUDIOS</a>
+        </h1>
+
+        <h2>SBK CATALOG</h2>
+
+        <a href="sbk.html">[ BACK TO SBK ]</a>
+
+    </header>
+
+
+
+    <main>
+
+        <div class="pdf-wrap">
+
+            <iframe
+                class="pdf-viewer"
+                src="../assets/projects/sbk/2022 SBK June Catalog.pdf"
+                title="SBK 108-Page Product Catalog">
+            </iframe>
+
+        </div>
+
+
+        <div class="download-area">
+
+            <a
+                href="../assets/projects/sbk/2022 SBK June Catalog.pdf"
+                target="_blank"
+                class="download-button"
+            >
+                OPEN FULL PDF
+            </a>
+
+        </div>
+
+    </main>
+
+
+
+    <footer class="site-footer">
+
+        © 2026 Gregg Studios. All rights reserved.
+        Artwork, branding, photography, and design shown are presented
+        for portfolio purposes only.
+
+    </footer>
+
+
+</body>
+</html>
