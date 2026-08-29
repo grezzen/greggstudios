@@ -28,6 +28,10 @@
             min-height: 100%;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #ffffff;
@@ -89,25 +93,25 @@
             text-decoration: none;
         }
 
-       .header-main {
-    font-size: 27px;
-    font-weight: 400;
-    line-height: 1.28;
-}
+        .header-main {
+            font-size: 27px;
+            font-weight: 400;
+            line-height: 1.28;
+        }
 
-.header-project {
-    font-size: 20px;
-    line-height: 1.4;
-}
+        .header-project {
+            font-size: 20px;
+            line-height: 1.4;
+        }
 
-.header-back {
-    display: block;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 1.45;
-    margin-top: 2px;
-}
+        .header-back {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.45;
+            margin-top: 2px;
+        }
 
 
         /* ==================================================
@@ -330,6 +334,36 @@
 
 
         /* ==================================================
+           BACK TO TOP BUTTON
+           ================================================== */
+
+        .back-top-wrap {
+            width: 100%;
+            text-align: center;
+
+            padding: 34px 20px;
+        }
+
+        .back-top-button {
+            display: inline-block;
+
+            background: #000000;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            line-height: 1.35;
+
+            padding: 9px 22px;
+        }
+
+        .back-top-button:hover {
+            background: #333333;
+        }
+
+
+        /* ==================================================
            FINAL SKILLS / PROGRAMS BLOCK
            ================================================== */
 
@@ -341,7 +375,7 @@
 
             margin-left: -50vw;
 
-            margin-top: 34px;
+            margin-top: 0;
 
             background: #000000;
             color: #ffffff;
@@ -356,17 +390,17 @@
         }
 
         .details-heading {
-    font-size: 19px;
-    font-weight: 700;
-    letter-spacing: 0;
-    margin-bottom: 8px;
-}
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: 0;
+            margin-bottom: 8px;
+        }
 
-.details-text {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.35;
-}
+        .details-text {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.35;
+        }
 
 
         /* ==================================================
@@ -479,7 +513,7 @@
 </head>
 
 
-<body>
+<body id="top">
 
 <div class="project-page">
 
@@ -532,7 +566,7 @@
                 <div class="black-field-inner">
 
                     <div class="section-title">
-                        Website & Digital Assets
+                        Website &amp; Digital Assets
                     </div>
 
                     <div class="section-copy">
@@ -556,9 +590,9 @@
                 <div class="four-pack-banner">
 
                     <img
-    src="../assets/projects/twacked-tea/Twacked-Tea-Hero-Banner-4-pack.jpg"
-    alt=""
->
+                        src="../assets/projects/twacked-tea/Twacked-Tea-Hero-Banner-4-pack.jpg"
+                        alt=""
+                    >
 
                 </div>
 
@@ -846,6 +880,22 @@
 
 
         </section>
+
+
+        <!-- ==================================================
+             BACK TO TOP
+             ================================================== -->
+
+        <div class="back-top-wrap">
+
+            <a
+                href="#top"
+                class="back-top-button"
+            >
+                BACK TO TOP
+            </a>
+
+        </div>
 
 
     </main>
