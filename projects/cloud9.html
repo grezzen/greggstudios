@@ -28,6 +28,10 @@
             min-height: 100%;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #ffffff;
@@ -203,6 +207,35 @@
 
 
         /* ==================================================
+           BACK TO TOP BUTTON
+           ================================================== */
+
+        .back-top-wrap {
+            width: 100%;
+            text-align: center;
+            padding: 0 20px 34px;
+        }
+
+        .back-top-button {
+            display: inline-block;
+
+            background: #000000;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            line-height: 1.35;
+
+            padding: 9px 22px;
+        }
+
+        .back-top-button:hover {
+            background: #333333;
+        }
+
+
+        /* ==================================================
            FINAL SKILLS / PROGRAMS BLOCK
            EXACT TWACKED TEA STANDARD
            ================================================== */
@@ -215,7 +248,7 @@
 
             margin-left: -50vw;
 
-            margin-top: 34px;
+            margin-top: 0;
 
             background: #000000;
             color: #ffffff;
@@ -322,7 +355,7 @@
 </head>
 
 
-<body>
+<body id="top">
 
 <div class="project-page">
 
@@ -540,6 +573,23 @@
 
 
         </section>
+
+
+
+        <!-- ==================================================
+             BACK TO TOP
+             ================================================== -->
+
+        <div class="back-top-wrap">
+
+            <a
+                href="#top"
+                class="back-top-button"
+            >
+                BACK TO TOP
+            </a>
+
+        </div>
 
 
     </main>
