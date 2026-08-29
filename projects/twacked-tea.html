@@ -305,24 +305,32 @@
             padding: 0 8px 0;
         }
 
+
+        /* TOP THREE — 01 / 02 / 05 */
+
         .catalog-top {
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+
+            gap: 28px;
+
+            padding: 0 0 28px;
+        }
+
+
+        /* BOTTOM TWO — 03 / 04 — CENTERED */
+
+        .catalog-bottom {
             width: 66%;
 
-            margin-left: 34%;
+            margin: 0 auto;
 
             display: grid;
 
             grid-template-columns: repeat(2, minmax(0, 1fr));
-
-            gap: 28px;
-
-            padding: 0 0 28px 22px;
-        }
-
-        .catalog-bottom {
-            display: grid;
-
-            grid-template-columns: repeat(3, minmax(0, 1fr));
 
             gap: 28px;
         }
@@ -453,7 +461,6 @@
 
             .catalog-top {
                 width: 100%;
-                margin-left: 0;
 
                 padding: 0 0 24px;
 
@@ -461,6 +468,8 @@
             }
 
             .catalog-bottom {
+                width: 100%;
+
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -498,6 +507,7 @@
 
             .catalog-top,
             .catalog-bottom {
+                width: 100%;
                 grid-template-columns: 1fr;
             }
 
@@ -810,7 +820,7 @@
             <div class="catalog-layout">
 
 
-                <!-- TOP TWO -->
+                <!-- TOP THREE — 01 / 02 / 05 -->
 
                 <div class="catalog-top">
 
@@ -835,10 +845,20 @@
                     </div>
 
 
+                    <div class="catalog-card">
+
+                        <img
+                            src="../assets/projects/twacked-tea/twacked-catalog-05.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+
                 </div>
 
 
-                <!-- BOTTOM THREE -->
+                <!-- BOTTOM TWO — 03 / 04 -->
 
                 <div class="catalog-bottom">
 
@@ -857,16 +877,6 @@
 
                         <img
                             src="../assets/projects/twacked-tea/twacked-catalog-04.jpg"
-                            alt=""
-                        >
-
-                    </div>
-
-
-                    <div class="catalog-card">
-
-                        <img
-                            src="../assets/projects/twacked-tea/twacked-catalog-05.jpg"
                             alt=""
                         >
 
