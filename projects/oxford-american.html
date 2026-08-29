@@ -28,6 +28,10 @@
             min-height: 100%;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #ffffff;
@@ -59,7 +63,7 @@
 
         /* ==================================================
            HEADER
-           SAME AS OTHER PROJECT PAGES
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .top-header {
@@ -74,7 +78,7 @@
         }
 
         .header-button {
-            width: 360px;
+            width: 310px;
             min-height: 62px;
 
             background: #000000;
@@ -116,7 +120,7 @@
 
         /* ==================================================
            TYPOGRAPHY
-           SAME AS OTHER PROJECT PAGES
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .section-title {
@@ -127,7 +131,7 @@
         }
 
         .section-copy {
-            max-width: 1080px;
+            max-width: 1000px;
 
             font-size: 14px;
             line-height: 1.35;
@@ -136,6 +140,7 @@
 
         /* ==================================================
            FULL WIDTH BLACK FIELD
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .black-field {
@@ -165,8 +170,8 @@
            ================================================== */
 
         .concert-black {
-            min-height: 190px;
-            margin-bottom: -62px;
+            min-height: 180px;
+            margin-bottom: -68px;
         }
 
         .concert-content {
@@ -182,10 +187,10 @@
            ================================================== */
 
         .grit-black {
-            min-height: 190px;
+            min-height: 180px;
 
             margin-top: 18px;
-            margin-bottom: -62px;
+            margin-bottom: -68px;
         }
 
         .grit-content {
@@ -198,10 +203,7 @@
 
         /* ==================================================
            IMAGE STACK
-
-           ONE COMPLETE FILE PER ROW
-           SAME WIDTH
-           NO CROPPING
+           EXISTING OXFORD AMERICAN LAYOUT PRESERVED
            ================================================== */
 
         .project-stack {
@@ -223,8 +225,38 @@
 
 
         /* ==================================================
+           BACK TO TOP BUTTON
+           ================================================== */
+
+        .back-top-wrap {
+            width: 100%;
+            text-align: center;
+
+            padding: 0 20px 34px;
+        }
+
+        .back-top-button {
+            display: inline-block;
+
+            background: #000000;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            line-height: 1.35;
+
+            padding: 9px 22px;
+        }
+
+        .back-top-button:hover {
+            background: #333333;
+        }
+
+
+        /* ==================================================
            SKILLS / PROGRAMS
-           SAME AS OTHER PROJECT PAGES
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .project-details {
@@ -234,7 +266,7 @@
             left: 50%;
 
             margin-left: -50vw;
-            margin-top: 34px;
+            margin-top: 0;
 
             background: #000000;
             color: #ffffff;
@@ -252,6 +284,7 @@
         .details-heading {
             font-size: 19px;
             font-weight: 700;
+            letter-spacing: 0;
 
             margin-bottom: 8px;
         }
@@ -266,7 +299,7 @@
 
         /* ==================================================
            FOOTER
-           SAME AS OTHER PROJECT PAGES
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .site-footer {
@@ -285,6 +318,8 @@
             text-align: center;
 
             padding: 7px 20px;
+
+            margin-top: 0;
         }
 
         .copyright {
@@ -316,6 +351,7 @@
 
         /* ==================================================
            MOBILE
+           EXISTING IMAGE BEHAVIOR PRESERVED
            ================================================== */
 
         @media (max-width: 600px) {
@@ -351,7 +387,7 @@
 </head>
 
 
-<body>
+<body id="top">
 
 <div class="project-page">
 
@@ -517,6 +553,22 @@
 
 
         </section>
+
+
+        <!-- ==================================================
+             BACK TO TOP
+             ================================================== -->
+
+        <div class="back-top-wrap">
+
+            <a
+                href="#top"
+                class="back-top-button"
+            >
+                BACK TO TOP
+            </a>
+
+        </div>
 
 
     </main>
