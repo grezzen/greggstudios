@@ -28,6 +28,10 @@
             min-height: 100%;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #ffffff;
@@ -59,7 +63,7 @@
 
         /* ==================================================
            HEADER
-           SAME SYSTEM AS TWACKED TEA
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .top-header {
@@ -74,7 +78,7 @@
         }
 
         .header-button {
-            width: 340px;
+            width: 310px;
             min-height: 62px;
 
             background: #000000;
@@ -116,6 +120,7 @@
 
         /* ==================================================
            TYPOGRAPHY
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .section-title {
@@ -135,6 +140,7 @@
 
         /* ==================================================
            FULL WIDTH BLACK FIELD
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .black-field {
@@ -179,8 +185,7 @@
         /* ==================================================
            GENERIC IMAGE RULES
 
-           NO CROPPING
-           NO WHITE BACKGROUND BOXES
+           EXISTING IMAGE BEHAVIOR PRESERVED
            ================================================== */
 
         .art-card {
@@ -211,6 +216,7 @@
 
         /* ==================================================
            LOGO / BRAND MARK GROUP 1
+           EXISTING LAYOUT PRESERVED
            ================================================== */
 
         .logo-row-three {
@@ -244,7 +250,7 @@
 
         /* ==================================================
            OWL / SHOP LOGO GROUP
-           MIDDLE OWL VERTICALLY CENTERED
+           EXISTING LAYOUT PRESERVED
            ================================================== */
 
         .owl-row {
@@ -263,10 +269,7 @@
 
         /* ==================================================
            CHARACTER / APPAREL ART
-
-           GODDESS = SLIGHTLY SMALLER
-           WYVERN = DOMINANT
-           PYTHON = NARROWER
+           EXISTING SIZING PRESERVED
            ================================================== */
 
         .character-row {
@@ -452,8 +455,7 @@
 
         /* ==================================================
            MERMAID / CHARACTER GROUP
-
-           CINCO ENLARGED
+           EXISTING CINCO ENLARGEMENT PRESERVED
            ================================================== */
 
         .mermaid-row {
@@ -478,7 +480,38 @@
 
 
         /* ==================================================
+           BACK TO TOP BUTTON
+           ================================================== */
+
+        .back-top-wrap {
+            width: 100%;
+            text-align: center;
+
+            padding: 0 20px 34px;
+        }
+
+        .back-top-button {
+            display: inline-block;
+
+            background: #000000;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            line-height: 1.35;
+
+            padding: 9px 22px;
+        }
+
+        .back-top-button:hover {
+            background: #333333;
+        }
+
+
+        /* ==================================================
            SKILLS / PROGRAMS
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .project-details {
@@ -488,7 +521,7 @@
             left: 50%;
 
             margin-left: -50vw;
-            margin-top: 34px;
+            margin-top: 0;
 
             background: #000000;
             color: #ffffff;
@@ -506,6 +539,7 @@
         .details-heading {
             font-size: 19px;
             font-weight: 700;
+            letter-spacing: 0;
 
             margin-bottom: 8px;
         }
@@ -520,6 +554,7 @@
 
         /* ==================================================
            FOOTER
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .site-footer {
@@ -538,6 +573,8 @@
             text-align: center;
 
             padding: 7px 20px;
+
+            margin-top: 0;
         }
 
         .copyright {
@@ -555,6 +592,7 @@
 
         /* ==================================================
            TABLET
+           EXISTING IMAGE BEHAVIOR PRESERVED
            ================================================== */
 
         @media (max-width: 900px) {
@@ -595,6 +633,7 @@
 
         /* ==================================================
            MOBILE
+           EXISTING IMAGE BEHAVIOR PRESERVED
            ================================================== */
 
         @media (max-width: 600px) {
@@ -637,7 +676,7 @@
 </head>
 
 
-<body>
+<body id="top">
 
 <div class="project-page">
 
@@ -692,7 +731,7 @@
                 <div class="black-field-inner">
 
                     <div class="section-title">
-                        Illustration & Graphic Artwork
+                        Illustration &amp; Graphic Artwork
                     </div>
 
                     <div class="section-copy">
@@ -712,39 +751,29 @@
             <div class="illustration-content">
 
 
-                <!-- ==================================================
-                     BRAND / LOGO GROUP
-                     ================================================== -->
+                <!-- BRAND / LOGO GROUP -->
 
                 <div class="logo-row-three">
 
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/terra-bits.png"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/seasoning-logo.png"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/trex farms vector print ready color.png"
                             alt=""
                         >
-
                     </div>
 
                 </div>
@@ -753,106 +782,79 @@
                 <div class="logo-row-two">
 
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/09.jpg"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/10.jpg"
                             alt=""
                         >
-
                     </div>
 
                 </div>
 
 
-                <!-- ==================================================
-                     OWL / SHOP LOGOS
-                     ================================================== -->
+                <!-- OWL / SHOP LOGOS -->
 
                 <div class="owl-row">
 
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/05.jpg"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/03.jpg"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/04.jpg"
                             alt=""
                         >
-
                     </div>
 
                 </div>
 
 
-                <!-- ==================================================
-                     CHARACTER / APPAREL ART
-                     ================================================== -->
+                <!-- CHARACTER / APPAREL ART -->
 
                 <div class="character-row">
 
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/12.jpg"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/Stasis-Wyvern-square-image.png"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/python_shirt.jpg"
                             alt=""
                         >
-
                     </div>
 
                 </div>
 
 
-                <!-- ==================================================
-                     STL MAP
-                     ================================================== -->
+                <!-- STL MAP -->
 
                 <div class="map-wrap">
 
@@ -882,7 +884,7 @@
                 <div class="black-field-inner">
 
                     <div class="section-title">
-                        Applied Illustration & Product Artwork
+                        Applied Illustration &amp; Product Artwork
                     </div>
 
                     <div class="section-copy">
@@ -901,153 +903,113 @@
             <div class="application-content">
 
 
-                <!-- ==================================================
-                     COUGHING CARDINAL
-                     ================================================== -->
+                <!-- COUGHING CARDINAL -->
 
                 <div class="cardinal-row">
 
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/CC-GALAXY.png"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/CC-TRIANGLE.png"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/cc-TIE-DIE.png"
                             alt=""
                         >
-
                     </div>
 
                 </div>
 
 
-                <!-- ==================================================
-                     BAG ART ROW 1
-                     ================================================== -->
+                <!-- BAG ART ROW 1 -->
 
                 <div class="bag-row">
 
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/35-bag-2025-GG.jpg"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/35-bag-2025-SB.jpg"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/35-bag-2025-KCC.jpg"
                             alt=""
                         >
-
                     </div>
 
                 </div>
 
 
-                <!-- ==================================================
-                     BAG ART ROW 2
-                     ================================================== -->
+                <!-- BAG ART ROW 2 -->
 
                 <div class="bag-row-two">
 
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/space-cake-packaging-all-sizes-3.jpg"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/gurilla-glue-packaging-1lb.jpg"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/cereal-milk-packaging-all-sizes-4.jpg"
                             alt=""
                         >
-
                     </div>
 
                 </div>
 
 
-                <!-- ==================================================
-                     ILLUSTRATIONS
-                     ================================================== -->
+                <!-- ILLUSTRATIONS -->
 
                 <div class="illustration-grid-three">
 
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/baseball-pedro.jpg"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/yellow-devil.jpg"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/elder-god.jpg"
                             alt=""
                         >
-
                     </div>
 
                 </div>
@@ -1056,88 +1018,66 @@
                 <div class="illustration-grid-two">
 
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/Gemini_ Greg Griesenauer_ 02-27-2021.JPG"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/Distant Land_ Greg Griesenauer_ 02-27-2021.JPG"
                             alt=""
                         >
-
                     </div>
 
                 </div>
 
 
-                <!-- ==================================================
-                     TYPE / CHARACTER ART
-                     ================================================== -->
+                <!-- TYPE / CHARACTER ART -->
 
                 <div class="bottom-logo-row">
 
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/bossmode.jpg"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/baconbeatz.png"
                             alt=""
                         >
-
                     </div>
 
                 </div>
 
 
-                <!-- ==================================================
-                     MERMAID / CHARACTER GROUP
-                     ================================================== -->
+                <!-- MERMAID / CHARACTER GROUP -->
 
                 <div class="mermaid-row">
 
                     <div class="art-card cinco-card">
-
                         <img
                             src="../assets/projects/illustration/cinco-de-miyo.jpg"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/sirens halloween.PNG"
                             alt=""
                         >
-
                     </div>
 
-
                     <div class="art-card">
-
                         <img
                             src="../assets/projects/illustration/Untitled-1 drink V2 2024.png"
                             alt=""
                         >
-
                     </div>
 
                 </div>
@@ -1147,6 +1087,22 @@
 
 
         </section>
+
+
+        <!-- ==================================================
+             BACK TO TOP
+             ================================================== -->
+
+        <div class="back-top-wrap">
+
+            <a
+                href="#top"
+                class="back-top-button"
+            >
+                BACK TO TOP
+            </a>
+
+        </div>
 
 
     </main>
