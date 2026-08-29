@@ -24,6 +24,10 @@
             min-height: 100%;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #ffffff;
@@ -51,7 +55,10 @@
         }
 
 
-        /* HEADER */
+        /* ==================================================
+           HEADER
+           LOCKED TWACKED TEA STANDARD
+           ================================================== */
 
         .top-header {
             width: 100%;
@@ -64,7 +71,7 @@
         }
 
         .header-button {
-            width: 340px;
+            width: 310px;
             min-height: 62px;
 
             background: #000000;
@@ -103,7 +110,10 @@
         }
 
 
-        /* TYPOGRAPHY */
+        /* ==================================================
+           TYPOGRAPHY
+           LOCKED TWACKED TEA STANDARD
+           ================================================== */
 
         .section-title {
             font-size: 19px;
@@ -118,7 +128,10 @@
         }
 
 
-        /* FULL WIDTH BLACK FIELD */
+        /* ==================================================
+           FULL WIDTH BLACK FIELD
+           LOCKED TWACKED TEA STANDARD
+           ================================================== */
 
         .black-field {
             width: 100vw;
@@ -144,7 +157,7 @@
         /* PEOPLE SECTION */
 
         .people-black {
-            min-height: 190px;
+            min-height: 180px;
             margin-bottom: -68px;
         }
 
@@ -345,7 +358,7 @@
         /* GLASS SECTION */
 
         .glass-black {
-            min-height: 190px;
+            min-height: 180px;
 
             margin-top: 18px;
             margin-bottom: -68px;
@@ -457,7 +470,40 @@
         }
 
 
-        /* SKILLS */
+        /* ==================================================
+           BACK TO TOP BUTTON
+           ================================================== */
+
+        .back-top-wrap {
+            width: 100%;
+            text-align: center;
+
+            padding: 0 20px 34px;
+        }
+
+        .back-top-button {
+            display: inline-block;
+
+            background: #000000;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            line-height: 1.35;
+
+            padding: 9px 22px;
+        }
+
+        .back-top-button:hover {
+            background: #333333;
+        }
+
+
+        /* ==================================================
+           SKILLS / PROGRAMS
+           LOCKED TWACKED TEA STANDARD
+           ================================================== */
 
         .project-details {
             width: 100vw;
@@ -466,7 +512,7 @@
             left: 50%;
 
             margin-left: -50vw;
-            margin-top: 34px;
+            margin-top: 0;
 
             background: #000000;
             color: #ffffff;
@@ -482,6 +528,7 @@
         .details-heading {
             font-size: 19px;
             font-weight: 700;
+            letter-spacing: 0;
 
             margin-bottom: 8px;
         }
@@ -494,7 +541,10 @@
         }
 
 
-        /* FOOTER */
+        /* ==================================================
+           FOOTER
+           LOCKED TWACKED TEA STANDARD
+           ================================================== */
 
         .site-footer {
             width: 100%;
@@ -512,6 +562,8 @@
             text-align: center;
 
             padding: 7px 20px;
+
+            margin-top: 0;
         }
 
         .copyright {
@@ -600,7 +652,7 @@
 </head>
 
 
-<body>
+<body id="top">
 
 <div class="project-page">
 
@@ -644,7 +696,7 @@
                 <div class="black-field-inner">
 
                     <div class="section-title">
-                        People & Event Photography
+                        People &amp; Event Photography
                     </div>
 
                     <div class="section-copy">
@@ -1026,10 +1078,28 @@
         </section>
 
 
+        <!-- ==================================================
+             BACK TO TOP
+             ================================================== -->
+
+        <div class="back-top-wrap">
+
+            <a
+                href="#top"
+                class="back-top-button"
+            >
+                BACK TO TOP
+            </a>
+
+        </div>
+
+
     </main>
 
 
-    <!-- SKILLS / PROGRAMS -->
+    <!-- ==================================================
+         SKILLS / PROGRAMS
+         ================================================== -->
 
     <section class="project-details">
 
@@ -1068,7 +1138,9 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- ==================================================
+         FOOTER
+         ================================================== -->
 
     <footer class="site-footer">
 
