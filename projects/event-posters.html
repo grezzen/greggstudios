@@ -28,6 +28,10 @@
             min-height: 100%;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #ffffff;
@@ -59,6 +63,7 @@
 
         /* ==================================================
            TOP HEADER
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .top-header {
@@ -73,7 +78,7 @@
         }
 
         .header-button {
-            width: 340px;
+            width: 310px;
             min-height: 62px;
 
             background: #000000;
@@ -115,6 +120,7 @@
 
         /* ==================================================
            TYPOGRAPHY
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .section-title {
@@ -134,6 +140,7 @@
 
         /* ==================================================
            FULL WIDTH BLACK FIELD
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .black-field {
@@ -178,6 +185,7 @@
 
         /* ==================================================
            MATCHED-HEIGHT IMAGE PAIRS
+           EXISTING LAYOUT PRESERVED
            ================================================== */
 
         .poster-top-two,
@@ -233,6 +241,7 @@
 
         /* ==================================================
            SINGLE POSTERS
+           EXISTING LAYOUT PRESERVED
            ================================================== */
 
         .poster-wide,
@@ -279,7 +288,37 @@
 
 
         /* ==================================================
+           BACK TO TOP BUTTON
+           ================================================== */
+
+        .back-top-wrap {
+            width: 100%;
+            text-align: center;
+            padding: 0 20px 34px;
+        }
+
+        .back-top-button {
+            display: inline-block;
+
+            background: #000000;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            line-height: 1.35;
+
+            padding: 9px 22px;
+        }
+
+        .back-top-button:hover {
+            background: #333333;
+        }
+
+
+        /* ==================================================
            SKILLS / PROGRAMS
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .project-details {
@@ -289,7 +328,7 @@
             left: 50%;
 
             margin-left: -50vw;
-            margin-top: 34px;
+            margin-top: 0;
 
             background: #000000;
             color: #ffffff;
@@ -307,6 +346,7 @@
         .details-heading {
             font-size: 19px;
             font-weight: 700;
+            letter-spacing: 0;
 
             margin-bottom: 8px;
         }
@@ -321,6 +361,7 @@
 
         /* ==================================================
            FOOTER
+           LOCKED TWACKED TEA STANDARD
            ================================================== */
 
         .site-footer {
@@ -339,6 +380,8 @@
             text-align: center;
 
             padding: 7px 20px;
+
+            margin-top: 0;
         }
 
         .copyright {
@@ -421,7 +464,7 @@
 </head>
 
 
-<body>
+<body id="top">
 
 <div class="project-page">
 
@@ -556,6 +599,7 @@
         </section>
 
 
+
         <!-- ==================================================
              PROMOTIONAL & SPECIAL EVENT POSTERS
              ================================================== -->
@@ -568,7 +612,7 @@
                 <div class="black-field-inner">
 
                     <div class="section-title">
-                        Promotional & Special Event Posters
+                        Promotional &amp; Special Event Posters
                     </div>
 
                     <div class="section-copy">
@@ -661,6 +705,23 @@
 
 
         </section>
+
+
+
+        <!-- ==================================================
+             BACK TO TOP
+             ================================================== -->
+
+        <div class="back-top-wrap">
+
+            <a
+                href="#top"
+                class="back-top-button"
+            >
+                BACK TO TOP
+            </a>
+
+        </div>
 
 
     </main>
