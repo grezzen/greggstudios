@@ -403,6 +403,235 @@
             line-height: 8px;
         }
 
+
+        /* ==================================================
+           MOBILE PORTFOLIO
+           VERTICAL ACCORDION
+           ================================================== */
+
+        @media (max-width: 700px) {
+
+            html,
+            body {
+                width: 100%;
+                height: auto;
+                min-height: 100%;
+            }
+
+            body {
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+
+            .portfolio-page {
+                width: 100%;
+                height: auto;
+                min-height: 100vh;
+            }
+
+
+            /* HEADER */
+
+            .portfolio-header {
+                height: 62px;
+            }
+
+            .portfolio-title {
+                font-size: 24px;
+                letter-spacing: 1.5px;
+            }
+
+
+            /* ACCORDION BECOMES VERTICAL */
+
+            .portfolio-accordion {
+                width: 100%;
+                max-width: none;
+
+                height: auto;
+
+                margin: 0;
+
+                display: flex;
+                flex-direction: column;
+
+                overflow: visible;
+            }
+
+
+            /* COLLAPSED PROJECT TILE */
+
+            .portfolio-panel {
+                flex: none;
+
+                width: 100%;
+                min-width: 100%;
+
+                height: 125px;
+
+                transition:
+                    height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+
+            /* COLLAPSED IMAGE */
+
+            .panel-image {
+                width: 100%;
+                height: 100%;
+
+                object-fit: cover;
+                object-position: center;
+            }
+
+
+            /* ALWAYS SHOW A LITTLE COLOR ON MOBILE */
+
+            .panel-overlay {
+                opacity: 0.35;
+            }
+
+
+            /* PROJECT NAME HORIZONTAL */
+
+            .panel-name {
+                left: 22px;
+                top: 50%;
+
+                transform: translateY(-50%);
+
+                font-size: 17px;
+                font-weight: 400;
+                letter-spacing: 1.5px;
+
+                opacity: 1;
+            }
+
+
+            /* DON'T USE DESKTOP HOVER EFFECTS */
+
+            .portfolio-panel:hover .panel-overlay {
+                opacity: 0.35;
+            }
+
+            .portfolio-panel:hover .panel-name {
+                opacity: 1;
+            }
+
+            .portfolio-panel:hover .panel-image {
+                transform: none;
+            }
+
+
+            /* ACTIVE PROJECT */
+
+            .portfolio-panel.active {
+                flex: none;
+
+                height: 430px;
+            }
+
+            .portfolio-panel.active .panel-image {
+                opacity: 0;
+            }
+
+            .portfolio-panel.active .panel-background {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            .portfolio-panel.active .panel-overlay {
+                opacity: 0.90;
+            }
+
+            .portfolio-panel.active .panel-name {
+                display: none;
+            }
+
+
+            /* ACTIVE CONTENT */
+
+            .panel-content {
+                left: 0;
+                right: 0;
+                top: 50%;
+
+                transform: translateY(-50%);
+
+                max-width: none;
+
+                padding: 35px 28px;
+            }
+
+            .panel-content h2 {
+                font-size: 30px;
+                line-height: 1.1;
+
+                letter-spacing: 1px;
+
+                margin-bottom: 16px;
+            }
+
+            .panel-content p {
+                max-width: none;
+
+                font-size: 15px;
+                line-height: 1.45;
+
+                margin-bottom: 22px;
+            }
+
+
+            /* BUTTON */
+
+            .learn-more {
+                min-width: 135px;
+                height: 44px;
+
+                padding: 0 20px;
+
+                font-size: 12px;
+            }
+
+
+            /* CLOSE X */
+
+            .close-panel {
+                top: 18px;
+                right: 20px;
+
+                font-size: 24px;
+            }
+
+
+            /* LIGHT THC MOBILE */
+
+            .light-panel .panel-name {
+                color: #000000;
+            }
+
+
+            /* FOOTER */
+
+            .portfolio-footer {
+                height: auto;
+                min-height: 48px;
+
+                padding: 7px 15px;
+            }
+
+            .copyright {
+                font-size: 11px;
+                line-height: 13px;
+            }
+
+            .copyright-details {
+                font-size: 7px;
+                line-height: 9px;
+            }
+
+        }
+
     </style>
 </head>
 
