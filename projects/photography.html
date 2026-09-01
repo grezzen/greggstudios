@@ -613,13 +613,58 @@
         }
 
 
-        /* MOBILE */
+        /* ==================================================
+           MOBILE
+
+           MAIN FIX:
+           BLACK TEXT FIELDS NOW GROW WITH COPY INSTEAD OF
+           USING THE DESKTOP FIXED HEIGHT / LARGE OVERLAP.
+           ================================================== */
 
         @media (max-width: 600px) {
 
             .page-inner {
                 width: 100%;
             }
+
+
+            /* ----------------------------------------------
+               MOBILE SECTION TEXT / IMAGE SPACING FIX
+
+               Allow black fields to grow naturally with
+               wrapped mobile text.
+
+               Extra bottom padding creates black space below
+               the copy.
+
+               Smaller negative margin keeps the intended
+               black-behind-image effect without covering text.
+               ---------------------------------------------- */
+
+            .people-black,
+            .glass-black {
+                min-height: 0;
+                height: auto;
+
+                margin-bottom: -28px;
+            }
+
+            .people-black .black-field-inner,
+            .glass-black .black-field-inner {
+                padding-bottom: 48px;
+            }
+
+
+            /* MOBILE IMAGE CONTENT */
+
+            .people-content,
+            .glass-content {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+
+            /* MOBILE IMAGE GRIDS */
 
             .snow-grid,
             .skate-top,
@@ -639,6 +684,9 @@
             .glass-column {
                 gap: 18px;
             }
+
+
+            /* SKILLS */
 
             .project-details {
                 padding-left: 7vw;
