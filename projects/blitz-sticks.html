@@ -196,6 +196,19 @@
 
 
         /* ==================================================
+           DESKTOP / MOBILE IMAGE SWAPS
+           ================================================== */
+
+        .desktop-image {
+            display: block;
+        }
+
+        .mobile-image {
+            display: none;
+        }
+
+
+        /* ==================================================
            CATALOG BUTTON
            ================================================== */
 
@@ -363,6 +376,7 @@
 
         /* ==================================================
            MOBILE
+           TEXT FIX + MOBILE IMAGE SWAPS
            ================================================== */
 
         @media (max-width: 600px) {
@@ -371,10 +385,44 @@
                 width: 100%;
             }
 
+
+            /* ==================================================
+               TEXT / IMAGE OVERLAP FIX
+               ================================================== */
+
+            .section-black {
+                min-height: 0;
+                height: auto;
+
+                margin-bottom: -28px;
+            }
+
+            .section-black .black-field-inner {
+                padding-bottom: 48px;
+            }
+
             .section-content {
                 padding-left: 18px;
                 padding-right: 18px;
             }
+
+
+            /* ==================================================
+               MOBILE IMAGE SWAPS
+               ================================================== */
+
+            .desktop-image {
+                display: none;
+            }
+
+            .mobile-image {
+                display: block;
+            }
+
+
+            /* ==================================================
+               SKILLS
+               ================================================== */
 
             .project-details {
                 padding-left: 7vw;
@@ -464,11 +512,24 @@
 
                 <div class="image-stack">
 
+
+                    <!-- DESKTOP -->
+
                     <img
                         src="../assets/projects/blitz-sticks/Blitz-01.png"
                         alt="Blitz Sticks product catalog"
-                        class="project-image"
+                        class="project-image desktop-image"
                     >
+
+
+                    <!-- MOBILE -->
+
+                    <img
+                        src="../assets/projects/blitz-sticks/Blitz-01-mobile.png"
+                        alt="Blitz Sticks product catalog"
+                        class="project-image mobile-image"
+                    >
+
 
                 </div>
 
@@ -603,11 +664,24 @@
 
                 <div class="image-stack">
 
+
+                    <!-- DESKTOP -->
+
                     <img
                         src="../assets/projects/blitz-sticks/Blitz-53.png"
                         alt="Blitz Sticks retail promotional materials"
-                        class="project-image"
+                        class="project-image desktop-image"
                     >
+
+
+                    <!-- MOBILE -->
+
+                    <img
+                        src="../assets/projects/blitz-sticks/Blitz-53-mobile.png"
+                        alt="Blitz Sticks retail promotional materials"
+                        class="project-image mobile-image"
+                    >
+
 
                     <img
                         src="../assets/projects/blitz-sticks/Blitz-cannabinoid-pad-28-x-7.jpg"
@@ -670,11 +744,24 @@
                         class="project-image"
                     >
 
+
+                    <!-- DESKTOP -->
+
                     <img
                         src="../assets/projects/blitz-sticks/Blitz-55.png"
                         alt="Blitz Sticks digital promotional assets"
-                        class="project-image"
+                        class="project-image desktop-image"
                     >
+
+
+                    <!-- MOBILE -->
+
+                    <img
+                        src="../assets/projects/blitz-sticks/Blitz-55-mobile.png"
+                        alt="Blitz Sticks digital promotional assets"
+                        class="project-image mobile-image"
+                    >
+
 
                 </div>
 
