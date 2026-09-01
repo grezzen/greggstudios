@@ -184,7 +184,6 @@
 
         /* ==================================================
            GENERIC IMAGE RULES
-
            EXISTING IMAGE BEHAVIOR PRESERVED
            ================================================== */
 
@@ -633,7 +632,7 @@
 
         /* ==================================================
            MOBILE
-           EXISTING IMAGE BEHAVIOR PRESERVED
+           IMAGE LAYOUT PRESERVED + TEXT OVERLAP FIX
            ================================================== */
 
         @media (max-width: 600px) {
@@ -641,6 +640,31 @@
             .page-inner {
                 width: 100%;
             }
+
+
+            /* ----------------------------------------------
+               MOBILE BLACK SECTION FIX
+
+               Allow text sections to grow naturally.
+               Add extra black space below the wrapped copy.
+               Reduce overlap so images stay below the text.
+               ---------------------------------------------- */
+
+            .illustration-black,
+            .application-black {
+                min-height: 0;
+                height: auto;
+
+                margin-bottom: -28px;
+            }
+
+            .illustration-black .black-field-inner,
+            .application-black .black-field-inner {
+                padding-bottom: 48px;
+            }
+
+
+            /* MOBILE IMAGE STACKS */
 
             .logo-row-three,
             .logo-row-two,
