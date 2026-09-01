@@ -194,6 +194,19 @@
 
 
         /* ==================================================
+           DESKTOP / MOBILE IMAGE SWAPS
+           ================================================== */
+
+        .desktop-image {
+            display: block;
+        }
+
+        .mobile-image {
+            display: none;
+        }
+
+
+        /* ==================================================
            SECTION SPACING
            ================================================== */
 
@@ -330,6 +343,7 @@
 
         /* ==================================================
            MOBILE
+           TEXT FIX + IMAGE SWAPS
            ================================================== */
 
         @media (max-width: 600px) {
@@ -338,10 +352,44 @@
                 width: 100%;
             }
 
+
+            /* ==================================================
+               TEXT / IMAGE OVERLAP FIX
+               ================================================== */
+
+            .section-black {
+                min-height: 0;
+                height: auto;
+
+                margin-bottom: -28px;
+            }
+
+            .section-black .black-field-inner {
+                padding-bottom: 48px;
+            }
+
             .section-content {
                 padding-left: 18px;
                 padding-right: 18px;
             }
+
+
+            /* ==================================================
+               MOBILE IMAGE SWAPS
+               ================================================== */
+
+            .desktop-image {
+                display: none;
+            }
+
+            .mobile-image {
+                display: block;
+            }
+
+
+            /* ==================================================
+               SKILLS
+               ================================================== */
 
             .project-details {
                 padding-left: 7vw;
@@ -428,25 +476,66 @@
 
                 <div class="image-stack">
 
+
+                    <!-- C9-01 DESKTOP -->
+
                     <img
                         src="../assets/projects/cloud9/C9-01.png"
                         alt=""
+                        class="desktop-image"
                     >
+
+
+                    <!-- C9-01 MOBILE -->
+
+                    <img
+                        src="../assets/projects/cloud9/C9-01-mobile.png"
+                        alt=""
+                        class="mobile-image"
+                    >
+
 
                     <img
                         src="../assets/projects/cloud9/C9-02.jpg"
                         alt=""
                     >
 
+
+                    <!-- C9-03 DESKTOP -->
+
                     <img
                         src="../assets/projects/cloud9/C9-03.jpg"
                         alt=""
+                        class="desktop-image"
                     >
+
+
+                    <!-- C9-03 MOBILE -->
+
+                    <img
+                        src="../assets/projects/cloud9/C9-03-mobile.jpg"
+                        alt=""
+                        class="mobile-image"
+                    >
+
+
+                    <!-- C9-04 DESKTOP -->
 
                     <img
                         src="../assets/projects/cloud9/C9-04.jpg"
                         alt=""
+                        class="desktop-image"
                     >
+
+
+                    <!-- C9-04 MOBILE -->
+
+                    <img
+                        src="../assets/projects/cloud9/C9-04-mobile.jpg"
+                        alt=""
+                        class="mobile-image"
+                    >
+
 
                 </div>
 
@@ -495,10 +584,24 @@
                         alt=""
                     >
 
+
+                    <!-- C9-06 DESKTOP -->
+
                     <img
                         src="../assets/projects/cloud9/C9-06.jpg"
                         alt=""
+                        class="desktop-image"
                     >
+
+
+                    <!-- C9-06 MOBILE -->
+
+                    <img
+                        src="../assets/projects/cloud9/C9-06-mobile.jpg"
+                        alt=""
+                        class="mobile-image"
+                    >
+
 
                     <img
                         src="../assets/projects/cloud9/C9-07.jpg"
@@ -510,10 +613,24 @@
                         alt=""
                     >
 
+
+                    <!-- C9-09 DESKTOP -->
+
                     <img
                         src="../assets/projects/cloud9/C9-09.jpg"
                         alt=""
+                        class="desktop-image"
                     >
+
+
+                    <!-- C9-09 MOBILE -->
+
+                    <img
+                        src="../assets/projects/cloud9/C9-09-mobile.jpg"
+                        alt=""
+                        class="mobile-image"
+                    >
+
 
                 </div>
 
