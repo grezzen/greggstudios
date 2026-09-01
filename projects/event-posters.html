@@ -438,6 +438,7 @@
 
         /* ==================================================
            MOBILE
+           TEXT OVERLAP FIX
            ================================================== */
 
         @media (max-width: 600px) {
@@ -446,11 +447,33 @@
                 width: 100%;
             }
 
+
+            /* MOBILE BLACK SECTION FIX */
+
+            .poster-black,
+            .promo-black {
+                min-height: 0;
+                height: auto;
+
+                margin-bottom: -28px;
+            }
+
+            .poster-black .black-field-inner,
+            .promo-black .black-field-inner {
+                padding-bottom: 48px;
+            }
+
+
+            /* MOBILE IMAGE CONTENT */
+
             .poster-content,
             .promo-content {
                 padding-left: 12px;
                 padding-right: 12px;
             }
+
+
+            /* SKILLS */
 
             .project-details {
                 padding-left: 7vw;
