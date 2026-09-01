@@ -185,7 +185,6 @@
 
         /* ==================================================
            APPAREL & HATS
-
            EXISTING IMAGE POSITION PRESERVED
            ================================================== */
 
@@ -224,8 +223,21 @@
 
 
         /* ==================================================
+           DESKTOP / MOBILE IMAGE SWAPS
+           ================================================== */
+
+        .desktop-image {
+            display: block;
+        }
+
+        .mobile-image {
+            display: none;
+        }
+
+
+        /* ==================================================
            SKATEBOARD ROW
-           EXISTING 40 / 60 LAYOUT PRESERVED
+           EXISTING 40 / 60 DESKTOP LAYOUT
            ================================================== */
 
         .skateboard-row {
@@ -255,7 +267,7 @@
 
         /* ==================================================
            GLASS FEATURE ROW
-           EXISTING THREE IMAGE LAYOUT PRESERVED
+           EXISTING THREE IMAGE DESKTOP LAYOUT
            ================================================== */
 
         .glass-feature-row {
@@ -282,7 +294,7 @@
 
         /* ==================================================
            RETAIL FEATURE ROW
-           EXISTING ENLARGED PAIR PRESERVED
+           EXISTING ENLARGED DESKTOP PAIR
            ================================================== */
 
         .retail-feature-row {
@@ -420,7 +432,7 @@
 
         /* ==================================================
            TABLET
-           EXISTING IMAGE BEHAVIOR PRESERVED
+           EXISTING DESKTOP/TABLET BEHAVIOR PRESERVED
            ================================================== */
 
         @media (max-width: 900px) {
@@ -445,7 +457,7 @@
 
         /* ==================================================
            MOBILE
-           EXISTING IMAGE BEHAVIOR PRESERVED
+           TEXT FIX + 1-BY-1 STACKS + IMAGE SWAPS
            ================================================== */
 
         @media (max-width: 600px) {
@@ -454,68 +466,131 @@
                 width: 100%;
             }
 
+
+            /* ==================================================
+               MOBILE TEXT / IMAGE OVERLAP FIX
+               ================================================== */
+
+            .section-black,
+            .apparel-black {
+                min-height: 0;
+                height: auto;
+
+                margin-bottom: -28px;
+            }
+
+            .section-black .black-field-inner,
+            .apparel-black .black-field-inner {
+                padding-bottom: 48px;
+            }
+
             .section-content {
                 padding-left: 12px;
                 padding-right: 12px;
             }
 
-            .section-black {
-                margin-bottom: -35px;
-            }
-
-            .apparel-black {
-                margin-bottom: -45px;
-            }
-
             .apparel-content {
-                padding-top: 38px;
+                padding-top: 0;
             }
+
+
+            /* ==================================================
+               MOBILE IMAGE SWAPS
+               ================================================== */
+
+            .desktop-image {
+                display: none;
+            }
+
+            .mobile-image {
+                display: block;
+            }
+
+
+            /* ==================================================
+               FULL IMAGE STACK
+               ================================================== */
 
             .full-image-stack {
                 gap: 16px;
             }
 
 
-            /* SKATE PAIR */
+            /* ==================================================
+               SKATEBOARD
+               MOBILE = ONE IMAGE PER ROW
+               ================================================== */
 
             .skateboard-row {
-                gap: 10px;
+                flex-direction: column;
+
+                align-items: center;
+
+                gap: 16px;
             }
 
-            .skate-event {
-                width: calc(40% - 5px);
-            }
-
+            .skate-event,
             .skate-decks {
-                width: calc(60% - 5px);
+                width: 100%;
+                height: auto;
+
+                max-width: 100%;
             }
 
 
-            /* GLASS POSTERS */
+            /* ==================================================
+               GLASS POSTERS
+               MOBILE = ONE IMAGE PER ROW
+               ================================================== */
 
             .glass-feature-row {
-                gap: 6px;
+                flex-direction: column;
+
+                align-items: center;
+
+                gap: 16px;
+
                 margin-bottom: 16px;
             }
 
             .glass-feature-row img {
-                height: 44vw;
-                max-width: 32%;
+                width: 100%;
+                height: auto;
+
+                max-width: 100%;
+
+                object-fit: contain;
             }
 
 
-            /* RETAIL PAIR */
+            /* ==================================================
+               RETAIL PAIR
+               MOBILE = ONE IMAGE PER ROW
+               ================================================== */
 
             .retail-feature-row {
-                gap: 8px;
+                flex-direction: column;
+
+                align-items: center;
+
+                gap: 16px;
+
                 margin-bottom: 16px;
             }
 
             .retail-feature-row img {
-                height: 68vw;
-                max-width: calc(50% - 4px);
+                width: 100%;
+                height: auto;
+
+                max-width: 100%;
+
+                object-fit: contain;
             }
 
+
+            /* ==================================================
+               SKILLS
+               ================================================== */
 
             .project-details {
                 padding-left: 7vw;
@@ -597,10 +672,24 @@
 
                 <div class="full-image-stack">
 
+
+                    <!-- DESKTOP -->
+
                     <img
                         src="../assets/projects/greatest-shop-ever/GSE01.png"
                         alt="Greatest Shop Ever apparel and hat designs"
+                        class="desktop-image"
                     >
+
+
+                    <!-- MOBILE -->
+
+                    <img
+                        src="../assets/projects/greatest-shop-ever/GSE01-mobile.png"
+                        alt="Greatest Shop Ever apparel and hat designs"
+                        class="mobile-image"
+                    >
+
 
                 </div>
 
@@ -693,6 +782,10 @@
             <div class="section-content">
 
 
+                <!-- THREE POSTERS
+                     DESKTOP = SIDE BY SIDE
+                     MOBILE = ONE PER ROW -->
+
                 <div class="glass-feature-row">
 
                     <img
@@ -715,25 +808,68 @@
 
                 <div class="full-image-stack">
 
+
+                    <!-- ==================================================
+                         GSE02
+                         ================================================== -->
+
                     <img
                         src="../assets/projects/greatest-shop-ever/GSE02.jpg"
                         alt="Greatest Shop Ever glass blowing promotional materials"
+                        class="desktop-image"
                     >
+
+                    <img
+                        src="../assets/projects/greatest-shop-ever/GSE02-mobile.jpg"
+                        alt="Greatest Shop Ever glass blowing promotional materials"
+                        class="mobile-image"
+                    >
+
+
+                    <!-- ==================================================
+                         GSE03
+                         SAME IMAGE DESKTOP + MOBILE
+                         ================================================== -->
 
                     <img
                         src="../assets/projects/greatest-shop-ever/GSE03.jpg"
                         alt="Greatest Shop Ever Sherbet event materials"
                     >
 
+
+                    <!-- ==================================================
+                         GSE04
+                         ================================================== -->
+
                     <img
                         src="../assets/projects/greatest-shop-ever/GSE04.jpg"
                         alt="Greatest Shop Ever Huffy event materials"
+                        class="desktop-image"
                     >
+
+                    <img
+                        src="../assets/projects/greatest-shop-ever/GSE04-mobile.png"
+                        alt="Greatest Shop Ever Huffy event materials"
+                        class="mobile-image"
+                    >
+
+
+                    <!-- ==================================================
+                         GSE05
+                         ================================================== -->
 
                     <img
                         src="../assets/projects/greatest-shop-ever/GSE05.jpg"
                         alt="Greatest Shop Ever glass event promotional materials"
+                        class="desktop-image"
                     >
+
+                    <img
+                        src="../assets/projects/greatest-shop-ever/GSE05-mobile.png"
+                        alt="Greatest Shop Ever glass event promotional materials"
+                        class="mobile-image"
+                    >
+
 
                 </div>
 
@@ -776,6 +912,10 @@
             <div class="section-content">
 
 
+                <!-- RETAIL PAIR
+                     DESKTOP = SIDE BY SIDE
+                     MOBILE = ONE PER ROW -->
+
                 <div class="retail-feature-row">
 
                     <img
@@ -793,10 +933,24 @@
 
                 <div class="full-image-stack">
 
+
+                    <!-- DESKTOP -->
+
                     <img
                         src="../assets/projects/greatest-shop-ever/GSE06.jpg"
                         alt="Greatest Shop Ever retail and VIP promotional materials"
+                        class="desktop-image"
                     >
+
+
+                    <!-- MOBILE -->
+
+                    <img
+                        src="../assets/projects/greatest-shop-ever/GSE06-mobile.png"
+                        alt="Greatest Shop Ever retail and VIP promotional materials"
+                        class="mobile-image"
+                    >
+
 
                 </div>
 
