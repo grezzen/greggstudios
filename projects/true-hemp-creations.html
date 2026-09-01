@@ -363,6 +363,17 @@
         }
 
 
+        /* DESKTOP / MOBILE PITCH IMAGE SWAP */
+
+        .pitch-desktop {
+            display: block;
+        }
+
+        .pitch-mobile {
+            display: none;
+        }
+
+
         /* ==================================================
            BACK TO TOP BUTTON
            ================================================== */
@@ -502,7 +513,7 @@
 
         /* ==================================================
            MOBILE
-           EXISTING IMAGE BEHAVIOR PRESERVED
+           TEXT OVERLAP FIX + PITCH IMAGE SWAP
            ================================================== */
 
         @media (max-width: 600px) {
@@ -510,6 +521,37 @@
             .page-inner {
                 width: 100%;
             }
+
+
+            /* ----------------------------------------------
+               MOBILE BLACK SECTION FIX
+
+               All three text sections grow naturally with
+               the wrapped copy.
+
+               Extra bottom padding keeps text clear.
+
+               Smaller overlap preserves the desktop visual
+               style without allowing images to cover text.
+               ---------------------------------------------- */
+
+            .catalog-black,
+            .digital-black,
+            .pitch-black {
+                min-height: 0;
+                height: auto;
+
+                margin-bottom: -28px;
+            }
+
+            .catalog-black .black-field-inner,
+            .digital-black .black-field-inner,
+            .pitch-black .black-field-inner {
+                padding-bottom: 48px;
+            }
+
+
+            /* CATALOG */
 
             .catalog-grid {
                 grid-template-columns: 1fr;
@@ -519,12 +561,29 @@
                 width: calc(100% - 24px);
             }
 
+
+            /* CONTENT PADDING */
+
             .catalog-content,
             .digital-content,
             .pitch-content {
                 padding-left: 12px;
                 padding-right: 12px;
             }
+
+
+            /* MOBILE PITCH DECK IMAGE */
+
+            .pitch-desktop {
+                display: none;
+            }
+
+            .pitch-mobile {
+                display: block;
+            }
+
+
+            /* SKILLS */
 
             .project-details {
                 padding-left: 7vw;
@@ -850,10 +909,24 @@
 
                 <div class="pitch-image">
 
+
+                    <!-- DESKTOP VERSION -->
+
                     <img
                         src="../assets/projects/true-hemp-creations/true-hemp-pitch-deck.png"
                         alt="True Hemp Creations distribution pitch deck"
+                        class="pitch-desktop"
                     >
+
+
+                    <!-- MOBILE VERSION -->
+
+                    <img
+                        src="../assets/projects/true-hemp-creations/true-hemp-pitch-deck-mobile.png"
+                        alt="True Hemp Creations distribution pitch deck"
+                        class="pitch-mobile"
+                    >
+
 
                 </div>
 
