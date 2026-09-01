@@ -408,6 +408,7 @@
 
         /* ==================================================
            MOBILE
+           TEXT OVERLAP FIX
            ================================================== */
 
         @media (max-width: 600px) {
@@ -416,16 +417,39 @@
                 width: 100%;
             }
 
+
+            /* MOBILE BLACK SECTION FIX */
+
+            .section-black {
+                min-height: 0;
+                height: auto;
+
+                margin-bottom: -28px;
+            }
+
+            .section-black .black-field-inner {
+                padding-bottom: 48px;
+            }
+
+
+            /* MOBILE CONTENT */
+
             .section-content {
                 padding-left: 18px;
                 padding-right: 18px;
             }
+
+
+            /* MOBILE GRIDS */
 
             .catalog-grid,
             .sell-sheet-grid,
             .business-card-grid {
                 grid-template-columns: 1fr;
             }
+
+
+            /* SKILLS */
 
             .project-details {
                 padding-left: 7vw;
