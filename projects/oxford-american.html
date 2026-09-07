@@ -202,6 +202,44 @@
 
 
         /* ==================================================
+           GIVING TUESDAY
+           ================================================== */
+
+        .giving-black {
+            min-height: 180px;
+
+            margin-top: 18px;
+            margin-bottom: -68px;
+        }
+
+        .giving-content {
+            position: relative;
+            z-index: 2;
+
+            padding: 0 18px 40px;
+        }
+
+
+        /* ==================================================
+           PROMOTIONAL PIECES
+           ================================================== */
+
+        .promo-black {
+            min-height: 180px;
+
+            margin-top: 18px;
+            margin-bottom: -68px;
+        }
+
+        .promo-content {
+            position: relative;
+            z-index: 2;
+
+            padding: 0 18px 40px;
+        }
+
+
+        /* ==================================================
            IMAGE STACK
            EXISTING OXFORD AMERICAN LAYOUT PRESERVED
            ================================================== */
@@ -217,6 +255,38 @@
         }
 
         .project-stack img {
+            width: 100%;
+            height: auto;
+
+            object-fit: contain;
+        }
+
+
+        /* ==================================================
+           DESKTOP / MOBILE IMAGE GROUPS
+           ================================================== */
+
+        .desktop-image-group {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 24px;
+        }
+
+        .mobile-image-group {
+            display: none;
+
+            width: 100%;
+
+            flex-direction: column;
+
+            gap: 16px;
+        }
+
+        .desktop-image-group img,
+        .mobile-image-group img {
             width: 100%;
             height: auto;
 
@@ -361,10 +431,14 @@
             }
 
 
-            /* MOBILE BLACK SECTION FIX */
+            /* ==================================================
+               MOBILE BLACK SECTION FIX
+               ================================================== */
 
             .concert-black,
-            .grit-black {
+            .grit-black,
+            .giving-black,
+            .promo-black {
                 min-height: 0;
                 height: auto;
 
@@ -372,28 +446,51 @@
             }
 
             .concert-black .black-field-inner,
-            .grit-black .black-field-inner {
+            .grit-black .black-field-inner,
+            .giving-black .black-field-inner,
+            .promo-black .black-field-inner {
                 padding-bottom: 48px;
             }
 
 
-            /* MOBILE IMAGE CONTENT */
+            /* ==================================================
+               MOBILE IMAGE CONTENT
+               ================================================== */
 
             .concert-content,
-            .grit-content {
+            .grit-content,
+            .giving-content,
+            .promo-content {
                 padding-left: 12px;
                 padding-right: 12px;
             }
 
 
-            /* IMAGE STACK */
+            /* ==================================================
+               IMAGE STACK
+               ================================================== */
 
             .project-stack {
                 gap: 16px;
             }
 
 
-            /* SKILLS */
+            /* ==================================================
+               DESKTOP / MOBILE IMAGE SWAP
+               ================================================== */
+
+            .desktop-image-group {
+                display: none;
+            }
+
+            .mobile-image-group {
+                display: flex;
+            }
+
+
+            /* ==================================================
+               SKILLS
+               ================================================== */
 
             .project-details {
                 padding-left: 7vw;
@@ -565,6 +662,172 @@
                         src="../assets/projects/oxford-american/OA04.jpg"
                         alt="Oxford American 50 Years of True Grit promotional collateral"
                     >
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==================================================
+             GIVING TUESDAY
+             ================================================== -->
+
+        <section>
+
+
+            <div class="black-field giving-black">
+
+                <div class="black-field-inner">
+
+                    <div class="section-title">
+                        Giving Tuesday
+                    </div>
+
+                    <div class="section-copy">
+                        Developed a coordinated Giving Tuesday fundraising campaign for the
+                        Oxford American, creating promotional graphics designed to encourage
+                        audience support and communicate the organization's fundraising message.
+                        Built a consistent visual system across campaign materials for use in
+                        digital outreach and donor communications while maintaining the
+                        publication's established visual identity.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="giving-content">
+
+                <div class="project-stack">
+
+
+                    <!-- DESKTOP -->
+
+                    <div class="desktop-image-group">
+
+                        <img
+                            src="../assets/projects/oxford-american/giving%20tuesday.png"
+                            alt="Oxford American Giving Tuesday campaign"
+                        >
+
+                    </div>
+
+
+                    <!-- MOBILE -->
+
+                    <div class="mobile-image-group">
+
+                        <img
+                            src="../assets/projects/oxford-american/giving%20tuesday%20mobile%2001.png"
+                            alt="Oxford American Giving Tuesday campaign"
+                        >
+
+                        <img
+                            src="../assets/projects/oxford-american/giving%20tuesday%20mobile%2002.png"
+                            alt="Oxford American Giving Tuesday campaign"
+                        >
+
+                        <img
+                            src="../assets/projects/oxford-american/giving%20tuesday%20mobile%2003.png"
+                            alt="Oxford American Giving Tuesday campaign"
+                        >
+
+                        <img
+                            src="../assets/projects/oxford-american/giving%20tuesday%20mobile%2004.png"
+                            alt="Oxford American Giving Tuesday campaign"
+                        >
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==================================================
+             PROMOTIONAL PIECES
+             ================================================== -->
+
+        <section>
+
+
+            <div class="black-field promo-black">
+
+                <div class="black-field-inner">
+
+                    <div class="section-title">
+                        Promotional Pieces
+                    </div>
+
+                    <div class="section-copy">
+                        Created promotional materials supporting the Oxford American's
+                        events, programs, and audience outreach. Developed coordinated
+                        print and digital pieces that combined editorial imagery, typography,
+                        and campaign messaging into clear, engaging communications while
+                        maintaining consistency with the publication's broader visual identity.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="promo-content">
+
+                <div class="project-stack">
+
+
+                    <!-- DESKTOP -->
+
+                    <div class="desktop-image-group">
+
+                        <img
+                            src="../assets/projects/oxford-american/OA%20promo%201.png"
+                            alt="Oxford American promotional materials"
+                        >
+
+                        <img
+                            src="../assets/projects/oxford-american/OA%20promo%202.png"
+                            alt="Oxford American promotional materials"
+                        >
+
+                    </div>
+
+
+                    <!-- MOBILE -->
+
+                    <div class="mobile-image-group">
+
+                        <img
+                            src="../assets/projects/oxford-american/OA%20promo%20mobile%2001.png"
+                            alt="Oxford American promotional materials"
+                        >
+
+                        <img
+                            src="../assets/projects/oxford-american/OA%20promo%20mobile%2002.png"
+                            alt="Oxford American promotional materials"
+                        >
+
+                        <img
+                            src="../assets/projects/oxford-american/OA%20promo%20mobile%2003.png"
+                            alt="Oxford American promotional materials"
+                        >
+
+                        <img
+                            src="../assets/projects/oxford-american/OA%20promo%20mobile%2004.png"
+                            alt="Oxford American promotional materials"
+                        >
+
+                    </div>
 
 
                 </div>
