@@ -137,6 +137,10 @@
             line-height: 1.35;
         }
 
+        .section-copy p + p {
+            margin-top: 10px;
+        }
+
 
         /* ==================================================
            FULL WIDTH BLACK FIELD
@@ -166,13 +170,19 @@
 
 
         /* ==================================================
-           SECTION 1
            EVENT POSTER DESIGN
+           UPDATED FOR COMBINED COPY
            ================================================== */
 
         .poster-black {
-            min-height: 190px;
+            min-height: 0;
+            height: auto;
+
             margin-bottom: -68px;
+        }
+
+        .poster-black .black-field-inner {
+            padding-bottom: 92px;
         }
 
         .poster-content {
@@ -268,16 +278,9 @@
 
 
         /* ==================================================
-           SECTION 2
-           PROMOTIONAL & SPECIAL EVENT POSTERS
+           CONTINUED POSTER CONTENT
+           NO SECOND BLACK TEXT BOX
            ================================================== */
-
-        .promo-black {
-            min-height: 190px;
-
-            margin-top: 18px;
-            margin-bottom: -68px;
-        }
 
         .promo-content {
             position: relative;
@@ -450,16 +453,14 @@
 
             /* MOBILE BLACK SECTION FIX */
 
-            .poster-black,
-            .promo-black {
+            .poster-black {
                 min-height: 0;
                 height: auto;
 
                 margin-bottom: -28px;
             }
 
-            .poster-black .black-field-inner,
-            .promo-black .black-field-inner {
+            .poster-black .black-field-inner {
                 padding-bottom: 48px;
             }
 
@@ -546,11 +547,23 @@
                     </div>
 
                     <div class="section-copy">
-                        Designed promotional posters and event graphics for concerts,
-                        retail events, glass blowing shows, themed promotions, and
-                        special events. Created distinctive visual identities tailored
-                        to each event while maintaining clear hierarchy, legibility,
-                        and strong promotional impact across print and digital use.
+
+                        <p>
+                            Designed promotional posters and event graphics for concerts,
+                            retail events, glass blowing shows, themed promotions, and
+                            special events. Created distinctive visual identities tailored
+                            to each event while maintaining clear hierarchy, legibility,
+                            and strong promotional impact across print and digital use.
+                        </p>
+
+                        <p>
+                            Developed promotional artwork for music events, retail
+                            promotions, holiday events, performances, and branded
+                            campaigns. Projects ranged from illustrated and photographic
+                            compositions to typographic and concept-driven poster designs,
+                            supporting both physical event promotion and digital marketing.
+                        </p>
+
                     </div>
 
                 </div>
@@ -619,37 +632,10 @@
             </div>
 
 
-        </section>
-
-
-
-        <!-- ==================================================
-             PROMOTIONAL & SPECIAL EVENT POSTERS
-             ================================================== -->
-
-        <section>
-
-
-            <div class="black-field promo-black">
-
-                <div class="black-field-inner">
-
-                    <div class="section-title">
-                        Promotional &amp; Special Event Posters
-                    </div>
-
-                    <div class="section-copy">
-                        Developed promotional artwork for music events, retail
-                        promotions, holiday events, performances, and branded
-                        campaigns. Projects ranged from illustrated and photographic
-                        compositions to typographic and concept-driven poster designs,
-                        supporting both physical event promotion and digital marketing.
-                    </div>
-
-                </div>
-
-            </div>
-
+            <!-- ==================================================
+                 CONTINUED POSTERS
+                 NO SECOND BLACK TEXT SECTION
+                 ================================================== -->
 
             <div class="promo-content">
 
