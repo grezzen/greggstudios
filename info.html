@@ -25,6 +25,10 @@
             min-height: 100%;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background-color: #ffffff;
@@ -281,13 +285,32 @@
 
 
         /* =========================
-           PORTFOLIO EXPERTISE
+           BACK TO TOP BUTTON
            ========================= */
 
-        .portfolio-expertise {
-            font-size: 13px;
+        .back-top-wrap {
+            width: 100%;
+            text-align: center;
 
-            line-height: 1.4;
+            margin-top: 28px;
+        }
+
+        .back-top-button {
+            display: inline-block;
+
+            background: #000000;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            line-height: 1.35;
+
+            padding: 9px 22px;
+        }
+
+        .back-top-button:hover {
+            background: #333333;
         }
 
 
@@ -300,7 +323,6 @@
             min-height: 31px;
 
             background-color: #000000;
-
             color: #ffffff;
 
             text-align: center;
@@ -413,8 +435,7 @@
             .profile,
             .bullet-list,
             .skill-text,
-            .job-description,
-            .portfolio-expertise {
+            .job-description {
                 font-size: 11px;
             }
 
@@ -456,7 +477,7 @@
 </head>
 
 
-<body>
+<body id="top">
 
 
     <!-- =========================
@@ -496,7 +517,6 @@
                 <div class="contact">
                     (314)662-1173 •
                     ggrezzen@gmail.com •
-                    GregGLLC.com •
                     linkedin.com/in/greg-griesenauer
                 </div>
 
@@ -546,39 +566,29 @@
                     </li>
 
                     <li>
-                        Designed branding and packaging for
-                        <strong>hundreds of consumer products</strong>.
+                        Designed branding and packaging for hundreds of consumer products.
                     </li>
 
                     <li>
-                        Created
-                        <strong>
-                            hundreds of logos, advertisements, brochures,
-                            posters, marketing campaigns, and promotional materials
-                        </strong>.
+                        Created hundreds of logos, advertisements, brochures,
+                        posters, marketing campaigns, and promotional materials.
                     </li>
 
                     <li>
-                        Produced
-                        <strong>
-                            50+ product catalogs, sales publications, and printed
-                            marketing pieces
-                        </strong>.
+                        Produced 50+ product catalogs, sales publications, and printed
+                        marketing pieces.
                     </li>
 
                     <li>
-                        Designed creative assets supporting
-                        <strong>50+ websites and e-commerce platforms</strong>.
+                        Designed creative assets supporting 50+ websites and e-commerce platforms.
                     </li>
 
                     <li>
-                        Produced and retouched
-                        <strong>thousands of commercial product photographs</strong>.
+                        Produced and retouched thousands of commercial product photographs.
                     </li>
 
                     <li>
-                        Led creative execution across
-                        <strong>20+ consumer and commercial brands</strong>.
+                        Led creative execution across 20+ consumer and commercial brands.
                     </li>
 
                     <li>
@@ -747,7 +757,7 @@
 
                         <li>
                             Designed and produced a
-                            <strong>100-page multi-brand product catalog</strong>
+                            100-page multi-brand product catalog
                             from concept through print production, creating a unified
                             sales resource where none previously existed.
                         </li>
@@ -769,8 +779,7 @@
                     <ul class="bullet-list">
 
                         <li>
-                            Design packaging for
-                            <strong>hundreds of consumer products</strong>,
+                            Design packaging for hundreds of consumer products,
                             including dielines, labels, regulatory layouts, inserts,
                             display packaging, and production-ready artwork.
                         </li>
@@ -791,8 +800,7 @@
                     <ul class="bullet-list">
 
                         <li>
-                            Produce and retouch
-                            <strong>thousands of commercial product photographs</strong>
+                            Produce and retouch thousands of commercial product photographs
                             for catalogs, advertising, websites, and packaging.
                         </li>
 
@@ -897,8 +905,7 @@
 
                         <li>
                             Created three consecutive Giving Tuesday campaigns that
-                            contributed approximately
-                            <strong>$25,000 annually</strong>
+                            contributed approximately $25,000 annually
                             in fundraising.
                         </li>
 
@@ -1013,22 +1020,15 @@
             </section>
 
 
-            <!-- PORTFOLIO EXPERTISE -->
+            <!-- BACK TO TOP -->
 
-            <section class="section">
+            <div class="back-top-wrap">
 
-                <h2 class="section-title">
-                    PORTFOLIO EXPERTISE
-                </h2>
+                <a href="#top" class="back-top-button">
+                    BACK TO TOP
+                </a>
 
-                <div class="portfolio-expertise">
-                    Brand Identity • Packaging Design • Consumer Products •
-                    Catalog Design • Print Design • Illustration •
-                    Commercial Photography • Advertising • Marketing Campaigns •
-                    Retail Graphics
-                </div>
-
-            </section>
+            </div>
 
 
         </article>
