@@ -137,6 +137,10 @@
             line-height: 1.35;
         }
 
+        .section-copy p + p {
+            margin-top: 10px;
+        }
+
 
         /* ==================================================
            FULL WIDTH BLACK FIELD
@@ -334,15 +338,9 @@
 
 
         /* ==================================================
-           SECOND BLACK FIELD
+           CONTINUED IMAGE CONTENT
+           ORIGINAL IMAGE SPACING PRESERVED
            ================================================== */
-
-        .application-black {
-            min-height: 180px;
-
-            margin-top: 18px;
-            margin-bottom: -58px;
-        }
 
         .application-content {
             position: relative;
@@ -642,24 +640,16 @@
             }
 
 
-            /* ----------------------------------------------
-               MOBILE BLACK SECTION FIX
+            /* MOBILE BLACK SECTION FIX */
 
-               Allow text sections to grow naturally.
-               Add extra black space below the wrapped copy.
-               Reduce overlap so images stay below the text.
-               ---------------------------------------------- */
-
-            .illustration-black,
-            .application-black {
+            .illustration-black {
                 min-height: 0;
                 height: auto;
 
                 margin-bottom: -28px;
             }
 
-            .illustration-black .black-field-inner,
-            .application-black .black-field-inner {
+            .illustration-black .black-field-inner {
                 padding-bottom: 48px;
             }
 
@@ -759,12 +749,24 @@
                     </div>
 
                     <div class="section-copy">
-                        A collection of original illustrations and graphic artwork created
-                        across a variety of industries, brands, and applications. Work includes
-                        logo and identity development for glass artists, growers, DJs, and
-                        hospitality businesses; apparel graphics for brands including Strix
-                        Vitro and Coughing Cardinal; large-format artwork; and custom illustration
-                        developed for apparel, packaging, promotional materials, and commercial use.
+
+                        <p>
+                            A collection of original illustrations and graphic artwork created
+                            across a variety of industries, brands, and applications. Work includes
+                            logo and identity development for glass artists, growers, DJs, and
+                            hospitality businesses; apparel graphics for brands including Strix
+                            Vitro and Coughing Cardinal; large-format artwork; and custom illustration
+                            developed for apparel, packaging, promotional materials, and commercial use.
+                        </p>
+
+                        <p>
+                            Illustration developed for branding, packaging, apparel,
+                            promotional products, retail graphics, and commercial applications.
+                            The collection demonstrates the ability to adapt illustration and
+                            graphic design techniques to different media, production methods,
+                            audiences, and brand identities.
+                        </p>
+
                     </div>
 
                 </div>
@@ -893,36 +895,10 @@
             </div>
 
 
-        </section>
-
-
-        <!-- ==================================================
-             APPLIED ILLUSTRATION
-             ================================================== -->
-
-        <section>
-
-
-            <div class="black-field application-black">
-
-                <div class="black-field-inner">
-
-                    <div class="section-title">
-                        Applied Illustration &amp; Product Artwork
-                    </div>
-
-                    <div class="section-copy">
-                        Illustration developed for branding, packaging, apparel,
-                        promotional products, retail graphics, and commercial applications.
-                        The collection demonstrates the ability to adapt illustration and
-                        graphic design techniques to different media, production methods,
-                        audiences, and brand identities.
-                    </div>
-
-                </div>
-
-            </div>
-
+            <!-- ==================================================
+                 CONTINUED IMAGE COLLECTION
+                 NO SECOND BLACK TEXT BOX
+                 ================================================== -->
 
             <div class="application-content">
 
